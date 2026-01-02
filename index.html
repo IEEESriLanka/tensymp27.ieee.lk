@@ -1,92 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <title>IEEE TENSYMP 2027 | Sri Lanka</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IEEE TENSYMP 2027 - Sri Lanka</title>
-    <meta name="description"
-        content="Historic moment for IEEE Sri Lanka Section! Hosting the 2027 IEEE TENSYMP at the University of Peradeniya.">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tensymp27.ieee.lk/">
-    <meta property="og:title" content="IEEE TENSYMP 2027 - Sri Lanka">
-    <meta property="og:description"
-        content="Historic moment for IEEE Sri Lanka Section! Hosting the 2027 IEEE TENSYMP at the University of Peradeniya.">
-    <meta property="og:image" content="https://tensymp27.ieee.lk/tensymp27-announcement.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tensymp27.ieee.lk/">
-    <meta property="twitter:title" content="IEEE TENSYMP 2027 - Sri Lanka">
-    <meta property="twitter:description"
-        content="Historic moment for IEEE Sri Lanka Section! Hosting the 2027 IEEE TENSYMP at the University of Peradeniya.">
-    <meta property="twitter:image" content="https://tensymp27.ieee.lk/tensymp27-announcement.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<script src="script.js"></script>
 
-    <main class="container">
-        <section class="hero">
-            <div class="hero-content fade-in-up">
-                <span class="badge">🎉 Historic Moment</span>
-                <h1>IEEE TENSYMP 2027 <br>Coming to Sri Lanka!</h1>
-                <p class="lead">We are honoured to announce that the 2025-2026 IEEE Region 10 Conference Committee has
-                    selected IEEE Sri Lanka Section to host the 2027 IEEE TENSYMP at the Faculty of Engineering,
-                    University of Peradeniya.
-                </p>
-            </div>
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="TENSYMP 2027.png" alt="IEEE R10 Logo">
+            <!--<span>TENSYMP 2027</span>-->
+        </div>
+<div class="menu-toggle" id="mobile-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
-            <div class="hero-image fade-in-up delay-1">
-                <img src="tensymp27-announcement.jpg" alt="IEEE TENSYMP 2027 Announcement"
-                    class="responsive-img shadow-lg">
-            </div>
-        </section>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
 
-        <section class="details fade-in-up delay-2">
-            <div class="card">
-                <h2>One of Region 10’s Flagship Conferences</h2>
-                <p>The IEEE Region 10 Symposium (TENSYMP) is one of the most prestigious technical conferences in the
-                    Asia-Pacific region. It brings together researchers, engineers, and practitioners to discuss the
-                    latest advances in technology.</p>
-            </div>
-        </section>
+                <li class="dropdown">
+                    <a href="#">Call for Contributions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Call for Papers</a></li>
+                        <li><a href="#">Special Invited Papers</a></li>
+                        <li><a href="#">Call for Tutorials </a></li>
+                        <li><a href="#">Important Dates</a></li>
+                        <li><a href="#">Technical Program Guidelines </a></li>
+                        <li><a href="#">Author Guidelines</a></li>
+                        <li><a href="#">Submit Online</a></li>
+                        <li><a href="#">Camera Ready Paper Submission</a></li>
+                        <li><a href="#">Presentation Submission Guidelines</a></li>
+                    </ul>
+                </li>
 
-        <section class="timeline fade-in-up delay-3">
-            <h3>TENSYMP Events</h3>
-            <div class="timeline-grid">
-                <a href="https://attend.ieee.org/tensymp25/" target="_blank" class="timeline-item">
-                    <div class="year">2025</div>
-                    <div class="location">Christchurch, New Zealand</div>
-                    <div class="date">July 7–9</div>
-                </a>
-                <div class="timeline-item future">
-                    <div class="year">2026</div>
-                    <div class="location">Penang, Malaysia</div>
-                    <div class="date">Coming Soon</div>
+                <li class="dropdown">
+                    <a href="#">Programme</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">At a Glance</a></li>
+                        <li><a href="#">Keynote Speakers</a></li>
+                        <li><a href="#">Plenary Panels</a></li>
+                        <li><a href="#">Technical Sessions</a></li>
+                        <li><a href="#">Workshops & Tutorials</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Committees</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Advisory Committee</a></li>
+                        <li><a href="#">Organizing Committee</a></li>
+                        <li><a href="#">Technical Program Committee</a></li>
+                        <li><a href="#">Track Chairs & Co-Chairs</a></li>
+                        <li><a href="#">International Reviewers</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Registration</a></li>
+
+                <li class="dropdown">
+                    <a href="#">Sponsors & Exhibitor</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sponsorship packages</a></li>
+                        <li><a href="#">Exhibition opportunities</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Venue & Travel</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Venue details</a></li>
+                        <li><a href="#">Travel & visa support</a></li>
+                        <li><a href="#">Accommodation suggestions</a></li>
+                        <li><a href="#">Tourism & excursions</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>IEEE TENSYMP 2027</h1>
+        <h2>Region 10 Symposium</h2>
+
+        <p class="theme">
+            <strong>Connected Intelligence for Resilient Societies</strong>
+        </p>
+
+        <p class="details">
+            12–14 May 2027 <br>
+            Faculty of Engineering, University of Peradeniya, Sri Lanka
+        </p>
+    </div>
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+<section class="section">
+    <h2><img src="logo-transparent.png" alt="IEEE Sri Lanka Section logo" class="section-logo"> About IEEE Sri Lanka Section</h2>
+    <p style="text-align: justify;">
+        The IEEE Sri Lanka Section represents a vibrant and growing community of engineers,
+        researchers, academics, and students committed to advancing technology for the benefit
+        of humanity. Since its inauguration in 2003, the Section has played a key role in
+        strengthening Sri Lanka’s presence within the global IEEE ecosystem through technical
+        excellence, leadership, and impactful collaborations.
+    </p>
+</section>
+
+<section class="section light">
+    <h2><img src="TENSYMP 2027-crop.png" alt="IEEE Sri Lanka Section logo" class="section-logo" >About IEEE TENSYMP 2027</h2>
+    <p  style="text-align: justify;">
+        IEEE TENSYMP 2027, to be held from 12–14 May 2027 at the Faculty of Engineering,
+        University of Peradeniya, marks a significant milestone for the IEEE Sri Lanka Section
+        and the wider IEEE Asia–Pacific community. Under the theme
+        <strong>“Connected Intelligence for Resilient Societies”</strong>, the symposium
+        provides a high-impact platform for advancing interdisciplinary research, innovation,
+        and collaboration at the intersection of intelligent technologies and societal resilience.
+    </p>
+    <!-- Flyer card: replace `tensymp-flyer.pdf` and `tensymp-flyer-thumb.jpg` with your files -->
+    <div class="flyer-card">
+        <a href="tensymp-flyer.pdf" target="_blank" rel="noopener noreferrer">
+            <img src="tensymp27-announcement.jpg" alt="TENSYMP 2027 flyer" class="flyer-img">
+        </a>
+        
+    </div>
+</section>
+
+<section class="section">
+    <h2>Conference Theme & Vision</h2>
+    <p  style="text-align: justify;">
+        The theme “Connected Intelligence for Resilient Societies” explores how the convergence
+        of Artificial Intelligence, Machine Learning, the Internet of Things, advanced sensing
+        and actuation, robotics, and next-generation communication technologies can enable
+        societies to become more adaptive, secure, and sustainable.
+    </p>
+    <p>
+        In a region increasingly affected by climate change, natural disasters, healthcare
+        inequities, and digital divides, TENSYMP 2027 focuses on technologies that allow
+        communities not only to respond to disruptions but also to anticipate and recover
+        effectively.
+    </p>
+</section>
+
+<section class="section light">
+    <h2>IEEE Collaboration & Global Impact</h2>
+    <p  style="text-align: justify;">
+        This vision aligns strongly with IEEE’s leading technical communities, including the
+        IEEE Computer Society, IEEE Signal Processing Society, IEEE Communications Society,
+        IEEE Sensors Council, and the IEEE Robotics and Automation Society. Together, these
+        communities bring complementary expertise to address complex real-world challenges
+        through integrated and connected intelligence.
+    </p>
+    <p  style="text-align: justify;">
+        In line with IEEE’s mission of <em>“Advancing Technology for Humanity”</em> and the
+        United Nations Sustainable Development Goals, TENSYMP 2027 highlights technologies
+        contributing to Climate Action (SDG 13), Resilient Infrastructure (SDG 9),
+        Sustainable Cities (SDG 11), Good Health and Well-Being (SDG 3), and Affordable and
+        Clean Energy (SDG 7).
+    </p>
+</section>
+
+<section class="section">
+    <h2>Proposed Technical Tracks</h2>
+
+    <div class="tracks-grid">
+        <div class="track-card">
+            <h3>Artificial Intelligence & Data Intelligence</h3>
+            <p>AI for social good, predictive analytics, and intelligent decision-making.</p>
+        </div>
+
+        <div class="track-card">
+            <h3>Future Communication & Networking</h3>
+            <p>5G/6G, IoT infrastructures, and secure, resilient connectivity.</p>
+        </div>
+
+        <div class="track-card">
+            <h3>Cyber-Physical Systems & Intelligent Automation</h3>
+            <p>Smart sensing, robotics, and real-time control systems.</p>
+        </div>
+
+        <div class="track-card">
+            <h3>Sustainable Energy & Environmental Technologies</h3>
+            <p>Renewable energy, smart grids, and climate-resilient designs.</p>
+        </div>
+
+        <div class="track-card">
+            <h3>Cybersecurity & Resilient Computing</h3>
+            <p>Secure architectures, privacy, fault tolerance, and trusted systems.</p>
+        </div>
+
+        <div class="track-card">
+            <h3>Technology for Health & Society</h3>
+            <p>AI-driven healthcare, telemedicine, and ICT for underserved communities.</p>
+        </div>
+
+        <div class="track-card">
+            <h3>Ethics, Policy & Governance</h3>
+            <p>Responsible AI, data governance, standards, and regulation.</p>
+        </div>
+
+        <div class="track-card">
+            <h3>Education & Capacity Building</h3>
+            <p  style="text-align: justify;">Digital literacy, workforce upskilling, and future-ready education.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="section light">
+    <h2>Conference Kicks Off In...</h2>
+    <div id="countdown" class="countdown-timer">
+  <div><span id="days">00</span><small>Days</small></div> 
+  <div><span id="hours">00</span><small>Hours</small></div> 
+  <div><span id="minutes">00</span><small>Minutes</small></div> 
+  <div><span id="seconds">00</span><small>Seconds</small></div> 
+</div>
+</section>
+
+<!-- ================= MESSAGES ================= -->
+<section class="section">
+    <h2>Messages</h2>
+    <div class="grid-3">
+
+        <div class="card message-card">
+            <img src="dummy.jpeg" alt="Chair photo" class="message-photo">
+            <div class="message-body">
+                <blockquote class="message-quote" > We are delighted to host IEEE TENSYMP 2027 at the Faculty of Engineering, University of Peradeniya. This event brings together researchers, students, and industry to share innovations that advance technology for humanity. </blockquote>
+                <div class="message-author">
+                    Prof. S. Vasanthapriyan<br>
+                    <small>Chair, IEEE Sri Lanka Section (2025)</small>
                 </div>
-                <div class="timeline-item highlight">
-                    <div class="year">2027</div>
-                    <div class="location">Kandy, Sri Lanka</div>
-                    <div class="date">University of Peradeniya</div>
-                </div>
+
             </div>
-        </section>
-    </main>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 IEEE Sri Lanka Section. All rights reserved.</p>
-    </footer>
+        <div class="card message-card">
+            <img src="dummy.jpeg" alt="Chair photo" class="message-photo">
+            <div class="message-body">
+                <blockquote class="message-quote">We are delighted to host IEEE TENSYMP 2027 at the Faculty of Engineering, University of Peradeniya. This event brings together researchers, students, and industry to share innovations that advance technology for humanity. </blockquote>
+                <div class="message-author">
+                    Prof. Roshan G. Ragel<br>
+                    <small>Conference Chair, IEEE TENSYMP 2027</small>
+                </div>
 
-    <script src="script.js"></script>
+
+            </div>
+        </div>
+        <div class="card message-card">
+            <img src="dummy.jpeg" alt="Chair photo" class="message-photo">
+            <div class="message-body">
+                <blockquote class="message-quote"> We are delighted to host IEEE TENSYMP 2027 at the Faculty of Engineering, University of Peradeniya. This event brings together researchers, students, and industry to share innovations that advance technology for humanity. </blockquote>
+                <div class="message-author">Prof. Jane Doe<br><small>R10 Conference Committee</small></div>
+            </div>
+        </div>
+
+        
+    </div>
+</section>
+
+<!-- ================= SCOPE ================= -->
+<section class="section light">
+    <h2>Conference Scope & Objectives</h2>
+    <p>
+        The conference aims to foster interdisciplinary collaboration, promote ethical innovation,
+        and address global challenges aligned with IEEE and UN SDGs.
+    </p>
+</section>
+
+<!-- ================= HISTORY ================= -->
+<section class="section">
+    <h2>History of IEEE TENSYMP</h2>
+    <div class="timeline">
+        <div class="timeline-item highlight">2024 – New Delhi</div>
+        <div class="timeline-item highlight">2025 – New Zealand</div>
+        <div class="timeline-item highlight">2026 – Malaysia</div>
+        
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Conference Info -->
+        <div class="footer-col">
+            <img src="TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
+            <p>
+                IEEE Region 10 Symposium 2027<br>
+                Faculty of Engineering<br>
+                University of Peradeniya, Sri Lanka
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Call for Papers</a></li>
+                <li><a href="#">Programme</a></li>
+                <li><a href="#">Registration</a></li>
+                <li><a href="#">Committees</a></li>
+            </ul>
+        </div>
+
+        <!-- Conference -->
+        <div class="footer-col">
+            <h4>Conference</h4>
+            <ul>
+                <li><a href="#">Important Dates</a></li>
+                <li><a href="#">Keynote Speakers</a></li>
+                <li><a href="#">Workshops & Tutorials</a></li>
+                <li><a href="#">Venue & Travel</a></li>
+            </ul>
+        </div>
+
+        <!-- IEEE Links -->
+        <div class="footer-col">
+            <h4>IEEE</h4>
+            <ul>
+                <li><a href="#">IEEE Sri Lanka Section</a></li>
+                <li><a href="#">IEEE Region 10</a></li>
+                <li><a href="#">IEEE Policies</a></li>
+                <li><a href="#">Code of Conduct</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>
+            © 2027 IEEE Sri Lanka Section · IEEE TENSYMP 2027<br>
+            All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<script>
+  // Set your conference date here (year, month (0-based), day, hour, minute, second)
+  const conferenceDate = new Date('2027-08-15T09:00:00'); // e.g., Aug 15, 2027 9:00 AM
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = conferenceDate - now;
+
+    if (diff <= 0) {
+      // If date passed
+      document.getElementById('countdown').innerHTML = "<div>Conference started!</div>";
+      clearInterval(timerInterval);
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById('days').textContent = String(days).padStart(2, '0');
+    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+  }
+
+  // Update every second
+  const timerInterval = setInterval(updateCountdown, 1000);
+  updateCountdown(); // initial call
+</script>
+
 </body>
-
 </html>
