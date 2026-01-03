@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>IEEE TENSYMP 2027 | Sri Lanka</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <style>
+                .page-banner {
+                    background: var(--dark);
+                    color: #fff;
+                    padding: 100px 8% 50px;
+                }
+
+                .page-banner h1 {
+                    font-size: 2.2rem;
+                    font-weight: 600;
+                }
+
+                .content-section {
+                    padding: 50px 8%;
+                    max-width: 1100px;
+                    margin: 0 auto;
+                }
+
+                .content-section h2 {
+                    font-size: 1.4rem;
+                    color: #002244;
+                    margin-bottom: 20px;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid #e5e7eb;
+                }
+
+                .content-section h3 {
+                    font-size: 1.1rem;
+                    color: #002244;
+                    margin: 30px 0 15px;
+                }
+
+                .content-section p {
+                    font-size: 0.95rem;
+                    color: #444;
+                    line-height: 1.8;
+                    margin-bottom: 15px;
+                }
+                
+                .schedule-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 30px;
+                }
+
+                .schedule-table th,
+                .schedule-table td {
+                    border: 1px solid #e5e7eb;
+                    padding: 14px;
+                    font-size: 0.9rem;
+                    vertical-align: top;
+                }
+
+                .schedule-table th {
+                    background: #f8fafc;
+                    font-weight: 600;
+                    color: #002244;
+                    text-align: left;
+                }
+
+                .day-title {
+                    font-weight: 600;
+                    color: var(--primary);
+                }
+
+                /* Keynote Speakers */
+                .speakers-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 25px;
+                    margin-top: 40px;
+                }
+
+                .speaker-card {
+                    border: 1px solid #e5e7eb;
+                    background: #fff;
+                    text-align: center;
+                    padding: 22px 18px;
+                }
+
+                .speaker-img {
+                    width: 110px;
+                    height: 110px;
+                    margin: 0 auto 15px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background: #f1f5f9;
+                }
+
+                .speaker-img img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .speaker-info h4 {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: #002244;
+                    margin-bottom: 6px;
+                }
+
+                .speaker-info .designation {
+                    font-size: 0.85rem;
+                    color: #555;
+                    line-height: 1.4;
+                }
+
+                .talk-title {
+                    font-size: 0.82rem;
+                    color: #00629B; /* IEEE blue */
+                    margin-top: 8px;
+                    font-style: italic;
+                    line-height: 1.4;
+                }
+
+
+                /* Responsive */
+                @media (max-width: 900px) {
+                    .speakers-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .speakers-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+
+        </style>
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <!-- ================= NAVBAR ================= -->
+        <header class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="TENSYMP 2027.png" alt="IEEE R10 Logo">
+                    <!--<span>TENSYMP 2027</span>-->
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Call for Contributions</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Call for Papers</a>
+                                </li>
+                                <li>
+                                    <a href="#">Special Invited Papers</a>
+                                </li>
+                                <li>
+                                    <a href="#">Call for Tutorials</a>
+                                </li>
+                                <li>
+                                    <a href="#">Important Dates</a>
+                                </li>
+                                <li>
+                                    <a href="#">Technical Program Guidelines</a>
+                                </li>
+                                <li>
+                                    <a href="#">Author Guidelines</a>
+                                </li>
+                                <li>
+                                    <a href="#">Submit Online</a>
+                                </li>
+                                <li>
+                                    <a href="#">Camera Ready Paper Submission</a>
+                                </li>
+                                <li>
+                                    <a href="#">Presentation Submission Guidelines</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Programme</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="at-a-glance.html">At a Glance</a>
+                                </li>
+                                <li>
+                                    <a href="keynote-speakers.html">Keynote Speakers</a>
+                                </li>
+                                <li>
+                                    <a href="plenary-panels.html">Plenary Panels</a>
+                                </li>
+                                <li>
+                                    <a href="technical-sessions.html">Technical Sessions</a>
+                                </li>
+                                <li>
+                                    <a href="workshops-tutorials.html">Workshops & Tutorials</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Committees</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Advisory Committee</a>
+                                </li>
+                                <li>
+                                    <a href="#">Organizing Committee</a>
+                                </li>
+                                <li>
+                                    <a href="#">Technical Program Committee</a>
+                                </li>
+                                <li>
+                                    <a href="#">Track Chairs & Co-Chairs</a>
+                                </li>
+                                <li>
+                                    <a href="#">International Reviewers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Registration</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Sponsors & Exhibitor</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="sponsorship-packages.html">Sponsorship packages</a>
+                                </li>
+                                <li>
+                                    <a href="exhibition.html">Exhibition opportunities</a>
+                                </li>
+                                <li>
+                                    <a href="sponsors.html">Our Sponsors</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Venue & Travel</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="venue-details.html">Venue details</a>
+                                </li>
+                                <li>
+                                    <a href="travel-visa.html">Travel & visa support</a>
+                                </li>
+                                <li>
+                                    <a href="accommodation.html">Accommodation suggestions</a>
+                                </li>
+                                <li>
+                                    <a href="tourism.html">Tourism & excursions</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="page-banner">
+            <h1>Keynote Speakers</h1>
+        </section>
+        
+
+        <section class="content-section">
+            <p>
+                IEEE TENSYMP 2027 will feature internationally recognized experts
+        from academia, industry, and research institutions.  
+        The keynote speaker lineup will be announced soon.
+            </p>
+            <div class="speakers-grid">
+
+    <div class="speaker-card">
+        <div class="speaker-img">
+            <img src="https://img.icons8.com/?size=100&id=Cssf43cjx2fu&format=png&color=000000" alt="Keynote Speaker">
+        </div>
+        <div class="speaker-info">
+            <h4>Keynote Speaker – To Be Announced</h4>
+            <p class="designation">Distinguished Professor · Leading Global University</p>
+            <p class="talk-title">Keynote Title: To Be Announced</p>
+        </div>
+    </div>
+
+    <div class="speaker-card">
+        <div class="speaker-img">
+            <img src="https://img.icons8.com/?size=100&id=Cssf43cjx2fu&format=png&color=000000" alt="Keynote Speaker">
+        </div>
+        <div class="speaker-info">
+            <h4>Keynote Speaker – To Be Announced</h4>
+            <p class="designation">Senior Industry Expert · International Organization</p>
+            <p class="talk-title">Keynote Title: To Be Announced</p>
+        </div>
+    </div>
+
+    <div class="speaker-card">
+        <div class="speaker-img">
+            <img src="https://img.icons8.com/?size=100&id=Cssf43cjx2fu&format=png&color=000000" alt="Keynote Speaker">
+        </div>
+        <div class="speaker-info">
+            <h4>Keynote Speaker – To Be Announced</h4>
+            <p class="designation">Research Leader · Innovation & Technology</p>
+            <p class="talk-title">Keynote Title: To Be Announced</p>
+        </div>
+    </div>
+
+    <div class="speaker-card">
+        <div class="speaker-img">
+            <img src="https://img.icons8.com/?size=100&id=Cssf43cjx2fu&format=png&color=000000" alt="Keynote Speaker">
+        </div>
+        <div class="speaker-info">
+            <h4>Keynote Speaker – To Be Announced</h4>
+            <p class="designation">IEEE Fellow · Emerging Technologies</p>
+            <p class="talk-title">Keynote Title: To Be Announced</p>
+        </div>
+    </div>
+
+    <div class="speaker-card">
+        <div class="speaker-img">
+            <img src="https://img.icons8.com/?size=100&id=Cssf43cjx2fu&format=png&color=000000" alt="Keynote Speaker">
+        </div>
+        <div class="speaker-info">
+            <h4>Keynote Speaker – To Be Announced</h4>
+            <p class="designation">Technology Strategist · Global Research Center</p>
+            <p class="talk-title">Keynote Title: To Be Announced</p>
+        </div>
+    </div>
+
+</div>
+
+
+            <p style="margin-top:30px; font-size:0.9rem; color:#666;">
+                Speaker details, affiliations, and keynote topics will be updated
+        upon confirmation.
+            </p>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Conference Info -->
+                <div class="footer-col">
+                    <img src="TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
+                    <p>
+                        IEEE Region 10 Symposium 2027
+                        <br>
+                        Faculty of Engineering
+                        <br>
+                        University of Peradeniya, Sri Lanka
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Call for Papers</a>
+                        </li>
+                        <li>
+                            <a href="#">Programme</a>
+                        </li>
+                        <li>
+                            <a href="#">Registration</a>
+                        </li>
+                        <li>
+                            <a href="#">Committees</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Conference -->
+                <div class="footer-col">
+                    <h4>Conference</h4>
+                    <ul>
+                        <li>
+                            <a href="#">Important Dates</a>
+                        </li>
+                        <li>
+                            <a href="#">Keynote Speakers</a>
+                        </li>
+                        <li>
+                            <a href="#">Workshops & Tutorials</a>
+                        </li>
+                        <li>
+                            <a href="#">Venue & Travel</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- IEEE Links -->
+                <div class="footer-col">
+                    <h4>IEEE</h4>
+                    <ul>
+                        <li>
+                            <a href="#">IEEE Sri Lanka Section</a>
+                        </li>
+                        <li>
+                            <a href="#">IEEE Region 10</a>
+                        </li>
+                        <li>
+                            <a href="#">IEEE Policies</a>
+                        </li>
+                        <li>
+                            <a href="#">Code of Conduct</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>
+                    © 2027 IEEE Sri Lanka Section · IEEE TENSYMP 2027
+                    <br>
+                    All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

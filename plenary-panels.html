@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Travel & Visa | IEEE TENSYMP 2027</title>
+    <title>Programme at a Glance | IEEE TENSYMP 2027</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
     <style>
-        .page-banner {
+         .page-banner {
             background: var(--dark);
             color: #fff;
             padding: 100px 8% 50px;
@@ -45,138 +46,57 @@
             line-height: 1.8;
             margin-bottom: 15px;
         }
-
-        /* Travel & Visa */
-        .travel-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .travel-item h4 {
-            font-size: 1rem;
-            color: #002244;
-            margin-bottom: 10px;
-        }
-
-        .travel-item p {
-            font-size: 0.9rem;
-            color: #555;
-            line-height: 1.7;
-        }
-
-        .visa-box {
-            background: #fff;
-            border: 1px solid #e5e7eb;
-            padding: 25px;
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
             margin-top: 30px;
         }
 
-        .visa-box h4 {
-            font-size: 1rem;
-            color: #002244;
-            margin-bottom: 12px;
-        }
-
-        .visa-box p {
-            font-size: 0.9rem;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .visa-box a {
-            color: var(--primary);
-            font-weight: 500;
-        }
-
-        .visa-note {
-            background: #fef3c7;
-            border-left: 3px solid #d97706;
-            padding: 15px 20px;
-            margin-top: 15px;
-        }
-
-        .visa-note p {
-            margin: 0;
-            font-size: 0.88rem;
-            color: #92400e;
-        }
-
-        .transport-options {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .transport-card {
+        .schedule-table th,
+        .schedule-table td {
             border: 1px solid #e5e7eb;
-            padding: 18px;
-            text-align: center;
+            padding: 14px;
+            font-size: 0.9rem;
+            vertical-align: top;
         }
 
-        .transport-card h4 {
-            font-size: 0.95rem;
+        .schedule-table th {
+            background: #f8fafc;
+            font-weight: 600;
             color: #002244;
-            margin-bottom: 6px;
+            text-align: left;
         }
 
-        .transport-card p {
-            font-size: 0.82rem;
-            color: #666;
-            margin: 0;
-        }
-
-        @media (max-width: 900px) {
-            .transport-options {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .page-banner {
-                padding: 80px 5% 40px;
-            }
-
-            .page-banner h1 {
-                font-size: 1.8rem;
-            }
-
-            .content-section {
-                padding: 40px 5%;
-            }
-
-            .travel-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .transport-options {
-                grid-template-columns: 1fr;
-            }
+        .day-title {
+            font-weight: 600;
+            color: var(--primary);
         }
     </style>
 </head>
 
 <body>
+
 <script src="script.js"></script>
 
+<!-- ================= NAVBAR ================= -->
 <header class="navbar">
     <div class="nav-container">
         <div class="logo">
             <img src="TENSYMP 2027.png" alt="IEEE R10 Logo">
+            <!--<span>TENSYMP 2027</span>-->
         </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+<div class="menu-toggle" id="mobile-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
 
-               <li class="dropdown">
+                <li class="dropdown">
                     <a href="#">Call for Contributions</a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Call for Papers</a></li>
@@ -214,7 +134,8 @@
                 </li>
 
                 <li><a href="#">Registration</a></li>
-               <li class="dropdown">
+
+                <li class="dropdown">
                     <a href="#">Sponsors & Exhibitor</a>
                     <ul class="dropdown-menu">
                         <li><a href="sponsorship-packages.html">Sponsorship packages</a></li>
@@ -239,89 +160,31 @@
 </header>
 
 <section class="page-banner">
-    <h1>Travel & Visa Support</h1>
+    <h1>Plenary Panels</h1>
 </section>
 
 <section class="content-section">
-    <h2>Travel & Visa Support</h2>
-
-    <h3>Getting to Sri Lanka</h3>
     <p>
-        Bandaranaike International Airport (CMB) in Colombo is the main international gateway. The airport is approximately 115 km from Kandy (3–3.5 hours by road).
+        Plenary panels bring together experts from academia, industry,
+        and policy-making bodies to discuss emerging challenges and opportunities.
     </p>
 
-    <div class="travel-grid">
-        <div class="travel-item">
-            <h4>By Air</h4>
-            <p>Direct flights operate from major Asian hubs including Singapore, Dubai, Delhi, Bangkok, and Kuala Lumpur. SriLankan Airlines is the national carrier with connections worldwide.</p>
-        </div>
-        <div class="travel-item">
-            <h4>Airport to Kandy</h4>
-            <p>Pre-arranged transfers available via the registration portal (LKR 12,000). Alternatively, take an Uber or taxi (~LKR 10,000–15,000) or the scenic train from Colombo Fort (3–4 hours).</p>
-        </div>
-    </div>
-
-    <h3>Local Transportation</h3>
-    <div class="transport-options">
-        <div class="transport-card">
-            <h4>Uber</h4>
-            <p>Available in Kandy area</p>
-        </div>
-        <div class="transport-card">
-            <h4>PickMe</h4>
-            <p>Local ride-hailing app</p>
-        </div>
-        <div class="transport-card">
-            <h4>Conference Shuttle</h4>
-            <p>Free from partner hotels</p>
-        </div>
-        <div class="transport-card">
-            <h4>Tuk-Tuk</h4>
-            <p>LKR 300–500 to venue</p>
-        </div>
-    </div>
-
-    <div class="visa-box">
-        <h4>Visa Requirements</h4>
-        <p>
-            Most nationalities require an Electronic Travel Authorization (ETA) to enter Sri Lanka. The ETA is valid for 30 days and can be extended.
-        </p>
-        <p>
-            <strong>Apply online:</strong> <a href="https://www.eta.gov.lk" target="_blank" rel="noopener">www.eta.gov.lk</a><br>
-            Processing time: 24–48 hours | Fee: USD 50 (subject to change)
-        </p>
-        
-        <div class="visa-note">
-            <p>
-                <strong>Invitation Letters:</strong> If you require a visa support letter for your application, please email <a href="mailto:visa@tensymp2027.org" style="color: #92400e;">visa@tensymp2027.org</a> with your registration confirmation and passport details.
-            </p>
-        </div>
-    </div>
-
-    <h3>Travel Tips</h3>
-    <div class="travel-grid">
-        <div class="travel-item">
-            <h4>Currency</h4>
-            <p>Sri Lankan Rupee (LKR). ATMs widely available. Major credit cards accepted at hotels and restaurants. USD 1 ≈ LKR 320.</p>
-        </div>
-        <div class="travel-item">
-            <h4>Weather</h4>
-            <p>May in Kandy: Warm and humid (25–30°C). Occasional rain showers. Pack light clothing and an umbrella.</p>
-        </div>
-        <div class="travel-item">
-            <h4>Power</h4>
-            <p>230V, 50Hz. Type D and Type G plugs. Bring a universal adapter.</p>
-        </div>
-        <div class="travel-item">
-            <h4>Emergency</h4>
-            <p>Police: 119 | Ambulance: 1990 | Tourist Police: 1912</p>
-        </div>
-    </div>
+    <h3>Panel Themes</h3>
+    <ul style="padding-left:20px; line-height:1.8; font-size:0.95rem;">
+        <li>AI and Ethics in Engineering</li>
+        <li>Green Technologies and Sustainability</li>
+        <li>Industry–Academia Collaboration</li>
+        <li>Future of Smart Cities</li>
+    </ul>
 </section>
 
+
+
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
     <div class="footer-container">
 
+        <!-- Conference Info -->
         <div class="footer-col">
             <img src="TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
             <p>
@@ -331,10 +194,11 @@
             </p>
         </div>
 
+        <!-- Quick Links -->
         <div class="footer-col">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Call for Papers</a></li>
                 <li><a href="#">Programme</a></li>
                 <li><a href="#">Registration</a></li>
@@ -342,16 +206,18 @@
             </ul>
         </div>
 
+        <!-- Conference -->
         <div class="footer-col">
             <h4>Conference</h4>
             <ul>
                 <li><a href="#">Important Dates</a></li>
                 <li><a href="#">Keynote Speakers</a></li>
                 <li><a href="#">Workshops & Tutorials</a></li>
-                <li><a href="venue-details.html">Venue & Travel</a></li>
+                <li><a href="#">Venue & Travel</a></li>
             </ul>
         </div>
 
+        <!-- IEEE Links -->
         <div class="footer-col">
             <h4>IEEE</h4>
             <ul>
@@ -364,6 +230,7 @@
 
     </div>
 
+    <!-- Bottom Bar -->
     <div class="footer-bottom">
         <p>
             © 2027 IEEE Sri Lanka Section · IEEE TENSYMP 2027<br>
@@ -371,6 +238,7 @@
         </p>
     </div>
 </footer>
+
 
 </body>
 </html>
