@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Venue Details | IEEE TENSYMP 2027</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-banner {
+            background: var(--dark);
+            color: #fff;
+            padding: 100px 8% 50px;
+        }
+
+        .page-banner h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        .content-section {
+            padding: 50px 8%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            font-size: 1.4rem;
+            color: #002244;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .content-section h3 {
+            font-size: 1.1rem;
+            color: #002244;
+            margin: 30px 0 15px;
+        }
+
+        .content-section p {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Venue Details */
+        .venue-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .venue-text address {
+            font-style: normal;
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .map-container {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            display: block;
+        }
+
+        .access-info {
+            margin-top: 30px;
+        }
+
+        .access-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .access-item {
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+        }
+
+        .access-item h4 {
+            font-size: 0.95rem;
+            color: #002244;
+            margin-bottom: 8px;
+        }
+
+        .access-item p {
+            font-size: 0.9rem;
+            color: #555;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .page-banner {
+                padding: 80px 5% 40px;
+            }
+
+            .page-banner h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-section {
+                padding: 40px 5%;
+            }
+
+            .venue-grid,
+            .access-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<script src="script.js"></script>
+
+<header class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="TENSYMP 2027.png" alt="IEEE R10 Logo">
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="#">Call for Contributions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Call for Papers</a></li>
+                        <li><a href="#">Special Invited Papers</a></li>
+                        <li><a href="#">Call for Tutorials </a></li>
+                        <li><a href="#">Important Dates</a></li>
+                        <li><a href="#">Technical Program Guidelines </a></li>
+                        <li><a href="#">Author Guidelines</a></li>
+                        <li><a href="#">Submit Online</a></li>
+                        <li><a href="#">Camera Ready Paper Submission</a></li>
+                        <li><a href="#">Presentation Submission Guidelines</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Programme</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">At a Glance</a></li>
+                        <li><a href="#">Keynote Speakers</a></li>
+                        <li><a href="#">Plenary Panels</a></li>
+                        <li><a href="#">Technical Sessions</a></li>
+                        <li><a href="#">Workshops & Tutorials</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Committees</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Advisory Committee</a></li>
+                        <li><a href="#">Organizing Committee</a></li>
+                        <li><a href="#">Technical Program Committee</a></li>
+                        <li><a href="#">Track Chairs & Co-Chairs</a></li>
+                        <li><a href="#">International Reviewers</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Registration</a></li>
+
+                <li class="dropdown">
+                    <a href="#">Sponsors & Exhibitor</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sponsorship-packages.html">Sponsorship packages</a></li>
+                        <li><a href="exhibition.html">Exhibition opportunities</a></li>
+                        <li><a href="sponsors.html">Our Sponsors</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Venue & Travel</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="venue-details.html">Venue details</a></li>
+                        <li><a href="travel-visa.html">Travel & visa support</a></li>
+                        <li><a href="accommodation.html">Accommodation suggestions</a></li>
+                        <li><a href="tourism.html">Tourism & excursions</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="page-banner">
+    <h1>Conference Venue</h1>
+</section>
+
+<section class="content-section">
+    <h2>Conference Venue</h2>
+    
+    <div class="venue-grid">
+        <div class="venue-text">
+            <address>
+                <strong>Faculty of Engineering</strong><br>
+                University of Peradeniya<br>
+                Peradeniya 20400<br>
+                Kandy, Sri Lanka
+            </address>
+            <p>
+                The Faculty of Engineering at the University of Peradeniya is one of Sri Lanka's premier engineering institutions. Established in 1950, it is set within the largest university campus in Sri Lanka, spanning over 700 hectares of scenic landscape.
+            </p>
+            <p>
+                The venue offers modern conference facilities, lecture halls, and breakout rooms suitable for technical sessions, workshops, and networking events.
+            </p>
+        </div>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5!2d80.5967!3d7.2536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368a0e8f6e8e7%3A0x4b05a3ed2f9f0c3e!2sFaculty%20of%20Engineering%2C%20University%20of%20Peradeniya!5e0!3m2!1sen!2slk!4v1600000000000!5m2!1sen!2slk"
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="access-info">
+        <h3>Campus Access</h3>
+        <div class="access-grid">
+            <div class="access-item">
+                <h4>Main Entrance</h4>
+                <p>Enter via the Galaha Road gate. Show your conference badge to security. Visitor parking available near the Engineering Faculty.</p>
+            </div>
+            <div class="access-item">
+                <h4>Registration Desk</h4>
+                <p>Located at the main foyer of the New Auditorium. Open from 7:30 AM on conference days.</p>
+            </div>
+            <div class="access-item">
+                <h4>Parking</h4>
+                <p>Free parking available for attendees at the designated conference parking area. Follow signage from the main gate.</p>
+            </div>
+            <div class="access-item">
+                <h4>Accessibility</h4>
+                <p>Wheelchair access available at all main venues. Contact us in advance for special assistance requirements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <img src="TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
+            <p>
+                IEEE Region 10 Symposium 2027<br>
+                Faculty of Engineering<br>
+                University of Peradeniya, Sri Lanka
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Call for Papers</a></li>
+                <li><a href="#">Programme</a></li>
+                <li><a href="#">Registration</a></li>
+                <li><a href="#">Committees</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Conference</h4>
+            <ul>
+                <li><a href="#">Important Dates</a></li>
+                <li><a href="#">Keynote Speakers</a></li>
+                <li><a href="#">Workshops & Tutorials</a></li>
+                <li><a href="venue-details.html">Venue & Travel</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>IEEE</h4>
+            <ul>
+                <li><a href="#">IEEE Sri Lanka Section</a></li>
+                <li><a href="#">IEEE Region 10</a></li>
+                <li><a href="#">IEEE Policies</a></li>
+                <li><a href="#">Code of Conduct</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2027 IEEE Sri Lanka Section · IEEE TENSYMP 2027<br>
+            All rights reserved.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
