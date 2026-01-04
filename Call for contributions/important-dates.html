@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Programme at a Glance | IEEE TENSYMP 2027</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+                .page-banner {
+            background: var(--dark);
+            color: #fff;
+            padding: 100px 8% 50px;
+        }
+
+        .page-banner h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        .content-section {
+            padding: 50px 8%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            font-size: 1.4rem;
+            color: #002244;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .content-section h3 {
+            font-size: 1.1rem;
+            color: #002244;
+            margin: 30px 0 15px;
+        }
+
+        .content-section p {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            border: 1px solid #e5e7eb;
+            padding: 14px;
+            font-size: 0.9rem;
+            vertical-align: top;
+        }
+
+        .schedule-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #002244;
+            text-align: left;
+        }
+
+        .day-title {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+
+
+/* CSS Variables */
+:root {
+  --primary: #00629B;
+  --primary-hover: #004e7c;
+  --dark: #002855;
+  --light: #f8f9fa;
+  --text-grey: #555555;
+  --white: #ffffff;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --font: 'Outfit', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+
+
+
+/* Utility Classes */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+
+.breadcrumb {
+  color: var(--light);
+  font-size: 0.9rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 40px auto;
+  padding-left: 40px;
+  display: block !important;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #d1d5db;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+  display: block !important;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.timeline-content {
+  display: block !important;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #002855;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+ </style>
+</head>
+
+<body>
+    <script src="../script.js"></script>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../TENSYMP 2027.png" alt="IEEE R10 Logo">
+                <!--<span>TENSYMP 2027</span>-->
+            </div>
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Call for Contributions</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="call for papers.html">Call for Papers</a></li>
+                            <li><a href="special-invited-papers.html">Special Invited Papers</a></li>
+                            <li><a href="call-for-tutorials.html">Call for Tutorials </a></li>
+                            <li><a href="important-dates.html">Important Dates</a></li>
+                            <li><a href="technical-program-guidelines.html">Technical Program Guidelines </a></li>
+                            <li><a href="author-guidelines.html">Author Guidelines</a></li>
+                            <li><a href="submit-online.html">Submit Online</a></li>
+                            <li><a href="camera-ready-submission.html">Camera Ready Paper Submission</a></li>
+                            <li><a href="presentation-guidelines.html">Presentation Submission Guidelines</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Programme</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Programme/at-a-glance.html">At a Glance</a></li>
+                            <li><a href="../Programme/keynote-speakers.html">Keynote Speakers</a></li>
+                            <li><a href="../Programme/plenary-panels.html">Plenary Panels</a></li>
+                            <li><a href="../Programme/technical-sessions.html">Technical Sessions</a></li>
+                            <li><a href="../Programme/workshops-tutorials.html">Workshops & Tutorials</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Committees</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Advisory Committee</a></li>
+                            <li><a href="#">Organizing Committee</a></li>
+                            <li><a href="#">Technical Program Committee</a></li>
+                            <li><a href="#">Track Chairs & Co-Chairs</a></li>
+                            <li><a href="#">International Reviewers</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Registration</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Sponsors & Exhibitor</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Sponsor&Exhibitor/sponsorship-packages.html">Sponsorship packages</a></li>
+                            <li><a href="../Sponsor&Exhibitor/exhibition.html">Exhibition opportunities</a></li>
+                            <li><a href="../Sponsor&Exhibitor/sponsors.html">Our Sponsors</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Venue & Travel</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Venue&Travel/venue-details.html">Venue details</a></li>
+                            <li><a href="../Venue&Travel/travel-visa.html">Travel & visa support</a></li>
+                            <li><a href="../Venue&Travel/accommodation.html">Accommodation suggestions</a></li>
+                            <li><a href="../Venue&Travel/tourism.html">Tourism & excursions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-banner">
+    
+            <h1 class="page-title">Important Dates</h1>
+            <div class="breadcrumb">Home > Call for Contributions > Important Dates</div>
+        </div>
+    
+    </section>
+
+    <main class="container">
+        <div class="content-section">
+            <p style="text-align:center; font-size:0.9rem; color:#666; margin-top:30px;">
+  All dates are tentative and will be updated once officially confirmed.
+</p>
+
+
+            <div class="timeline">
+
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Call for Papers Opens</div>
+      <p>The call for paper submissions will be announced soon.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Special Session & Tutorial Proposals</div>
+      <p>Submission window for special sessions and tutorial proposals.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Paper Submission Deadline</div>
+      <p>Deadline for submitting full papers to regular tracks.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Notification of Acceptance</div>
+      <p>Authors will be informed about the review decisions.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Camera-Ready Submission</div>
+      <p>Final versions of accepted papers will be collected.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Registration Opens</div>
+      <p>Participant registration details will be published.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Tentative · 2027</div>
+    <div class="timeline-content">
+      <div class="timeline-title">IEEE TENSYMP 2027 Conference</div>
+      <p>The symposium will be held on announced dates in 2027.</p>
+    </div>
+  </div>
+
+</div>
+
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="submit-online.html" class="btn">Submit Paper Now</a>
+            </div>
+        </div>
+    </main>
+<!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Conference Info -->
+            <div class="footer-col">
+                <img src="../TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
+                <p>
+                    IEEE Region 10 Symposium 2027<br>
+                    Faculty of Engineering<br>
+                    University of Peradeniya, Sri Lanka
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Call for Papers</a></li>
+                    <li><a href="#">Programme</a></li>
+                    <li><a href="#">Registration</a></li>
+                    <li><a href="#">Committees</a></li>
+                </ul>
+            </div>
+
+            <!-- Conference -->
+            <div class="footer-col">
+                <h4>Conference</h4>
+                <ul>
+                    <li><a href="#">Important Dates</a></li>
+                    <li><a href="#">Keynote Speakers</a></li>
+                    <li><a href="#">Workshops & Tutorials</a></li>
+                    <li><a href="#">Venue & Travel</a></li>
+                </ul>
+            </div>
+
+            <!-- IEEE Links -->
+            <div class="footer-col">
+                <h4>IEEE</h4>
+                <ul>
+                    <li><a href="#">IEEE Sri Lanka Section</a></li>
+                    <li><a href="#">IEEE Region 10</a></li>
+                    <li><a href="#">IEEE Policies</a></li>
+                    <li><a href="#">Code of Conduct</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>
+                © 2027 IEEE Sri Lanka Section · IEEE TENSYMP 2027<br>
+                All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

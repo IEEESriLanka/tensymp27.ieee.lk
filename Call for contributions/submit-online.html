@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Programme at a Glance | IEEE TENSYMP 2027</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+                .page-banner {
+            background: var(--dark);
+            color: #fff;
+            padding: 100px 8% 50px;
+        }
+
+        .page-banner h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        .content-section {
+            padding: 50px 8%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            font-size: 1.4rem;
+            color: #002244;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .content-section h3 {
+            font-size: 1.1rem;
+            color: #002244;
+            margin: 30px 0 15px;
+        }
+
+        .content-section p {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            border: 1px solid #e5e7eb;
+            padding: 14px;
+            font-size: 0.9rem;
+            vertical-align: top;
+        }
+
+        .schedule-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #002244;
+            text-align: left;
+        }
+
+        .day-title {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+
+
+/* CSS Variables */
+:root {
+  --primary: #00629B;
+  --primary-hover: #004e7c;
+  --dark: #002855;
+  --light: #f8f9fa;
+  --text-grey: #555555;
+  --white: #ffffff;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --font: 'Outfit', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+
+
+
+/* Utility Classes */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+
+
+
+.breadcrumb {
+  color: var(--light);
+  font-size: 0.9rem;
+}
+
+.card {
+  background-color: var(--light);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+  border-left: 4px solid var(--primary);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+
+.bullet-list {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-top: 10px;
+        }
+
+        .bullet-list li {
+        margin-bottom: 8px;
+        }
+
+        
+/* Forms */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 98, 155, 0.1);
+}
+
+.form-text {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+.file-upload-wrapper {
+  border: 2px dashed #ddd;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.file-upload-wrapper:hover {
+  border-color: var(--primary);
+  background-color: rgba(0, 98, 155, 0.02);
+}
+
+    </style>
+</head>
+
+<body>
+<script src="../script.js"></script>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../TENSYMP 2027.png" alt="IEEE R10 Logo">
+                <!--<span>TENSYMP 2027</span>-->
+            </div>
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Call for Contributions</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="call for papers.html">Call for Papers</a></li>
+                            <li><a href="special-invited-papers.html">Special Invited Papers</a></li>
+                            <li><a href="call-for-tutorials.html">Call for Tutorials </a></li>
+                            <li><a href="important-dates.html">Important Dates</a></li>
+                            <li><a href="technical-program-guidelines.html">Technical Program Guidelines </a></li>
+                            <li><a href="author-guidelines.html">Author Guidelines</a></li>
+                            <li><a href="submit-online.html">Submit Online</a></li>
+                            <li><a href="camera-ready-submission.html">Camera Ready Paper Submission</a></li>
+                            <li><a href="presentation-guidelines.html">Presentation Submission Guidelines</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Programme</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Programme/at-a-glance.html">At a Glance</a></li>
+                            <li><a href="../Programme/keynote-speakers.html">Keynote Speakers</a></li>
+                            <li><a href="../Programme/plenary-panels.html">Plenary Panels</a></li>
+                            <li><a href="../Programme/technical-sessions.html">Technical Sessions</a></li>
+                            <li><a href="../Programme/workshops-tutorials.html">Workshops & Tutorials</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Committees</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Advisory Committee</a></li>
+                            <li><a href="#">Organizing Committee</a></li>
+                            <li><a href="#">Technical Program Committee</a></li>
+                            <li><a href="#">Track Chairs & Co-Chairs</a></li>
+                            <li><a href="#">International Reviewers</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Registration</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Sponsors & Exhibitor</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Sponsor&Exhibitor/sponsorship-packages.html">Sponsorship packages</a></li>
+                            <li><a href="../Sponsor&Exhibitor/exhibition.html">Exhibition opportunities</a></li>
+                            <li><a href="../Sponsor&Exhibitor/sponsors.html">Our Sponsors</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Venue & Travel</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Venue&Travel/venue-details.html">Venue details</a></li>
+                            <li><a href="../Venue&Travel/travel-visa.html">Travel & visa support</a></li>
+                            <li><a href="../Venue&Travel/accommodation.html">Accommodation suggestions</a></li>
+                            <li><a href="../Venue&Travel/tourism.html">Tourism & excursions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section class="page-banner">
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Submit Online</h1>
+            <div class="breadcrumb">Home > Call for Contributions > Submit Online</div>
+        </div>
+    </section>
+</section>
+
+    <main class="container">
+        <div class="content-section" style="max-width: 800px; margin: 0 auto; margin-bottom: 40px;">
+            <p class="lead">Use the form below to submit your manuscript for review. Ensure you have followed the <a
+                    href="author-guidelines.html" style="color: var(--primary); text-decoration: underline;">Author
+                    Guidelines</a> before submitting.</p>
+
+            <form id="submissionForm">
+                <div class="card" style="border-left: none; padding-top: 20px;">
+                    <h3>Paper Details</h3>
+                    <div class="form-group">
+                        <label class="form-label">Paper Title *</label>
+                        <input type="text" class="form-control" name="title" required
+                            placeholder="Enter the full title of your paper">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Track / Context *</label>
+                        <select class="form-control" required>
+                            <option value="">Select a track...</option>
+                            <option value="cs">Computer Science & AI</option>
+                            <option value="ee">Electrical Engineering</option>
+                            <option value="comm">Communications</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Abstract *</label>
+                        <textarea class="form-control" rows="5" required
+                            placeholder="Paste your abstract here..."></textarea>
+                    </div>
+                </div>
+
+                <div class="card" style="border-left: none; padding-top: 20px;">
+                    <h3>Author Information</h3>
+                    <div class="row" style="display: flex; gap: 20px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label class="form-label">First Name *</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label class="form-label">Last Name *</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address *</label>
+                        <input type="email" class="form-control" required placeholder="author@institution.edu">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Affiliation *</label>
+                        <input type="text" class="form-control" required placeholder="University or Company Name">
+                    </div>
+                </div>
+
+                <div class="card" style="border-left: none; padding-top: 20px;">
+                    <h3>File Upload</h3>
+                    <div class="form-group">
+                        <label class="form-label">Manuscript (PDF only) *</label>
+                        <div class="file-upload-wrapper" onclick="document.getElementById('fileInput').click()">
+                            <input type="file" id="fileInput" style="display: none;" accept=".pdf" required
+                                onchange="this.parentElement.querySelector('span').innerText = this.files[0].name">
+                            <span style="color: #666;">Click to upload your PDF file (Max 10MB)</span>
+                        </div>
+                        <div class="form-text">File must be in IEEE format.</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button type="submit" class="btn" style="padding: 15px 40px; font-size: 1.1rem;">Submit
+                        Paper</button>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">By submitting, you agree to our terms and privacy
+                        policy.</p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+<!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Conference Info -->
+            <div class="footer-col">
+                <img src="../TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
+                <p>
+                    IEEE Region 10 Symposium 2027<br>
+                    Faculty of Engineering<br>
+                    University of Peradeniya, Sri Lanka
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Call for Papers</a></li>
+                    <li><a href="#">Programme</a></li>
+                    <li><a href="#">Registration</a></li>
+                    <li><a href="#">Committees</a></li>
+                </ul>
+            </div>
+
+            <!-- Conference -->
+            <div class="footer-col">
+                <h4>Conference</h4>
+                <ul>
+                    <li><a href="#">Important Dates</a></li>
+                    <li><a href="#">Keynote Speakers</a></li>
+                    <li><a href="#">Workshops & Tutorials</a></li>
+                    <li><a href="#">Venue & Travel</a></li>
+                </ul>
+            </div>
+
+            <!-- IEEE Links -->
+            <div class="footer-col">
+                <h4>IEEE</h4>
+                <ul>
+                    <li><a href="#">IEEE Sri Lanka Section</a></li>
+                    <li><a href="#">IEEE Region 10</a></li>
+                    <li><a href="#">IEEE Policies</a></li>
+                    <li><a href="#">Code of Conduct</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>
+                © 2027 IEEE Sri Lanka Section · IEEE TENSYMP 2027<br>
+                All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -131,6 +131,56 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.classList.toggle("active");
     });
 
+    
+    // 4. Active Link Highlighting
+    // Get current page URL filename
+    const currentLocation = location.href;
+    const allLinks = document.querySelectorAll('nav a');
+    const menuLength = allLinks.length;
+
+    for (let i = 0; i < menuLength; i++) {
+        // Check if the link href is in the current URL
+        // Used basic inclusion check, might need refinement for index/root
+        if (allLinks[i].href === currentLocation || (currentLocation.endsWith('/') && allLinks[i].getAttribute('href').includes('index.html'))) {
+            allLinks[i].classList.add('active');
+            // If it's a dropdown item, also highlight the parent
+            if (allLinks[i].classList.contains('dropdown-item')) {
+                const parentNav = allLinks[i].closest('.nav-item');
+                if (parentNav) {
+                    parentNav.querySelector('.nav-link').classList.add('active');
+                }
+            }
+        }
+    }
+
+    // 5. Submit Online Form Validation
+    const submissionForm = document.getElementById('submissionForm');
+    if (submissionForm) {
+        submissionForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simple Validation
+            let valid = true;
+            const requiredFields = submissionForm.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    valid = false;
+                    field.style.borderColor = 'red';
+                } else {
+                    field.style.borderColor = '#ddd';
+                }
+            });
+
+            if (valid) {
+                // Simulate success
+                alert('Thank you for your submission! This is a demo.');
+                submissionForm.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+    }
 
 
 });

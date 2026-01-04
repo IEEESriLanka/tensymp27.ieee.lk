@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Programme at a Glance | IEEE TENSYMP 2027</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Guidelines - Academic Conference 2026</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 
     <style>
-         .page-banner {
+
+        .page-banner {
             background: var(--dark);
             color: #fff;
             padding: 100px 8% 50px;
@@ -72,15 +74,75 @@
             font-weight: 600;
             color: var(--primary);
         }
+
+
+
+        
+
+        /* CSS Variables */
+        :root {
+        --primary: #00629B;
+        --primary-hover: #004e7c;
+        --dark: #002855;
+        --light: #f8f9fa;
+        --text-grey: #555555;
+        --white: #ffffff;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --font: 'Outfit', sans-serif;
+        --transition: all 0.3s ease;
+        }
+
+        /* Guidelines (Author/Technical/Presentation) */
+        .guidelines-list {
+        counter-reset: section;
+        list-style-type: none;
+        }
+
+        .guidelines-list > li {
+        position: relative;
+        padding-left: 40px;
+        margin-bottom: 25px;
+        }
+
+        .guidelines-list > li::before {
+        counter-increment: section;
+        content: counter(section);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-color: var(--primary);
+        color: var(--white);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-weight: 600;
+        }
+
+        .guidelines-list li h4 {
+        margin-bottom: 10px;
+        color: var(--dark);
+        }
+
+        .bullet-list {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-top: 10px;
+        }
+
+        .bullet-list li {
+        margin-bottom: 8px;
+        }
+
     </style>
 </head>
 
 <body>
+  <!-- ================= NAVBAR ================= -->
 
-<script src="../script.js"></script>
-
-<!-- ================= NAVBAR ================= -->
-<header class="navbar">
+  <header class="navbar">
     <div class="nav-container">
         <div class="logo">
             <img src="../TENSYMP 2027.png" alt="IEEE R10 Logo">
@@ -99,26 +161,26 @@
                 <li class="dropdown">
                     <a href="#">Call for Contributions</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../Call for contributions/call for papers.html">Call for Papers</a></li>
-                        <li><a href="../Call for contributions/special-invited-papers.html">Special Invited Papers</a></li>
-                        <li><a href="../Call for contributions/call-for-tutorials.html">Call for Tutorials </a></li>
-                        <li><a href="../Call for contributions/important-dates.html">Important Dates</a></li>
-                        <li><a href="../Call for contributions/technical-program-guidelines.html">Technical Program Guidelines </a></li>
-                        <li><a href="../Call for contributions/author-guidelines.html">Author Guidelines</a></li>
-                        <li><a href="../Call for contributions/submit-online.html">Submit Online</a></li>
-                        <li><a href="../Call for contributions/camera-ready-submission.html">Camera Ready Paper Submission</a></li>
-                        <li><a href="../Call for contributions/presentation-guidelines.html">Presentation Submission Guidelines</a></li>
-                    </ul>
+                            <li><a href="call for papers.html">Call for Papers</a></li>
+                            <li><a href="special-invited-papers.html">Special Invited Papers</a></li>
+                            <li><a href="call-for-tutorials.html">Call for Tutorials </a></li>
+                            <li><a href="important-dates.html">Important Dates</a></li>
+                            <li><a href="technical-program-guidelines.html">Technical Program Guidelines </a></li>
+                            <li><a href="author-guidelines.html">Author Guidelines</a></li>
+                            <li><a href="submit-online.html">Submit Online</a></li>
+                            <li><a href="camera-ready-submission.html">Camera Ready Paper Submission</a></li>
+                            <li><a href="presentation-guidelines.html">Presentation Submission Guidelines</a></li>
+                        </ul>
                 </li>
 
                 <li class="dropdown">
                     <a href="#">Programme</a>
                     <ul class="dropdown-menu">
-                        <li><a href="at-a-glance.html">At a Glance</a></li>
-                        <li><a href="keynote-speakers.html">Keynote Speakers</a></li>
-                        <li><a href="plenary-panels.html">Plenary Panels</a></li>
-                        <li><a href="technical-sessions.html">Technical Sessions</a></li>
-                        <li><a href="workshops-tutorials.html">Workshops & Tutorials</a></li>
+                        <li><a href="../Programme/at-a-glance.html">At a Glance</a></li>
+                        <li><a href="../Programme/keynote-speakers.html">Keynote Speakers</a></li>
+                        <li><a href="../Programme/plenary-panels.html">Plenary Panels</a></li>
+                        <li><a href="../Programme/technical-sessions.html">Technical Sessions</a></li>
+                        <li><a href="../Programme/workshops-tutorials.html">Workshops & Tutorials</a></li>
                     </ul>
                 </li>
 
@@ -160,26 +222,50 @@
 </header>
 
 <section class="page-banner">
-    <h1>Plenary Panels</h1>
-</section>
-
-<section class="content-section">
-    <p>
-        Plenary panels bring together experts from academia, industry,
-        and policy-making bodies to discuss emerging challenges and opportunities.
-    </p>
-
-    <h3>Panel Themes</h3>
-    <ul style="padding-left:20px; line-height:1.8; font-size:0.95rem;">
-        <li>AI and Ethics in Engineering</li>
-        <li>Green Technologies and Sustainability</li>
-        <li>Industry–Academia Collaboration</li>
-        <li>Future of Smart Cities</li>
-    </ul>
+    <h1>Author Guidelines</h1>
+    <div class="breadcrumb">Home > Call for Contributions > Author Guidelines</div>
 </section>
 
 
 
+    <main class="container">
+        <div class="content-section">
+            <p>Please read the following instructions carefully before submitting your paper. Failure to comply with
+                these guidelines may result in rejection.</p>
+
+            <ol class="guidelines-list" style="margin-top: 30px;">
+                <li>
+                    <h4>Paper Layout and Format</h4>
+                    <p>Papers must be written in English and formatted according to the IEEE two-column format. The
+                        maximum length is 6 pages, including figures and references.</p>
+                    <a href="#" style="color: var(--primary); font-weight: 500;">Download Word Template</a> |
+                    <a href="#" style="color: var(--primary); font-weight: 500;">Download LaTeX Template</a>
+                </li>
+                <li>
+                    <h4>File Format</h4>
+                    <p>All submissions must be in PDF format. Ensure that all fonts are embedded and the file is not
+                        password protected. The file size should not exceed 10MB.</p>
+                </li>
+                <li>
+                    <h4>Blind Review Policy</h4>
+                    <p>For the initial submission, please <strong>remove all author names and affiliations</strong> from
+                        the paper. Avoid self-referencing in a way that reveals your identity.</p>
+                </li>
+                <li>
+                    <h4>Originality</h4>
+                    <p>Papers must present original work. Content that has been previously published or is under review
+                        elsewhere is not acceptable.</p>
+                </li>
+                <li>
+                    <h4>Submission System</h4>
+                    <p>Papers must be submitted electronically via the online submission system linked below.</p>
+                    <a href="submit-online.html" class="btn" style="margin-top: 10px;">Go to Submission System</a>
+                </li>
+            </ol>
+        </div>
+    </main>
+
+   
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
     <div class="footer-container">
@@ -239,6 +325,8 @@
     </div>
 </footer>
 
-
+   
+    <script src="../script.js"></script>
 </body>
+
 </html>
