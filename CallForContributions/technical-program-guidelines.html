@@ -151,6 +151,30 @@
         .bullet-list li {
         margin-bottom: 8px;
         }
+
+        .content-section h4 {
+            font-size: 1.05rem;
+            color: #002244;
+            margin: 25px 0 12px;
+            font-weight: 600;
+        }
+
+        .content-section ol {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .content-section ol > li {
+            counter-increment: item;
+            margin-bottom: 25px;
+        }
+
+        .content-section ol > li::before {
+            content: counter(item) ". ";
+            font-weight: 600;
+            color: var(--primary);
+        }
     </style>
 </head>
 
@@ -204,7 +228,7 @@
                         <a href="#">Committees</a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Advisory Committee</a></li>
-                            <li><a href="#">Organizing Committee</a></li>
+                            <li><a href="../committees/Organizing Committee.html">Organizing Committee</a></li>
                             <li><a href="../committees/technical-program-committee.html">Technical Program Committee</a></li>
                             <li><a href="#">Track Chairs & Co-Chairs</a></li>
                             <li><a href="../committees/international-advisory-committee.html">International Reviewers</a></li>
@@ -248,47 +272,71 @@
 
     <main class="container">
         <div class="content-section">
-            <p>The technical program committee is responsible for ensuring the high quality of the conference content.
-                The following guidelines outline the structure and expectations for the technical program.</p>
+            <h2>I. Review Process</h2>
+            <p>The papers submitted to the conference will be subjected to double-blind reviews by a maximum of three (03) reviewers, who will be experts in the corresponding sub-field. The field experts for the reviewing process are selected nationally (60%) and internationally (40%). The Technical Program Committee also consists of international members who are experts in the tracks designated to support the review process. The conference review process adheres to the <a href="https://conferences.ieeeauthorcenter.ieee.org/understand-peer-review/" target="_blank">IEEE Reviewing Guidelines</a>.</p>
 
-            <ol class="guidelines-list" style="margin-top: 30px;">
+            <h2>II. Paper Quality Assurance</h2>
+            <p>Ensuring the quality, integrity, and relevance of all accepted papers is a top priority for TENSYMP 2027. The Technical Program Committee (TPC) will implement a structured review and quality control process, adhering to IEEE best practices.</p>
+
+            <ol>
                 <li>
-                    <h4>Scope and Tracks</h4>
-                    <p>The conference is organized into several technical tracks. Authors should select the most
-                        appropriate track for their submission to ensure it is reviewed by experts in the field. The
-                        main tracks include:</p>
+                    <h4>Language Quality and Clarity</h4>
+                    <p>The TPC and Track Chairs/Co Chairs will oversee the language quality of submitted papers. Authors are encouraged to proofread thoroughly to ensure professional and clear English.</p>
+                </li>
+
+                <li>
+                    <h4>Acceptance ratio</h4>
+                    <p>For TENSYMP 2027, the TPC aims to maintain a similar standard, targeting an acceptance rate of 40–45% to preserve the rigor and academic excellence of the conference.</p>
+                </li>
+
+                <li>
+                    <h4>Compliance with IEEE Format</h4>
+                    <p>All submissions must strictly adhere to the IEEE standard conference paper format. Authors are provided with official IEEE templates and formatting instructions. Prior to the double-blind peer review, a desk review will be conducted to screen submissions for compliance.</p>
+                    <p>Papers will be desk rejected for the following reasons:</p>
                     <ul class="bullet-list">
-                        <li>Track 1: Algorithms and Complexity</li>
-                        <li>Track 2: Network Architectures and Protocols</li>
-                        <li>Track 3: Signal Processing</li>
-                        <li>Track 4: Industrial Applications</li>
+                        <li>Exceeding the maximum length of six (6) pages.</li>
+                        <li>Not aligned with the conference themes or scope.</li>
+                        <li>Not conforming to the IEEE formatting guidelines.</li>
+                        <li>Written in poor English that hinders understanding.</li>
+                        <li>Plagiarism exceeding 30%, as checked via Turnitin.</li>
                     </ul>
                 </li>
+
                 <li>
-                    <h4>Review Process</h4>
-                    <p>All submissions will undergo a double-blind peer review process. At least three independent
-                        reviewers will evaluate each paper based on:</p>
-                    <ul class="bullet-list">
-                        <li>Technical Novelty and Innovation</li>
-                        <li>Relevance to the Conference Scope</li>
-                        <li>Clarity of Presentation</li>
-                        <li>Validity of Experimental Results</li>
-                    </ul>
+                    <h4>Camera-Ready Submission</h4>
+                    <p>Upon acceptance, authors must submit their camera-ready version using the official IEEE camera-ready guidelines. The Publication team will work closely with authors to ensure formatting compliance and that reviewer comments are appropriately addressed. Final submissions will be reviewed again by the TPC before inclusion in the program of the Conference.</p>
                 </li>
+
                 <li>
-                    <h4>Ethical Standards</h4>
-                    <p>Authors must adhere to strict ethical standards. Plagiarism, including self-plagiarism, is
-                        strictly prohibited. All papers must be original and not simultaneously submitted to another
-                        journal or conference.</p>
+                    <h4>No-Show Policy</h4>
+                    <p>Papers that are accepted but not presented (i.e., no-show by any authors) will not be included in the official conference proceedings submitted to IEEE Xplore.</p>
                 </li>
+
                 <li>
-                    <h4>Conflicts of Interest</h4>
-                    <p>Reviewers and committee members must declare any conflicts of interest with submitted papers.
-                        Papers where a conflict exists will be reassigned to ensure an impartial review.</p>
+                    <h4>Conference Management System</h4>
+                    <p>Microsoft CMT will be used as the official Conference Management Tool for paper submission, review, and communication.</p>
                 </li>
+
+                <li>
+                    <h4>Plagiarism Policy</h4>
+                    <p>All papers will be screened for originality using Turnitin. Submissions with a similarity index exceeding 30% will be automatically rejected.</p>
+                </li>
+
+                <li>
+                    <h4>Final Decision Authority</h4>
+                    <p>The final decision regarding the acceptance or rejection of any submission lies with the Technical Program Committee, based on originality, relevance, quality of writing, and reviewer feedback.</p>
+                </li>
+            </ol>
+
+            <h2>III. Selection of the Best Paper of Each Track and Conference</h2>
+            <ol>
+                <li>Nominated papers for each track will be shortlisted based on the review score (average score of 4.0+ out of 5.0).</li>
+                <li>On the day of the Technical Sessions, the session chairs and members nominated from TPC will together take the decision on the best paper of each track by considering the status/quality of presentations.</li>
+                <li>The best paper of the conference will be selected among the best paper of each track, by the TPC chair together with session chairs.</li>
             </ol>
         </div>
     </main>
+
 <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer-container">

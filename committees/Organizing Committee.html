@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organizing Committee | IEEE TENSYMP 2027</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .page-banner {
+            background: var(--dark);
+            color: #fff;
+            padding: 100px 8% 50px;
+        }
+
+        .page-banner h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+        .content-section {
+            padding: 50px 8%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            font-size: 1.4rem;
+            color: #002244;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .content-section h3 {
+            font-size: 1.1rem;
+            color: #002244;
+            margin: 35px 0 25px;
+        }
+
+        .content-section p {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Committee Grid */
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .committee-card {
+            border: 1px solid #e5e7eb;
+            padding: 25px;
+            background: #fff;
+            transition: box-shadow 0.3s;
+        }
+
+        .committee-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 34, 68, 0.1);
+        }
+
+        .committee-card.chair {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary);
+        }
+
+        .committee-card .role {
+            font-size: 0.85rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .committee-card .name {
+            font-size: 1.15rem;
+            color: #002244;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .committee-card .affiliation {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .committee-card .affiliation strong {
+            color: #002244;
+        }
+
+        .intro-text {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        .intro-text p {
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .committee-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-banner {
+                padding: 80px 5% 40px;
+            }
+
+            .page-banner h1 {
+                font-size: 1.8rem;
+            }
+
+            .content-section {
+                padding: 40px 5%;
+            }
+
+            .committee-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<script src="../script.js"></script>
+
+<header class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="../TENSYMP 2027.png" alt="IEEE R10 Logo">
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="#">Call for Contributions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../CallForContributions/call-for-papers.html">Call for Papers</a></li>
+                        <li><a href="../CallForContributions/special-invited-papers.html">Special Invited Papers</a></li>
+                        <li><a href="../CallForContributions/call-for-tutorials.html">Call for Tutorials </a></li>
+                        <li><a href="../CallForContributions/important-dates.html">Important Dates</a></li>
+                        <li><a href="../CallForContributions/technical-program-guidelines.html">Technical Program Guidelines </a></li>
+                        <li><a href="../CallForContributions/author-guidelines.html">Author Guidelines</a></li>
+                        <li><a href="../CallForContributions/submit-online.html">Submit Online</a></li>
+                        <li><a href="../CallForContributions/camera-ready-submission.html">Camera Ready Paper Submission</a></li>
+                        <li><a href="../CallForContributions/presentation-guidelines.html">Presentation Submission Guidelines</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Programme</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Programme/at-a-glance.html">At a Glance</a></li>
+                        <li><a href="../Programme/keynote-speakers.html">Keynote Speakers</a></li>
+                        <li><a href="../Programme/plenary-panels.html">Plenary Panels</a></li>
+                        <li><a href="../Programme/technical-sessions.html">Technical Sessions</a></li>
+                        <li><a href="../Programme/workshops-tutorials.html">Workshops & Tutorials</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Committees</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Advisory Committee</a></li>
+                        <li><a href="Organizing Committee.html">Organizing Committee</a></li>
+                        <li><a href="technical-program-committee.html">Technical Program Committee</a></li>
+                        <li><a href="#">Track Chairs & Co-Chairs</a></li>
+                        <li><a href="international-advisory-committee.html">International Reviewers</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../registration.html">Registration</a></li>
+
+                <li class="dropdown">
+                    <a href="#">Sponsors & Exhibitor</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Sponsor&Exhibitor/sponsorship-packages.html">Sponsorship packages</a></li>
+                        <li><a href="../Sponsor&Exhibitor/exhibition.html">Exhibition opportunities</a></li>
+                        <li><a href="../Sponsor&Exhibitor/sponsors.html">Our Sponsors</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Venue & Travel</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Venue&Travel/venue-details.html">Venue details</a></li>
+                        <li><a href="../Venue&Travel/travel-visa.html">Travel & visa support</a></li>
+                        <li><a href="../Venue&Travel/accommodation.html">Accommodation suggestions</a></li>
+                        <li><a href="../Venue&Travel/tourism.html">Tourism & excursions</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="page-banner">
+    <h1>Organizing Committee</h1>
+</section>
+
+<section class="content-section">
+    <h2>Organizing Committee</h2>
+    
+    <div class="intro-text">
+        <p>
+            The Organizing Committee of IEEE TENSYMP 2027 brings together distinguished professionals and academics dedicated to ensuring the success of this premier conference. They oversee all aspects of conference planning, execution, and management.
+        </p>
+    </div>
+
+    <h3>Conference Leadership</h3>
+    <div class="committee-grid">
+        <div class="committee-card chair">
+            <div class="role">Honorary Chair</div>
+            <div class="name">Prof. Thrishantha Nanayakkara</div>
+            <div class="affiliation">
+                <strong>Professor of Robotics</strong><br>
+                Imperial College London
+            </div>
+        </div>
+
+        <div class="committee-card chair">
+            <div class="role">Conference Chair</div>
+            <div class="name">Prof. Roshan G Ragel</div>
+            <div class="affiliation">
+                <strong>Computer Engineering</strong><br>
+                University of Peradeniya
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Conference Vice Chair</div>
+            <div class="name">Prof. S. Vasanthapriyan</div>
+            <div class="affiliation">
+                <strong>Dean, Faculty of Computing</strong><br>
+                Sabaragamuwa University of Sri Lanka
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Conference Vice Chair</div>
+            <div class="name">Prof. Amirthalingam Ramanan</div>
+            <div class="affiliation">
+                <strong>Computer Science</strong><br>
+                University of Jaffna
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Conference Secretary</div>
+            <div class="name">Dr. Upul Jayasinghe</div>
+            <div class="affiliation">
+                <strong>Computer Engineering</strong><br>
+                University of Peradeniya
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Assistant Secretary</div>
+            <div class="name">Ms. Warunika Hippola</div>
+            <div class="affiliation">
+                <strong>Lecturer</strong><br>
+                SLTC Research University
+            </div>
+        </div>
+    </div>
+
+    <h3>Technical Program</h3>
+    <div class="committee-grid">
+        <div class="committee-card">
+            <div class="role">Technical Program Chair</div>
+            <div class="name">Senior Prof. Ruwan Gopura</div>
+            <div class="affiliation">
+                <strong>Department of Mechanical Engineering</strong><br>
+                University of Moratuwa
+            </div>
+        </div>
+    </div>
+
+    <h3>Finance & External Relations</h3>
+    <div class="committee-grid">
+        <div class="committee-card">
+            <div class="role">Finance Chair</div>
+            <div class="name">Mr. Kavinga Upul Ekanayake</div>
+            <div class="affiliation">
+                Accelr, Sri Lanka
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">External Relationships Chair</div>
+            <div class="name">Dr. Udaya Sampath Perera</div>
+            <div class="affiliation">
+                <strong>Department of Electronic and Telecommunication Engineering</strong>
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">External Relationships Co-Chair</div>
+            <div class="name">Dr. Aishwarya Bandla</div>
+            <div class="affiliation">
+                <strong>YP Representative</strong><br>
+                MGA Student Activities Committee
+            </div>
+        </div>
+    </div>
+
+    <h3>Workshops, Tutorials & Special Sessions</h3>
+    <div class="committee-grid">
+        <div class="committee-card">
+            <div class="role">Workshops Chair</div>
+            <div class="name">Prof. Anuradha Jayakody</div>
+            <div class="affiliation">
+                <strong>Faculty of Computing</strong><br>
+                Sri Lanka Institute of Information Technology
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Workshop Co-Chair</div>
+            <div class="name">Dr. Subodha Charles</div>
+            <div class="affiliation">
+                <strong>Electronic and Telecommunication Engineering</strong><br>
+                University of Moratuwa
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Special Sessions Chair</div>
+            <div class="name">Prof. Budhika Jayaseka</div>
+            <div class="affiliation">
+                <strong>Electrical Engineering</strong><br>
+                University of Moratuwa
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Special Sessions Co-Chair</div>
+            <div class="name">Prof. Lasith Gunawardena</div>
+            <div class="affiliation">
+                <strong>Department of Information Technology</strong><br>
+                University of Sri Jayewardenepura
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Tutorial Chair</div>
+            <div class="name">Dr. Samiru Gayan</div>
+            <div class="affiliation">
+                <strong>Electronic and Telecommunication Engineering</strong><br>
+                University of Moratuwa
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Tutorial Co-Chair</div>
+            <div class="name">Dr. Sureka Thiruchittampalam</div>
+            <div class="affiliation">
+                <strong>Lecturer, Department of Earth Resources Engineering</strong><br>
+                University of Moratuwa
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Tutorial Co-Chair</div>
+            <div class="name">Dr. Thilini Mahanama</div>
+            <div class="affiliation">
+                <strong>Department of Industrial Management</strong><br>
+                University of Kelaniya
+            </div>
+        </div>
+    </div>
+
+    <h3>Publications & Awards</h3>
+    <div class="committee-grid">
+        <div class="committee-card">
+            <div class="role">Publications Chair</div>
+            <div class="name">Dr. Chamira Edussooriya</div>
+            <div class="affiliation">
+                <strong>Department of Electronic and Telecommunication Engineering</strong><br>
+                University of Moratuwa
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Publications Co-Chair</div>
+            <div class="name">Dr. Kasun T. Hemachandra</div>
+            <div class="affiliation">
+                <strong>Department of Electronic and Telecommunication Engineering</strong><br>
+                University of Moratuwa
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Awards / Travel Grants Chair</div>
+            <div class="name">Dr. K. Pubudu N. Jayasena</div>
+            <div class="affiliation">
+                <strong>Faculty of Computer Science</strong><br>
+                Technical University Dresden<br>
+                Germany
+            </div>
+        </div>
+    </div>
+
+    <h3>Affinity Groups</h3>
+    <div class="committee-grid">
+        <div class="committee-card">
+            <div class="role">YP Track Chair</div>
+            <div class="name">Mr. Manodya Nabadawewa</div>
+            <div class="affiliation">
+                <strong>Manager</strong><br>
+                Trace Expert City, Sri Lanka
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">YP Track Co-Chair</div>
+            <div class="name">Mr. Heshan Mallawaarachchi</div>
+            <div class="affiliation">
+                IFS Sri Lanka
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">WIE Track Chair</div>
+            <div class="name">Ms. Abarnah Kirupananda</div>
+            <div class="affiliation">
+                <strong>Senior Lecturer</strong><br>
+                IIT
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">WIE Track Co-Chair</div>
+            <div class="name">Ms. Hiruni Hettiarachchi</div>
+            <div class="affiliation">
+                Orange HRM
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Student Track Chair</div>
+            <div class="name">Ms. Vismini Amarasinha</div>
+            <div class="affiliation">
+                POTENZA
+            </div>
+        </div>
+    </div>
+
+    <h3>Operations & Logistics</h3>
+    <div class="committee-grid">
+        <div class="committee-card">
+            <div class="role">Publicity Chair</div>
+            <div class="name">Ms. Umaya Balagalla</div>
+            <div class="affiliation">
+                <strong>Electrical and Electronic Engineering</strong><br>
+                University of Sri Jayewardenepura
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Registration Chair</div>
+            <div class="name">Dr. Swarnalatha Radhakrishnan</div>
+            <div class="affiliation">
+                <strong>Computer Engineering</strong><br>
+                University of Peradeniya
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Registration Co-Chair</div>
+            <div class="name">Ms. Sewwandie Nanayakkara</div>
+            <div class="affiliation">
+                SyscoLabs
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Local Arrangement Chair</div>
+            <div class="name">Dr. Pramila Gamage</div>
+            <div class="affiliation">
+                <strong>Manufacturing and Industrial Engineering</strong><br>
+                University of Peradeniya
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Innovation Challenge Chair</div>
+            <div class="name">Dr. Akila Wijethunga</div>
+            <div class="affiliation">
+                <strong>Faculty of Technology</strong><br>
+                University of Sri Jayewardenepura
+            </div>
+        </div>
+    </div>
+
+    <h3>Industry & Exhibitions</h3>
+    <div class="committee-grid">
+        <div class="committee-card">
+            <div class="role">Exhibitions and Patronage Chair</div>
+            <div class="name">Dr. Isuru Nawinne</div>
+            <div class="affiliation">
+                <strong>Computer Engineering</strong><br>
+                University of Peradeniya
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Exhibitions and Patronage Co-Chair</div>
+            <div class="name">Mr. Thilina Gunarathne</div>
+            <div class="affiliation">
+                <strong>Computer Engineering</strong><br>
+                University of Peradeniya
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Industry Outreach Chair</div>
+            <div class="name">Mr. Dhammika Marasinghe</div>
+            <div class="affiliation">
+                <strong>Senior Software Engineer</strong><br>
+                99x
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Industry Outreach Co-Chair</div>
+            <div class="name">Ms. Lihini Rajapaksha</div>
+            <div class="affiliation">
+                <strong>Associate Project Lead</strong><br>
+                Xyicon
+            </div>
+        </div>
+    </div>
+
+    <h3>IT, Website & Media</h3>
+    <div class="committee-grid">
+        <div class="committee-card">
+            <div class="role">IT and Website Chair</div>
+            <div class="name">Ms. Yasodha Vimukthi</div>
+            <div class="affiliation">
+                <strong>Computer Engineering</strong><br>
+                University of Peradeniya
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Media and Media Outreach Chair</div>
+            <div class="name">Ms. Andrea Rajiah</div>
+            <div class="affiliation">
+                LEARN
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">IT and Website Volunteer</div>
+            <div class="name">Ms. Aparna Thewarapperuma</div>
+            <div class="affiliation">
+                LEARN
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Publicity Volunteers</div>
+            <div class="name">Ms. Wathsala Dayananda</div>
+            <div class="affiliation">
+                LEARN
+            </div>
+        </div>
+
+        <div class="committee-card">
+            <div class="role">Publicity Volunteer</div>
+            <div class="name">Ms. Shashini Withanage</div>
+            <div class="affiliation">
+                LEARN
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Conference Info -->
+        <div class="footer-col">
+            <img src="../TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
+            <p>
+                IEEE Region 10 Symposium 2027<br>
+                Faculty of Engineering<br>
+                University of Peradeniya, Sri Lanka
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Call for Papers</a></li>
+                <li><a href="#">Programme</a></li>
+                <li><a href="#">Registration</a></li>
+                <li><a href="#">Committees</a></li>
+            </ul>
+        </div>
+
+        <!-- Conference -->
+        <div class="footer-col">
+            <h4>Conference</h4>
+            <ul>
+                <li><a href="#">Important Dates</a></li>
+                <li><a href="#">Keynote Speakers</a></li>
+                <li><a href="#">Workshops & Tutorials</a></li>
+                <li><a href="#">Venue & Travel</a></li>
+            </ul>
+        </div>
+
+        <!-- IEEE Links -->
+        <div class="footer-col">
+            <h4>IEEE</h4>
+            <ul>
+                <li><a href="#">IEEE Sri Lanka Section</a></li>
+                <li><a href="#">IEEE Region 10</a></li>
+                <li><a href="#">IEEE Policies</a></li>
+                <li><a href="#">Code of Conduct</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>
+            © 2027 IEEE Sri Lanka Section · IEEE TENSYMP 2027<br>
+            All rights reserved.
+        </p>
+    </div>
+</footer>
+
+</body>
+
+</html>
