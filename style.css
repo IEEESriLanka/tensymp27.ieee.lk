@@ -17,9 +17,6 @@ body {
 }
 
 
-/* =========================
-   NAVBAR - GLASSMORPHISM DESIGN
-========================= */
 .navbar {
     background: rgb(255, 255, 255);
     position: sticky;
@@ -54,11 +51,6 @@ body {
     text-decoration: none;
     height: 90px;
     z-index: 10000;
-    transition: transform 0.2s ease;
-}
-
-.logo:hover {
-    transform: scale(1.03);
 }
 
 .logo img {
