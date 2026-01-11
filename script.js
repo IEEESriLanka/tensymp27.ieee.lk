@@ -106,32 +106,27 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =================================
        6. MOBILE NAV TOGGLE
     ================================= */
-    const navToggle = document.querySelector('.nav-toggle');
+    const navToggle = document.querySelector('.nav-toggle'); 
     const navContainer = document.querySelector('.nav-container');
-   
 
-    if (navToggle) {
-        navToggle.addEventListener('click', () => {
-            navContainer.classList.toggle('nav-open');
-        });
+    if (navToggle) { 
+        navToggle.addEventListener('click', () => { 
+            navContainer.classList.toggle('nav-open'); 
+        }); 
     }
-
-
-    navLinks.forEach(link => link.addEventListener('click', () => {
-        if (navContainer.classList.contains('nav-open')) navContainer.classList.remove('nav-open');
+    navLinks.forEach(link => link.addEventListener('click', () => { 
+        if (navContainer.classList.contains('nav-open')) 
+            navContainer.classList.remove('nav-open'); 
     }));
 
-    const menuToggle = document.getElementById("mobile-menu");
+    const menuToggle = document.getElementById("mobile-menu"); 
     const nav = document.querySelector("nav");
 
-    if (!menuToggle || !nav) return;
-
+    if (!menuToggle || !nav) return; 
     menuToggle.addEventListener("click", () => {
-        menuToggle.classList.toggle("active");
-        nav.classList.toggle("active");
+        menuToggle.classList.toggle("active"); 
+        nav.classList.toggle("active"); 
     });
-
-    
     // 4. Active Link Highlighting
     // Get current page URL filename
     const currentLocation = location.href;
