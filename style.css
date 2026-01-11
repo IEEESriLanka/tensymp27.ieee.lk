@@ -205,11 +205,10 @@ body {
     }
 }
 
-/* HERO */
 .hero {
     position: relative;
     height: 90vh;
-    background: url("hero-bg.jpg") center/cover no-repeat;
+    background: url("uop-1.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -217,12 +216,12 @@ body {
     color: #fff;
 }
 
+
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 32, 64, 0.65);
 }
-
 .hero-content {
     position: relative;
     max-width: 900px;
@@ -233,24 +232,130 @@ body {
     font-size: 3.2rem;
     font-weight: 700;
     letter-spacing: 1px;
+  
 }
 
 .hero h2 {
     font-size: 1.6rem;
     font-weight: 400;
-    margin-top: 10px;
+    margin-top: 8px;
+    
 }
 
 .hero .theme {
-    margin: 25px 0;
+    margin: 16px 0;
     font-size: 1.5rem;
     font-weight: 600;
+
 }
 
 .hero .details {
     font-size: 1.1rem;
     line-height: 1.6;
+  
 }
+
+
+.hero-top-logos img {
+    height: 56px;
+    width: auto;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+    .hero {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-left: 0;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .hero-top-logos,
+    .hero-bottom {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .hero-overlay {
+        background: rgba(255,255,255,0.95);
+    }
+
+    .hero h1 { font-size: 2rem; }
+    .hero h2 { font-size: 1.2rem; }
+}
+
+
+
+/* Top logos positioned inside padding area */
+.hero-top-logos {
+    position: absolute;
+    top: 28px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    z-index: 2;
+    max-width: calc(100% - 40px);
+    overflow: visible;
+}
+
+
+/* Hero content stays after padding */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+    margin-left: 0;       /* no margin-left now, since padding handles space */
+    padding-left: 0;
+  
+}
+
+/* On mobile, override left-padding and center logos */
+@media (max-width: 768px) {
+    .hero {
+        padding-left: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-top-logos,
+    .hero-bottom {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        top: auto;
+        transform: none;
+        margin: 0 auto 20px;
+        justify-content: center;
+    }
+
+    .hero-overlay {
+        background: rgba(255,255,255,0.95);
+    }
+
+    .hero h1 { font-size: 2rem; }
+    .hero h2 { font-size: 1.2rem; }
+}
+
 
 .tracks-grid {
     display: grid;
@@ -325,88 +430,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* Professional message card: circular photo + typographic quote */
-
-.message-card {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
-    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-    padding: 1.6rem;
-    border-radius: 12px;
-    border-top: 6px solid var(--primary);
-    box-shadow: 0 10px 30px rgba(9,30,66,0.06);
-    max-width: 900px;
-}
-
-.message-photo {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    box-shadow: 0 6px 18px rgba(2,6,23,0.12);
-    border: 4px solid #fff;
-}
-
-.message-body {
-    flex: 1 1 auto;
-    text-align: center;
-}
-
-.message-quote {
-    font-style: normal;
-    font-size: 1.05rem;
-    color: #0b1b2b;
-    line-height: 1.7;
-    position: relative;
-    padding: 0.6rem 0 0.4rem 0;
-    z-index: 1;
-}
-
-.message-quote {
-    display: inline-block;
-    
-}
-
-.message-quote::before {
-    content: '‘‘';
-    font-size: 1.1rem;
-    color: #6b7a88;
-    margin-right: 8px;
-    vertical-align: text-top;
-    font-family: "Times New Roman", Times, serif;
-}
-
-.message-quote::after {
-    content: '”';
-    font-size: 1.3rem;
-    color: #6b7a88;
-    margin-left: 8px;
-    vertical-align: text-bottom;
-    font-family: "Times New Roman", Times, serif;
-}
-
-.message-author {
-    margin-top: 0.6rem;
-    font-weight: 700;
-    color: var(--dark);
-}
-
-.message-author small {
-    display: block;
-    font-weight: 500;
-    color: #4a5a6a;
-    margin-top: 2px;
-}
-
-@media (max-width: 780px) {
-    .message-card { flex-direction: column; align-items: center; text-align: center; }
-    .message-photo { width: 100px; height: 100px; }
-    .message-quote::before { display: none; }
-    .message-card { padding: 1.2rem; }
-}
 
 /* Header / nav responsive rules */
 @media (max-width: 900px) {
@@ -446,45 +469,145 @@ body {
     .grid-3 { grid-template-columns: 1fr; }
 }
 
-/* Reusable large decorative quote for recommendations, testimonials, etc. */
-.fancy-quote {
-    position: relative;
-    display: block;
-    padding: 1rem 1.4rem;
-    font-size: 1.05rem;
-    color: #0b1b2b;
-    background: linear-gradient(180deg, #fff 0%, #fbfdff 100%);
-    border-radius: 8px;
-    margin: 0.6rem 0;
+@media (max-width: 768px) {
+  .hero {
+    height: auto;          /* Let height adapt to content */
+    padding: 3rem 1rem;    /* Add some breathing room */
+    min-height: 60vh;      /* Maintain a decent viewport height */
+  }
 }
-.fancy-quote > * { position: relative; z-index: 1; }
-.fancy-quote::before,
-.fancy-quote::after {
-    position: absolute;
-    font-family: Georgia, 'Times New Roman', serif;
-    color: rgba(2,6,23,0.06);
-    z-index: 0;
-    pointer-events: none;
-}
-.fancy-quote::before, .fancy-quote::after { font-family: "Times New Roman", Times, serif; }
-.fancy-quote::before {
-    content: "\201C";
-    font-size: 5.6rem;
-    left: 10px;
-    top: -18px;
-    transform: rotate(-6deg);
-}
-.fancy-quote::after {
-    content: "\201D";
-    font-size: 5.6rem;
-    right: 10px;
-    bottom: -18px;
-    transform: rotate(6deg);
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;   /* Smaller headline */
+    line-height: 1.2;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  .hero .theme {
+    font-size: 1.2rem;
+  }
+
+  .hero .details {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 
-@media (max-width: 680px) {
-    .fancy-quote { padding: 0.8rem 1rem; }
-    .fancy-quote::before, .fancy-quote::after { font-size: 3rem; top: -8px; bottom: -8px; }
+@media (max-width: 768px) {
+  .hero-top-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .hero-top-logos img {
+    height: 40px;  /* smaller logos */
+  }
+}
+@media (max-width: 768px) {
+  .hero-overlay {
+    background: rgba(0, 32, 64, 0.85);  /* Slightly darker for contrast */
+  }
+}
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .hero h2 {
+    margin-bottom: 1rem;
+  }
+
+  .hero .theme {
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .logo img {
+    height: 90px;
+    width: auto;
+  }
+
+  .hero-top-logos img {
+    height: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 60vh;
+    padding: 3rem 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .hero .theme {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero .details {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .hero-top-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .hero-top-logos img {
+    height: 40px;
+    width: auto;
+  }
+
+  .hero-overlay {
+    background: rgba(0, 32, 64, 0.85);
+  }
+
+  .logo img {
+    height: 90px;
+    width: auto;
+  }
 }
 
 /* TIMELINE */
@@ -561,43 +684,6 @@ body {
     color: var(--primary);
 }
 
-/* =========================
-   HERO IMAGE
-========================= */
-
-.hero {
-    position: relative;
-    background: url("uop-1.jpg") center/cover no-repeat;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    }
-
-    /* Dark overlay for readability */
-    .hero-overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 40, 85, 0.7);
-    }
-
-    /* Content above overlay*/
-    .hero-content {
-        position: relative;
-        z-index: 1;
-        max-width: 800px;
-    }
-
-    .hero h1 {
-        font-size: 3.2rem;
-        margin-bottom: 1rem;
-    }
-
-    .hero h2 {
-        font-weight: 400;
-        margin-bottom: 1rem;
-    }
 
     .navbar {
     background: #ffffff;
@@ -830,4 +916,82 @@ body {
     .flyer-card { margin-top: 12px; }
     .flyer-actions { flex-direction: column; width: 100%; align-items: center; }
     .btn { width: 90%; text-align: center; }
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  font-family: var(--font);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 30px 0;
+}
+
+/* Timer blocks */
+.countdown-timer div {
+  background: #f0f4f8;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 70px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.countdown-timer span {
+  display: block;
+  font-size: 2.8rem;
+}
+
+.countdown-timer small {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--dark);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .countdown-timer {
+    gap: 30px;
+    font-size: 1.2rem;
+  }
+
+  .countdown-timer div {
+    padding: 10px 15px;
+    min-width: 55px;
+  }
+
+  .countdown-timer span {
+    font-size: 2.2rem;
+  }
+
+  .countdown-timer small {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-timer {
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.1rem;
+  }
+
+  .countdown-timer div {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 12px 0;
+    min-width: unset;
+  }
+
+  .countdown-timer span {
+    font-size: 2rem;
+  }
+
+  .countdown-timer small {
+    font-size: 0.75rem;
+  }
 }
