@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Programme at a Glance | IEEE TENSYMP 2027</title>
@@ -10,7 +9,7 @@
     <link rel="stylesheet" href="../style.css">
 
     <style>
-                .page-banner {
+        .page-banner {
             background: var(--dark);
             color: #fff;
             padding: 100px 8% 50px;
@@ -74,75 +73,114 @@
             color: var(--primary);
         }
 
+        /* CSS Variables */
+        :root {
+        --primary: #00629B;
+        --primary-hover: #004e7c;
+        --dark: #002855;
+        --light: #f8f9fa;
+        --text-grey: #555555;
+        --white: #ffffff;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --font: 'Outfit', sans-serif;
+        --transition: all 0.3s ease;
+        }
 
 
-/* CSS Variables */
-:root {
-  --primary: #00629B;
-  --primary-hover: #004e7c;
-  --dark: #002855;
-  --light: #f8f9fa;
-  --text-grey: #555555;
-  --white: #ffffff;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --font: 'Outfit', sans-serif;
-  --transition: all 0.3s ease;
-}
+        /* Utility Classes */
+        .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: var(--primary);
+        color: var(--white);
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        transition: var(--transition);
+        }
 
+        .btn:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+        }
 
+        .bg-light {
+        background-color: var(--light);
+        }
 
+        .breadcrumb {
+        color: var(--light);
+        font-size: 0.9rem;
+        }
 
-/* Utility Classes */
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--primary);
-  color: var(--white);
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  border: none;
-  transition: var(--transition);
-}
+        .page-banner {
+            background: var(--dark);
+            color: #fff;
+            padding: 100px 8% 50px;
+        }
 
-.btn:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
-}
+        .page-banner h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
 
-.bg-light {
-  background-color: var(--light);
-}
+        .content-section {
+            padding: 50px 8%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
 
-.section-padding {
-  padding: 60px 0;
-}
+        .content-section h2 {
+            font-size: 1.4rem;
+            color: #002244;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
 
+        .content-section h3 {
+            font-size: 1.1rem;
+            color: #002244;
+            margin: 30px 0 15px;
+        }
 
+        .content-section p {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
 
-.breadcrumb {
-  color: var(--light);
-  font-size: 0.9rem;
-}
+        .schedule-table th,
+        .schedule-table td {
+            border: 1px solid #e5e7eb;
+            padding: 14px;
+            font-size: 0.9rem;
+            vertical-align: top;
+        }
 
-.card {
-  background-color: var(--light);
-  border-radius: 8px;
-  padding: 30px;
-  margin-bottom: 20px;
-  transition: var(--transition);
-  border-left: 4px solid var(--primary);
-}
+        .schedule-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #002244;
+            text-align: left;
+        }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow);
-}
+        .day-title {
+            font-weight: 600;
+            color: var(--primary);
+        }
 
-
-.bullet-list {
+        .bullet-list {
         list-style-type: disc;
         padding-left: 20px;
         margin-top: 10px;
@@ -151,11 +189,12 @@
         .bullet-list li {
         margin-bottom: 8px;
         }
+
     </style>
 </head>
-
 <body>
-<script src="../script.js"></script>
+
+    <script src="../script.js"></script>
 
     <!-- ================= NAVBAR ================= -->
     <header class="navbar">
@@ -177,7 +216,7 @@
                     <li class="dropdown">
                         <a href="#">Call for Contributions</a>
                         <ul class="dropdown-menu">
-                            <li><a href="call for papers.html">Call for Papers</a></li>
+                            <li><a href="call-for-papers.html">Call for Papers</a></li>
                             <li><a href="special-invited-papers.html">Special Invited Papers</a></li>
                             <li><a href="call-for-tutorials.html">Call for Tutorials </a></li>
                             <li><a href="important-dates.html">Important Dates</a></li>
@@ -205,9 +244,9 @@
                         <ul class="dropdown-menu">
                             <li><a href="#">Advisory Committee</a></li>
                             <li><a href="#">Organizing Committee</a></li>
-                            <li><a href="#">Technical Program Committee</a></li>
+                            <li><a href="../committees/technical-program-committee.html">Technical Program Committee</a></li>
                             <li><a href="#">Track Chairs & Co-Chairs</a></li>
-                            <li><a href="#">International Reviewers</a></li>
+                            <li><a href="../committees/international-advisory-committee.html">International Reviewers</a></li>
                         </ul>
                     </li>
 
@@ -237,66 +276,59 @@
         </div>
     </header>
 
-<section class="page-banner">
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">Special Invited Papers</h1>
-            <div class="breadcrumb">Home > Call for Contributions > Special Invited Papers</div>
+    <section class="page-banner">
+    <h1>Call for Papers</h1>
+    <div class="breadcrumb">Home > Call for Contributions > Call for Papers</div>
+</section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="content-section">
+            <p class="lead" style="color: var(--dark); margin-bottom: 30px;">
+                The Academic Conference 2026 solicits original contributions in all areas of technology, engineering, and science. We invite researchers, academicians, and industry professionals to submit their latest research findings.
+            </p>
+
+            <div class="row" style="display: flex; flex-wrap: wrap; margin: -15px;">
+                <div class="col" style="flex: 1; min-width: 300px; padding: 15px;">
+                    <h2>Topics of Interest</h2>
+                    <p>Topics of interest include, but are not limited to:</p>
+                    <ul class="bullet-list">
+                        <li>Artificial Intelligence and Machine Learning</li>
+                        <li>Data Science and Big Data Analytics</li>
+                        <li>Internet of Things (IoT) and Smart Systems</li>
+                        <li>Cybersecurity and Privacy</li>
+                        <li>Cloud and Edge Computing</li>
+                        <li>Robotics and Automation</li>
+                        <li>Software Engineering and Architecture</li>
+                        <li>Telecommunications and Networking</li>
+                    </ul>
+                </div>
+                <div class="col" style="flex: 1; min-width: 300px; padding: 15px;">
+                    <div class="card">
+                        <h3>Key Information</h3>
+                        <p><strong>Conference Date:</strong> July 15-18, 2026</p>
+                        <p><strong>Location:</strong> Hybrid / New York, USA</p>
+                        <p><strong>Submission Format:</strong> IEEE Double Column</p>
+                        <a href="important-dates.html" class="btn" style="margin-top: 10px; width: 100%; text-align: center;">View Important Dates</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;">
+
+            <h2>Submission Process</h2>
+            <p>
+                Prospective authors are invited to submit full papers (maximum 6 pages including all figures, tables, and references) describing original work.
+                All submitted papers will be peer-reviewed. Accepted and presented papers will be eligible for submission to the digital library.
+            </p>
+            <div style="margin-top: 20px;">
+                <a href="author-guidelines.html" class="btn bg-light" style="color: var(--primary); border: 1px solid var(--primary); margin-right: 10px;">Read Author Guidelines</a>
+                <a href="submit-online.html" class="btn">Submit Your Paper</a>
+            </div>
         </div>
-    </section>
-    </section>
-
-   <main class="container">
-    <div class="content-section">
-        <h1 style="text-align: center;">Special Invited Papers</h1>
-
-
-        <p>In addition to regular submissions, the specific technical committees have curated a selection of Special Invited Papers from world-renowned experts.</p>
-        <br>
-        <h2>Overview</h2>
-        <p>The goal of special sessions is to provide a forum for contributions that are highly specialized in the conference theme, focused on new topics or innovative applications of established approaches. A special session consists of four to six papers, which, for example, addresses a particular theme or consists of work done in some particular international project. Prospective organizers are invited to submit proposals for special sessions by <strong>10th of June, 2026</strong>.</p>
-
-        <ul class="bullet-list">
-            <li>Notification of Acceptance: 30th of July 2026</li>
-            <li>Paper Submission deadline: 30th of November 2027</li>
-        </ul>
-        <br>
-
-        <h2>Proposal Requirements</h2>
-        <p>Proposals for special sessions are required to contain the following information:</p>
-        <ul class="bullet-list">
-            <li>Title for the proposed special session</li>
-            <li>Humanitarian aspect addressed by the proposed special session</li>
-            <li>One page summary of the special session including its motivation and goals</li>
-            <li>List of prospective authors who will submit papers to the special session</li>
-            <li>List of organizers (names, affiliations and short bio)</li>
-        </ul>
-        <p>There is a two-page limit for each proposal. Selected special sessions will be announced through the conference and will be open for submission to everyone.</p>
-        <br>
-        <h2>Submission</h2>
-        <p>Proposals for special sessions must be sent to:</p>
-        <div class="card" style="margin-top: 10px;">
-            <p><strong>Special Sessions Chair</strong><br>
-            Prof Budhika Jayaseka<br>
-            Past Chair, IEEE Sri Lanka Section,<br>
-            Electrical Engineering, University of Moratuwa<br>
-            <a href="mailto:buddhika@ieee.org">buddhika@ieee.org</a></p>
-        </div>
-        <br>
-
-        <h2>Review Process</h2>
-        <p>All papers will be peer-reviewed and will appear in the conference proceedings. The organizers will be Track Chairs (TC) for the proposed special session track. They are also responsible to assign reviewers and make judgment of the submitted papers for the special session. Papers co-authored by the special session organizers will be managed by other TCs to avoid conflicts of interest.</p>
-        <p>Please note that special session papers will be subject to the same rigorous review process which applies to regular papers not included in special sessions. The minimum number of papers per special session is four. If fewer than four papers submitted to a special session are accepted based on the reviewing process, the Program Committee reserves the right to re-assign these accepted papers to regular sessions.</p>
-
-        <br>
-        <h2>Invitation</h2>
-        <p>We look forward to hosting your Special Session at IEEE TENSYMP 2027.</p>
-    </div>
     </main>
 
-
-   
-<!-- ================= FOOTER ================= -->
+    <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer-container">
 
@@ -354,6 +386,7 @@
             </p>
         </div>
     </footer>
-</body>
 
+  
+</body>
 </html>
