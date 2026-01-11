@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -101,11 +102,11 @@
 <section id="home" class="hero">
     <div class="hero-overlay"></div>
 
-    <!-- Top logos 
+    <!-- Top logos -->
     <div class="hero-top-logos">
-        <img src="Region10_Logo_Footer.png" alt="IEEE Region 10" class="hero-logo">
-        <img src="logo-transparent.png" alt="IEEE Sri Lanka Section" class="hero-logo">
-    </div>-->
+        <img src="Region10_Logo_Footer.png" alt="IEEE Region 10" class="hero-logo" style=" filter: brightness(0) invert(1); height: 50px;">
+        <img src="logo-transparent1.png" alt="IEEE Sri Lanka Section" class="hero-logo">
+    </div>
 
     <!-- Main hero content -->
     <div class="hero-content">
@@ -118,6 +119,7 @@
 
         <p class="details">
             12–14 May 2027 <br>
+            Hosted by :
             Faculty of Engineering, University of Peradeniya, Sri Lanka
         </p>
     </div>
@@ -360,18 +362,19 @@
     </div>
 </footer>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('nav');
+    const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
 
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    nav.classList.toggle('active');
-  });
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');  // animate hamburger
+  nav.classList.toggle('active');         // show/hide menu
 });
+
 </script>
 
 <script>
+
+    
   // Set your conference date here (year, month (0-based), day, hour, minute, second)
   const conferenceDate = new Date('2027-08-15T09:00:00'); // e.g., Aug 15, 2027 9:00 AM
 
@@ -400,14 +403,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Update every second
   const timerInterval = setInterval(updateCountdown, 1000);
   updateCountdown(); // initial call
+// Select the hamburger button and nav menu
 
-  const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
 
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      nav.classList.toggle('active');
-    });
 
 </script>
 
