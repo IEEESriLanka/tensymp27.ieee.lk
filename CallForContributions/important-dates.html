@@ -8,9 +8,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    
+
     <style>
-        .page-banner {
+                .page-banner {
             background: var(--dark);
             color: #fff;
             padding: 100px 8% 50px;
@@ -112,37 +112,73 @@
   box-shadow: var(--shadow);
 }
 
-.bg-light {
-  background-color: var(--light);
-}
-
-.section-padding {
-  padding: 60px 0;
-}
-
-
 
 .breadcrumb {
   color: var(--light);
   font-size: 0.9rem;
 }
 
-.bullet-list {
-        list-style-type: disc;
-        padding-left: 20px;
-        margin-top: 10px;
-        }
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 40px auto;
+  padding-left: 40px;
+  display: block !important;
+}
 
-        .bullet-list li {
-        margin-bottom: 8px;
-        }
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #d1d5db;
+}
 
-    </style>
+.timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+  display: block !important;
+}
 
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.timeline-content {
+  display: block !important;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #002855;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+ </style>
 </head>
 
 <body>
-
     <script src="../script.js"></script>
 
     <!-- ================= NAVBAR ================= -->
@@ -165,7 +201,7 @@
                     <li class="dropdown">
                         <a href="#">Call for Contributions</a>
                         <ul class="dropdown-menu">
-                            <li><a href="call for papers.html">Call for Papers</a></li>
+                            <li><a href="call-for-papers.html">Call for Papers</a></li>
                             <li><a href="special-invited-papers.html">Special Invited Papers</a></li>
                             <li><a href="call-for-tutorials.html">Call for Tutorials </a></li>
                             <li><a href="important-dates.html">Important Dates</a></li>
@@ -193,9 +229,9 @@
                         <ul class="dropdown-menu">
                             <li><a href="#">Advisory Committee</a></li>
                             <li><a href="#">Organizing Committee</a></li>
-                            <li><a href="#">Technical Program Committee</a></li>
+                            <li><a href="../committees/technical-program-committee.html">Technical Program Committee</a></li>
                             <li><a href="#">Track Chairs & Co-Chairs</a></li>
-                            <li><a href="#">International Reviewers</a></li>
+                            <li><a href="../committees/international-advisory-committee.html">International Reviewers</a></li>
                         </ul>
                     </li>
 
@@ -226,83 +262,87 @@
     </header>
 
     <section class="page-banner">
-     <h1>Call for Tutorials</h1>
-    <div class="breadcrumb">Home > Call for Contributions > Call for Tutorials</div>
+    
+            <h1 class="page-title">Important Dates</h1>
+            <div class="breadcrumb">Home > Call for Contributions > Important Dates</div>
+        </div>
+    
     </section>
 
-   <main class="container">
-    <div class="content-section">
-        <h1>Call for Tutorials</h1>
+    <main class="container">
+        <div class="content-section">
+            <p style="text-align:center; font-size:0.9rem; color:#666; margin-top:30px;">
+  All dates are tentative and will be updated once officially confirmed.
+</p>
 
-        <p>
-            IEEE TENSYMP 2027 invites proposals for half-day (3 hours) or full-day (6 hours) tutorials on new and emerging topics within the broad scope of Computing and Artificial Intelligence. Proposals should be submitted in a PDF file, not exceeding five (5) pages. The selected tutorials will be scheduled in the second week of April 2027.
-        </p>
-        <br>
-        <h2>Topics</h2>
-        <p>The topics of interest include, but are not limited to:</p>
-        <ul class="bullet-list">
-            <li>Artificial Intelligence and Machine Learning</li>
-            <li>Data Science and Applications</li>
-            <li>Parallel and Distributed Computing</li>
-            <li>Human-Computer Interaction and Computer Vision</li>
-            <li>Knowledge Management and Information Systems</li>
-            <li>Software Engineering</li>
-            <li>Technology-Enhanced Learning and Teaching</li>
-            <li>Ethical and Sustainable Computing</li>
-            <li>Trustworthy and Explainable AI</li>
-            <li>Generative AI and Societal Impact</li>
-        </ul>
-        <br>
-        <br>
-        <h2>Tutorial Proposal Format</h2>
-        <p>Tutorial proposals should be clear, concise, and provide a comprehensive overview of the planned session. Each proposal must include the following information:</p>
-        <ul class="bullet-list">
-            <li>Abstract, objectives, motivation, and intended audience</li>
-            <li>Names and short biographies of all tutorial presenters</li>
-            <li>Detailed outline of the tutorial content, including a tentative schedule and identification of the presenter(s) for each part</li>
-            <li>Past and relevant expertise of the speaker(s) on the proposed topic</li>
-            <li>Previous tutorial experience of the speaker(s), including details of past versions of the tutorial (if any)</li>
-        </ul>
-        <br>
-        <h2>Selection</h2>
-        <p>All tutorial proposals must be sent to the Chairs and will be peer-reviewed. The Tutorial Chairs will make a final selection of tutorials to ensure variety and relevance to the conference attendees and to best fit the conference schedule.</p>
-        <br>
-        <h2>Upon Acceptance</h2>
-        <p>
-            Speakers for all accepted tutorials will be required to sign a commitment to present at the conference within 14 days of notification. Tutorial topics and their presenters will be featured on the R10 HTC 2027. Tutorial material must be emailed to the conference organizers at least 14 days before the presentation date.
-        </p>
-        <p>All questions concerning tutorial proposals should be submitted to the Workshop and Tutorial Chair.</p>
 
-        <h2>Tutorial Chair</h2>
-        <p>
-            Dr. Samiru Gayan<br>
-            Senior Lecturer<br>
-            Faculty of Engineering,<br>
-            University of Moratuwa, Sri Lanka.<br>
-            <a href="mailto:samirug@uom.lk">samirug@uom.lk</a>
-        </p>
+            <div class="timeline">
 
-        <h2>Tutorial Co-Chair</h2>
-        <p>
-            Dr. Sureka Thiruchittampalam<br>
-            Senior Lecturer,<br>
-            Department of Earth Resources Engineering,<br>
-            University of Moratuwa.<br>
-            <a href="mailto:s.thiruchittampalam@ieee.org">s.thiruchittampalam@ieee.org</a>
-        </p>
-        <br> 
-        <h2>Important Dates</h2>
-        <ul class="bullet-list">
-            <li>Tutorial Proposals Due: 20th of December 2026</li>
-            <li>Acceptance Notification: 20th of February 2027</li>
-            <li>Final Camera Ready Slides: 20th of March 2027</li>
-        </ul>
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Call for Papers Opens</div>
+      <p>The call for paper submissions will be announced soon.</p>
     </div>
-</main>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Special Session & Tutorial Proposals</div>
+      <p>Submission window for special sessions and tutorial proposals.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Paper Submission Deadline</div>
+      <p>Deadline for submitting full papers to regular tracks.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Notification of Acceptance</div>
+      <p>Authors will be informed about the review decisions.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Camera-Ready Submission</div>
+      <p>Final versions of accepted papers will be collected.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">To Be Announced</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Registration Opens</div>
+      <p>Participant registration details will be published.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Tentative · 2027</div>
+    <div class="timeline-content">
+      <div class="timeline-title">IEEE TENSYMP 2027 Conference</div>
+      <p>The symposium will be held on announced dates in 2027.</p>
+    </div>
+  </div>
+
+</div>
 
 
-    <!-- ================= FOOTER ================= -->
-    <!-- ================= FOOTER ================= -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="submit-online.html" class="btn">Submit Paper Now</a>
+            </div>
+        </div>
+    </main>
+<!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer-container">
 
@@ -360,7 +400,6 @@
             </p>
         </div>
     </footer>
-    
 </body>
 
 </html>

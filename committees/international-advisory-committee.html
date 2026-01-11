@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Travel & Visa | IEEE TENSYMP 2027</title>
+    <title>International Advisory Committee | IEEE TENSYMP 2027</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
         .content-section h3 {
             font-size: 1.1rem;
             color: #002244;
-            margin: 30px 0 15px;
+            margin: 35px 0 25px;
         }
 
         .content-section p {
@@ -46,91 +46,85 @@
             margin-bottom: 15px;
         }
 
-        /* Travel & Visa */
-        .travel-grid {
+        /* Committee Grid */
+        .committee-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
-        .travel-item h4 {
-            font-size: 1rem;
-            color: #002244;
-            margin-bottom: 10px;
-        }
-
-        .travel-item p {
-            font-size: 0.9rem;
-            color: #555;
-            line-height: 1.7;
-        }
-
-        .visa-box {
-            background: #fff;
+        .committee-card {
             border: 1px solid #e5e7eb;
             padding: 25px;
-            margin-top: 30px;
+            background: #fff;
+            transition: box-shadow 0.3s;
         }
 
-        .visa-box h4 {
-            font-size: 1rem;
+        .committee-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 34, 68, 0.1);
+        }
+
+        .committee-card.special {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary);
+        }
+
+        .committee-card .role {
+            font-size: 0.85rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .committee-card .name {
+            font-size: 1.15rem;
             color: #002244;
+            font-weight: 600;
             margin-bottom: 12px;
         }
 
-        .visa-box p {
+        .committee-card .affiliation {
             font-size: 0.9rem;
             color: #555;
-            margin-bottom: 10px;
+            line-height: 1.6;
         }
 
-        .visa-box a {
-            color: var(--primary);
-            font-weight: 500;
-        }
-
-        .visa-note {
-            background: #fef3c7;
-            border-left: 3px solid #d97706;
-            padding: 15px 20px;
-            margin-top: 15px;
-        }
-
-        .visa-note p {
-            margin: 0;
-            font-size: 0.88rem;
-            color: #92400e;
-        }
-
-        .transport-options {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .transport-card {
-            border: 1px solid #e5e7eb;
-            padding: 18px;
-            text-align: center;
-        }
-
-        .transport-card h4 {
-            font-size: 0.95rem;
+        .committee-card .affiliation strong {
             color: #002244;
-            margin-bottom: 6px;
         }
 
-        .transport-card p {
-            font-size: 0.82rem;
-            color: #666;
+        .intro-text {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        .intro-text p {
             margin: 0;
+        }
+
+        .category-intro {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f9fafb;
+            border-left: 3px solid var(--primary);
+            margin-bottom: 25px;
+        }
+
+        .category-intro p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+            font-style: italic;
         }
 
         @media (max-width: 900px) {
-            .transport-options {
-                grid-template-columns: repeat(2, 1fr);
+            .committee-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -147,12 +141,8 @@
                 padding: 40px 5%;
             }
 
-            .travel-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .transport-options {
-                grid-template-columns: 1fr;
+            .committee-card {
+                padding: 20px;
             }
         }
     </style>
@@ -176,7 +166,7 @@
             <ul class="nav-menu">
                 <li><a href="../index.html">Home</a></li>
 
-               <li class="dropdown">
+                <li class="dropdown">
                     <a href="#">Call for Contributions</a>
                     <ul class="dropdown-menu">
                         <li><a href="../CallForContributions/call-for-papers.html">Call for Papers</a></li>
@@ -207,14 +197,15 @@
                     <ul class="dropdown-menu">
                         <li><a href="#">Advisory Committee</a></li>
                         <li><a href="#">Organizing Committee</a></li>
-                        <li><a href="../committees/technical-program-committee.html">Technical Program Committee</a></li>
+                        <li><a href="technical-program-committee.html">Technical Program Committee</a></li>
                         <li><a href="#">Track Chairs & Co-Chairs</a></li>
-                        <li><a href="../committees/international-advisory-committee.html">International Reviewers</a></li>
+                        <li><a href="international-advisory-committee.html">International Reviewers</a></li>
                     </ul>
                 </li>
 
                 <li><a href="../registration.html">Registration</a></li>
-               <li class="dropdown">
+
+                <li class="dropdown">
                     <a href="#">Sponsors & Exhibitor</a>
                     <ul class="dropdown-menu">
                         <li><a href="../Sponsor&Exhibitor/sponsorship-packages.html">Sponsorship packages</a></li>
@@ -226,10 +217,10 @@
                 <li class="dropdown">
                     <a href="#">Venue & Travel</a>
                     <ul class="dropdown-menu">
-                        <li><a href="venue-details.html">Venue details</a></li>
-                        <li><a href="travel-visa.html">Travel & visa support</a></li>
-                        <li><a href="accommodation.html">Accommodation suggestions</a></li>
-                        <li><a href="tourism.html">Tourism & excursions</a></li>
+                        <li><a href="../Venue&Travel/venue-details.html">Venue details</a></li>
+                        <li><a href="../Venue&Travel/travel-visa.html">Travel & visa support</a></li>
+                        <li><a href="../Venue&Travel/accommodation.html">Accommodation suggestions</a></li>
+                        <li><a href="../Venue&Travel/tourism.html">Tourism & excursions</a></li>
                     </ul>
                 </li>
                 <li><a href="../contact.html">Contact Us</a></li>
@@ -239,82 +230,94 @@
 </header>
 
 <section class="page-banner">
-    <h1>Travel & Visa Support</h1>
+    <h1>International Advisory Committee</h1>
 </section>
 
 <section class="content-section">
-    <h2>Travel & Visa Support</h2>
-
-    <h3>Getting to Sri Lanka</h3>
-    <p>
-        Bandaranaike International Airport (CMB) in Colombo is the main international gateway. The airport is approximately 115 km from Kandy (3–3.5 hours by road).
-    </p>
-
-    <div class="travel-grid">
-        <div class="travel-item">
-            <h4>By Air</h4>
-            <p>Direct flights operate from major Asian hubs including Singapore, Dubai, Delhi, Bangkok, and Kuala Lumpur. SriLankan Airlines is the national carrier with connections worldwide.</p>
-        </div>
-        <div class="travel-item">
-            <h4>Airport to Kandy</h4>
-            <p>Pre-arranged transfers available via the registration portal (LKR 12,000). Alternatively, take an Uber or taxi (~LKR 10,000–15,000) or the scenic train from Colombo Fort (3–4 hours).</p>
-        </div>
-    </div>
-
-    <h3>Local Transportation</h3>
-    <div class="transport-options">
-        <div class="transport-card">
-            <h4>Uber</h4>
-            <p>Available in Kandy area</p>
-        </div>
-        <div class="transport-card">
-            <h4>PickMe</h4>
-            <p>Local ride-hailing app</p>
-        </div>
-        <div class="transport-card">
-            <h4>Conference Shuttle</h4>
-            <p>Free from partner hotels</p>
-        </div>
-        <div class="transport-card">
-            <h4>Tuk-Tuk</h4>
-            <p>LKR 300–500 to venue</p>
-        </div>
-    </div>
-
-    <div class="visa-box">
-        <h4>Visa Requirements</h4>
+    <h2>International Advisory Committee</h2>
+    
+    <div class="intro-text">
         <p>
-            Most nationalities require an Electronic Travel Authorization (ETA) to enter Sri Lanka. The ETA is valid for 30 days and can be extended.
+            The International Advisory Committee provides strategic guidance and ensures that IEEE TENSYMP 2027 meets the highest standards of the IEEE organization. The committee comprises distinguished leaders from IEEE Region 10, Region 11, and leading international institutions.
         </p>
-        <p>
-            <strong>Apply online:</strong> <a href="https://www.eta.gov.lk" target="_blank" rel="noopener">www.eta.gov.lk</a><br>
-            Processing time: 24–48 hours | Fee: USD 50 (subject to change)
-        </p>
-        
-        <div class="visa-note">
-            <p>
-                <strong>Invitation Letters:</strong> If you require a visa support letter for your application, please email <a href="mailto:visa@tensymp2027.org" style="color: #92400e;">visa@tensymp2027.org</a> with your registration confirmation and passport details.
-            </p>
-        </div>
     </div>
 
-    <h3>Travel Tips</h3>
-    <div class="travel-grid">
-        <div class="travel-item">
-            <h4>Currency</h4>
-            <p>Sri Lankan Rupee (LKR). ATMs widely available. Major credit cards accepted at hotels and restaurants. USD 1 ≈ LKR 320.</p>
+    <h3>Committee Members</h3>
+    <div class="committee-grid">
+        <div class="committee-card special">
+            <div class="role">Director</div>
+            <div class="name">Prof. Takako Hashimoto</div>
+            <div class="affiliation">
+                <strong>Director, IEEE Region 10</strong>
+            </div>
         </div>
-        <div class="travel-item">
-            <h4>Weather</h4>
-            <p>May in Kandy: Warm and humid (25–30°C). Occasional rain showers. Pack light clothing and an umbrella.</p>
+
+        <div class="committee-card special">
+            <div class="role">Director-Elect</div>
+            <div class="name">Prof. S. M. Sameer</div>
+            <div class="affiliation">
+                <strong>Director-Elect, IEEE Region 10</strong>
+            </div>
         </div>
-        <div class="travel-item">
-            <h4>Power</h4>
-            <p>230V, 50Hz. Type D and Type G plugs. Bring a universal adapter.</p>
+
+        <div class="committee-card special">
+            <div class="role">Director-Elect</div>
+            <div class="name">Prof. Nirmal Nair</div>
+            <div class="affiliation">
+                <strong>Director-Elect, IEEE Region 11</strong>
+            </div>
         </div>
-        <div class="travel-item">
-            <h4>Emergency</h4>
-            <p>Police: 119 | Ambulance: 1990 | Tourist Police: 1912</p>
+
+        <div class="committee-card special">
+            <div class="role">Immediate Past Director</div>
+            <div class="name">Prof. Lance</div>
+            <div class="affiliation">
+                <strong>Immediate Past Director, IEEE Region 10</strong>
+            </div>
+        </div>
+
+        <div class="committee-card special">
+            <div class="role">Past Director</div>
+            <div class="name">Mr. Deepak Mathur</div>
+            <div class="affiliation">
+                <strong>Past Director, IEEE Region 10</strong>
+            </div>
+        </div>
+
+        <div class="committee-card special">
+            <div class="role">Section Chair</div>
+            <div class="name">Prof. Michel Ong</div>
+            <div class="affiliation">
+                <strong>Chair, IEEE Singapore Section</strong>
+            </div>
+        </div>
+
+        <div class="committee-card special">
+            <div class="role">Academic Advisor</div>
+            <div class="name">Prof. Vijay Narayanan</div>
+            <div class="affiliation">
+                <strong>Pennsylvania State University</strong><br>
+                USA
+            </div>
+        </div>
+
+        <div class="committee-card special">
+            <div class="role">Academic Advisor</div>
+            <div class="name">Prof. Saman Halgamuge</div>
+            <div class="affiliation">
+                <strong>University of Melbourne</strong><br>
+                Australia
+            </div>
+        </div>
+
+        <div class="committee-card special">
+            <div class="role">Academic Advisor</div>
+            <div class="name">Prof. Sri Parameswaran</div>
+            <div class="affiliation">
+                <strong>Computer Engineering</strong><br>
+                The University of Sydney<br>
+                Australia
+            </div>
         </div>
     </div>
 </section>
@@ -322,6 +325,7 @@
 <footer class="footer">
     <div class="footer-container">
 
+        <!-- Conference Info -->
         <div class="footer-col">
             <img src="../TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
             <p>
@@ -331,10 +335,11 @@
             </p>
         </div>
 
+        <!-- Quick Links -->
         <div class="footer-col">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Call for Papers</a></li>
                 <li><a href="#">Programme</a></li>
                 <li><a href="#">Registration</a></li>
@@ -342,16 +347,18 @@
             </ul>
         </div>
 
+        <!-- Conference -->
         <div class="footer-col">
             <h4>Conference</h4>
             <ul>
                 <li><a href="#">Important Dates</a></li>
                 <li><a href="#">Keynote Speakers</a></li>
                 <li><a href="#">Workshops & Tutorials</a></li>
-                <li><a href="../venue-details.html">Venue & Travel</a></li>
+                <li><a href="#">Venue & Travel</a></li>
             </ul>
         </div>
 
+        <!-- IEEE Links -->
         <div class="footer-col">
             <h4>IEEE</h4>
             <ul>
@@ -364,6 +371,7 @@
 
     </div>
 
+    <!-- Bottom Bar -->
     <div class="footer-bottom">
         <p>
             © 2027 IEEE Sri Lanka Section · IEEE TENSYMP 2027<br>

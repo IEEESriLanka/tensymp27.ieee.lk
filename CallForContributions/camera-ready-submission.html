@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Programme at a Glance | IEEE TENSYMP 2027</title>
+    <title>IEEE TENSYMP 2027 | Sri Lanka</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 
     <style>
-                .page-banner {
+        .page-banner {
             background: var(--dark);
             color: #fff;
             padding: 100px 8% 50px;
@@ -74,6 +74,16 @@
             color: var(--primary);
         }
 
+        .bullet-list {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-top: 10px;
+        }
+
+        .bullet-list li {
+        margin-bottom: 8px;
+        }
+
 
 
 /* CSS Variables */
@@ -112,73 +122,35 @@
   box-shadow: var(--shadow);
 }
 
+.bg-light {
+  background-color: var(--light);
+}
+
 
 .breadcrumb {
   color: var(--light);
   font-size: 0.9rem;
 }
 
-.timeline {
-  position: relative;
-  max-width: 700px;
-  margin: 40px auto;
-  padding-left: 40px;
-  display: block !important;
+.card {
+  background-color: var(--light);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+  border-left: 4px solid var(--primary);
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 12px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #d1d5db;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 28px;
-  display: block !important;
-}
-
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 6px;
-  width: 14px;
-  height: 14px;
-  background: var(--primary);
-  border-radius: 50%;
-}
-
-.timeline-content {
-  display: block !important;
-}
-
-.timeline-date {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--primary);
-}
-
-.timeline-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #002855;
-}
-
-.timeline-content p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #444;
-}
-
- </style>
+    </style>
 </head>
 
 <body>
+
     <script src="../script.js"></script>
 
     <!-- ================= NAVBAR ================= -->
@@ -201,7 +173,7 @@
                     <li class="dropdown">
                         <a href="#">Call for Contributions</a>
                         <ul class="dropdown-menu">
-                            <li><a href="call for papers.html">Call for Papers</a></li>
+                            <li><a href="call-for-papers.html">Call for Papers</a></li>
                             <li><a href="special-invited-papers.html">Special Invited Papers</a></li>
                             <li><a href="call-for-tutorials.html">Call for Tutorials </a></li>
                             <li><a href="important-dates.html">Important Dates</a></li>
@@ -229,9 +201,9 @@
                         <ul class="dropdown-menu">
                             <li><a href="#">Advisory Committee</a></li>
                             <li><a href="#">Organizing Committee</a></li>
-                            <li><a href="#">Technical Program Committee</a></li>
+                            <li><a href="../committees/technical-program-committee.html">Technical Program Committee</a></li>
                             <li><a href="#">Track Chairs & Co-Chairs</a></li>
-                            <li><a href="#">International Reviewers</a></li>
+                            <li><a href="../committees/international-advisory-committee.html">International Reviewers</a></li>
                         </ul>
                     </li>
 
@@ -262,87 +234,47 @@
     </header>
 
     <section class="page-banner">
-    
-            <h1 class="page-title">Important Dates</h1>
-            <div class="breadcrumb">Home > Call for Contributions > Important Dates</div>
-        </div>
-    
+            <h1>Camera Ready Submission</h1>
+            <div class="breadcrumb">Home > Call for Contributions > Camera Ready Submission</div>
+        
     </section>
 
     <main class="container">
         <div class="content-section">
-            <p style="text-align:center; font-size:0.9rem; color:#666; margin-top:30px;">
-  All dates are tentative and will be updated once officially confirmed.
-</p>
+            <p class="lead">Congratulations on the acceptance of your paper! Please follow the steps below to submit
+                your final camera-ready manuscript.</p>
 
+            <div style="margin-top: 40px;">
+                <div class="card" style="border-left-color: #28a745;">
+                    <h3 style="color: #28a745;">Deadline: May 01, 2026</h3>
+                    <p>Submissions after this date will not be included in the proceedings.</p>
+                </div>
 
-            <div class="timeline">
+                <h3>Step 1: Final Revision</h3>
+                <p>Revise your paper based on the reviewers' comments. Ensure that the formatting strictly adheres to
+                    the <a href="author-guidelines.html" style="color: var(--primary);">Author Guidelines</a>.</p>
 
-  <div class="timeline-item">
-    <div class="timeline-date">To Be Announced</div>
-    <div class="timeline-content">
-      <div class="timeline-title">Call for Papers Opens</div>
-      <p>The call for paper submissions will be announced soon.</p>
-    </div>
-  </div>
+                <h3 style="margin-top: 30px;">Step 2: PDF Verification</h3>
+                <p>All papers must be compatible with IEEE Xplore®. Use the PDF eXpress site to validate your paper.</p>
+                <ul class="bullet-list">
+                    <li>Go to IEEE PDF eXpress Site</li>
+                    <li>Enter Conference ID: <strong>2026ACADEMIC</strong></li>
+                    <li>Create an account and upload your source file</li>
+                </ul>
 
-  <div class="timeline-item">
-    <div class="timeline-date">To Be Announced</div>
-    <div class="timeline-content">
-      <div class="timeline-title">Special Session & Tutorial Proposals</div>
-      <p>Submission window for special sessions and tutorial proposals.</p>
-    </div>
-  </div>
+                <h3 style="margin-top: 30px;">Step 3: Copyright Transfer</h3>
+                <p>Sign the electronic usage and copyright agreement. You will receive a link to the copyright system
+                    upon acceptance.</p>
 
-  <div class="timeline-item">
-    <div class="timeline-date">To Be Announced</div>
-    <div class="timeline-content">
-      <div class="timeline-title">Paper Submission Deadline</div>
-      <p>Deadline for submitting full papers to regular tracks.</p>
-    </div>
-  </div>
+                <h3 style="margin-top: 30px;">Step 4: Final Submission</h3>
+                <p>Upload the validated PDF file and the copyright receipt to the submission system.</p>
 
-  <div class="timeline-item">
-    <div class="timeline-date">To Be Announced</div>
-    <div class="timeline-content">
-      <div class="timeline-title">Notification of Acceptance</div>
-      <p>Authors will be informed about the review decisions.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">To Be Announced</div>
-    <div class="timeline-content">
-      <div class="timeline-title">Camera-Ready Submission</div>
-      <p>Final versions of accepted papers will be collected.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">To Be Announced</div>
-    <div class="timeline-content">
-      <div class="timeline-title">Registration Opens</div>
-      <p>Participant registration details will be published.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Tentative · 2027</div>
-    <div class="timeline-content">
-      <div class="timeline-title">IEEE TENSYMP 2027 Conference</div>
-      <p>The symposium will be held on announced dates in 2027.</p>
-    </div>
-  </div>
-
-</div>
-
-
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="submit-online.html" class="btn">Submit Paper Now</a>
+                <a href="submit-online.html" class="btn" style="margin-top: 20px;">Upload Final Paper</a>
             </div>
         </div>
     </main>
-<!-- ================= FOOTER ================= -->
+
+        <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer-container">
 

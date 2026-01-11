@@ -151,12 +151,61 @@
         .bullet-list li {
         margin-bottom: 8px;
         }
+
+        
+/* Forms */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 98, 155, 0.1);
+}
+
+.form-text {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+.file-upload-wrapper {
+  border: 2px dashed #ddd;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.file-upload-wrapper:hover {
+  border-color: var(--primary);
+  background-color: rgba(0, 98, 155, 0.02);
+}
+
     </style>
 </head>
 
 <body>
-
-    <script src="../script.js"></script>
+<script src="../script.js"></script>
 
     <!-- ================= NAVBAR ================= -->
     <header class="navbar">
@@ -178,7 +227,7 @@
                     <li class="dropdown">
                         <a href="#">Call for Contributions</a>
                         <ul class="dropdown-menu">
-                            <li><a href="call for papers.html">Call for Papers</a></li>
+                            <li><a href="call-for-papers.html">Call for Papers</a></li>
                             <li><a href="special-invited-papers.html">Special Invited Papers</a></li>
                             <li><a href="call-for-tutorials.html">Call for Tutorials </a></li>
                             <li><a href="important-dates.html">Important Dates</a></li>
@@ -206,9 +255,9 @@
                         <ul class="dropdown-menu">
                             <li><a href="#">Advisory Committee</a></li>
                             <li><a href="#">Organizing Committee</a></li>
-                            <li><a href="#">Technical Program Committee</a></li>
+                            <li><a href="../committees/technical-program-committee.html">Technical Program Committee</a></li>
                             <li><a href="#">Track Chairs & Co-Chairs</a></li>
-                            <li><a href="#">International Reviewers</a></li>
+                            <li><a href="../committees/international-advisory-committee.html">International Reviewers</a></li>
                         </ul>
                     </li>
 
@@ -238,64 +287,94 @@
         </div>
     </header>
 
-    <section class="page-banner">
-
-            <h1 >Presentation Guidelines</h1>
-            <div class="breadcrumb">Home > Call for Contributions > Presentation Guidelines</div>
-  
+<section class="page-banner">
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Submit Online</h1>
+            <div class="breadcrumb">Home > Call for Contributions > Submit Online</div>
+        </div>
     </section>
+</section>
 
     <main class="container">
+        <div class="content-section" style="max-width: 800px; margin: 0 auto; margin-bottom: 40px;">
+            <p class="lead">Use the form below to submit your manuscript for review. Ensure you have followed the <a
+                    href="author-guidelines.html" style="color: var(--primary); text-decoration: underline;">Author
+                    Guidelines</a> before submitting.</p>
 
-        <div class="content-section">
-            <h2 style="border-bottom: 2px solid var(--light); padding-bottom: 15px; margin-bottom: 30px;">Oral
-                Presentation Guidelines</h2>
-            <div class="row" style="display: flex; gap: 40px; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 300px;">
-                    <p>All oral presentations must be delivered in English. Please follow the timing strictly as session
-                        chairs will enforce time limits.</p>
-                    <ul class="bullet-list">
-                        <li><strong>Duration:</strong> 15 minutes for presentation + 5 minutes for Q&A.</li>
-                        <li><strong>Format:</strong> PPTX or PDF. Wide screen (16:9) aspect ratio is recommended.</li>
-                        <li><strong>Setup:</strong> Please arrive at the session room at least 10 minutes before the
-                            session starts to load your slides.</li>
-                        <li><strong>Equipment:</strong> A laptop and projector will be provided. Please bring your
-                            presentation on a USB drive.</li>
-                    </ul>
-                </div>
-                <div style="flex: 1; min-width: 300px;">
-                    <div class="card" style="text-align: center;">
-                        <h4 style="color: var(--primary);">Tips for Success</h4>
-                        <p style="font-size: 0.9rem;">Keep slides simple with minimal text. Use visuals to support your
-                            points. Rehearse to ensure you stay within the time limit.</p>
+            <form id="submissionForm">
+                <div class="card" style="border-left: none; padding-top: 20px;">
+                    <h3>Paper Details</h3>
+                    <div class="form-group">
+                        <label class="form-label">Paper Title *</label>
+                        <input type="text" class="form-control" name="title" required
+                            placeholder="Enter the full title of your paper">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Track / Context *</label>
+                        <select class="form-control" required>
+                            <option value="">Select a track...</option>
+                            <option value="cs">Computer Science & AI</option>
+                            <option value="ee">Electrical Engineering</option>
+                            <option value="comm">Communications</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Abstract *</label>
+                        <textarea class="form-control" rows="5" required
+                            placeholder="Paste your abstract here..."></textarea>
                     </div>
                 </div>
-            </div>
+
+                <div class="card" style="border-left: none; padding-top: 20px;">
+                    <h3>Author Information</h3>
+                    <div class="row" style="display: flex; gap: 20px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label class="form-label">First Name *</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label class="form-label">Last Name *</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address *</label>
+                        <input type="email" class="form-control" required placeholder="author@institution.edu">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Affiliation *</label>
+                        <input type="text" class="form-control" required placeholder="University or Company Name">
+                    </div>
+                </div>
+
+                <div class="card" style="border-left: none; padding-top: 20px;">
+                    <h3>File Upload</h3>
+                    <div class="form-group">
+                        <label class="form-label">Manuscript (PDF only) *</label>
+                        <div class="file-upload-wrapper" onclick="document.getElementById('fileInput').click()">
+                            <input type="file" id="fileInput" style="display: none;" accept=".pdf" required
+                                onchange="this.parentElement.querySelector('span').innerText = this.files[0].name">
+                            <span style="color: #666;">Click to upload your PDF file (Max 10MB)</span>
+                        </div>
+                        <div class="form-text">File must be in IEEE format.</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button type="submit" class="btn" style="padding: 15px 40px; font-size: 1.1rem;">Submit
+                        Paper</button>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">By submitting, you agree to our terms and privacy
+                        policy.</p>
+                </div>
+            </form>
         </div>
-
-        <div class="content-section" style="margin-top: 30px;">
-            <h2 style="border-bottom: 2px solid var(--light); padding-bottom: 15px; margin-bottom: 30px;">Poster
-                Presentation Guidelines</h2>
-            <p>Poster sessions provide an interactive forum for authors to discuss their work. Authors must be present
-                during their designated session time.</p>
-
-            <div style="background-color: var(--light); padding: 25px; border-radius: 8px; margin-top: 20px;">
-                <h4 style="color: var(--dark); margin-bottom: 15px;">Poster Specifications</h4>
-                <ul class="bullet-list">
-                    <li><strong>Size:</strong> A0 (841 x 1189 mm) or A1 (594 x 841 mm). Portrait orientation is
-                        preferred.</li>
-                    <li><strong>Content:</strong> Title, Authors, Affiliation, Introduction, Method, Results, and
-                        Conclusion.</li>
-                    <li><strong>Visuals:</strong> Ensure text and figures are readable from a distance of 1.5 meters.
-                    </li>
-                    <li><strong>Mounting:</strong> Materials for mounting posters will be provided at the venue.</li>
-                </ul>
-            </div>
-        </div>
-
     </main>
 
-        <!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer-container">
 
