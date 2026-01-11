@@ -5,13 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
     ================================= */
     const navbar = document.querySelector(".navbar");
 
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
-        } else {
-            navbar.style.boxShadow = "none";
-        }
-    });
+    if (navbar) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    }
 
     /* =================================
        2. DROPDOWN ANIMATION (CSS + JS)
@@ -104,29 +106,92 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* =================================
-       6. MOBILE NAV TOGGLE
+       6. MOBILE NAV TOGGLE - Fresh Code
     ================================= */
-    const navToggle = document.querySelector('.nav-toggle'); 
-    const navContainer = document.querySelector('.nav-container');
+    (function() {
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mainNav = document.getElementById('main-nav');
+        const body = document.body;
 
-    if (navToggle) { 
-        navToggle.addEventListener('click', () => { 
-            navContainer.classList.toggle('nav-open'); 
-        }); 
-    }
-    navLinks.forEach(link => link.addEventListener('click', () => { 
-        if (navContainer.classList.contains('nav-open')) 
-            navContainer.classList.remove('nav-open'); 
-    }));
+        function toggleMenu() {
+            if (!hamburgerBtn || !mainNav) return;
+            hamburgerBtn.classList.toggle('active');
+            mainNav.classList.toggle('open');
+            body.style.overflow = mainNav.classList.contains('open') ? 'hidden' : '';
+        }
 
-    const menuToggle = document.getElementById("mobile-menu"); 
-    const nav = document.querySelector("nav");
+        function closeMenu() {
+            if (!hamburgerBtn || !mainNav) return;
+            hamburgerBtn.classList.remove('active');
+            mainNav.classList.remove('open');
+            body.style.overflow = '';
+        }
 
-    if (!menuToggle || !nav) return; 
-    menuToggle.addEventListener("click", () => {
-        menuToggle.classList.toggle("active"); 
-        nav.classList.toggle("active"); 
-    });
+        if (hamburgerBtn) {
+            hamburgerBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleMenu();
+            });
+        }
+
+        // Mobile dropdown toggles - close others when one opens
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(function(dropdown) {
+            const link = dropdown.querySelector('.nav-link');
+            if (link) {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 992) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        // Close all other dropdowns first
+                        dropdowns.forEach(function(otherDropdown) {
+                            if (otherDropdown !== dropdown && otherDropdown.classList.contains('open')) {
+                                otherDropdown.classList.remove('open');
+                            }
+                        });
+                        
+                        // Toggle current dropdown
+                        dropdown.classList.toggle('open');
+                    }
+                });
+            }
+        });
+
+        // Close menu on outside click
+        document.addEventListener('click', function(e) {
+            if (mainNav && mainNav.classList.contains('open')) {
+                const isClickOnNav = mainNav.contains(e.target);
+                const isClickOnButton = hamburgerBtn && hamburgerBtn.contains(e.target);
+                
+                if (!isClickOnNav && !isClickOnButton) {
+                    closeMenu();
+                }
+            }
+        });
+
+        // Close menu on link click
+        const navLinks = document.querySelectorAll('.nav-item:not(.dropdown) .nav-link');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 992) closeMenu();
+            });
+        });
+
+        const submenuLinks = document.querySelectorAll('.submenu a');
+        submenuLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 992) closeMenu();
+            });
+        });
+
+        // Close on resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 992 && mainNav && mainNav.classList.contains('open')) {
+                closeMenu();
+            }
+        });
+    })();
     // 4. Active Link Highlighting
     // Get current page URL filename
     const currentLocation = location.href;
