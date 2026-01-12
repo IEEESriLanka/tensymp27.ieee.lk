@@ -286,7 +286,6 @@
             color: #999;
         }
 
-        /* Organized By / Hosted By Section - Sponsor Style */
         .organized-hosted-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -351,14 +350,26 @@
             opacity: 1;
         }
 
+        .hosted-logo-img {
+            width: 490px;
+            height: 170px;
+            max-width: 100%;
+            height: auto;
+        }
+
         @media (max-width: 768px) {
             .organized-hosted-section {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
+
+            .hosted-logo-img {
+                width: 100%;
+                max-width: 350px;
+                height: auto;
+            }
         }
 
-        /* About Grid */
         .about-modern-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -424,7 +435,6 @@
             text-align: justify;
         }
 
-        /* Tracks Grid */
         .tracks-modern-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -931,7 +941,6 @@
             }
         }
 
-        /* TENSYMP History Section - Button Design */
         .history-buttons {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -1357,7 +1366,7 @@
                 <div class="org-logos-grid">
                     <div>
                         <img src="organized-removebg-preview.png" alt="University of Peradeniya"
-                            style="width: 490px; height: 170px;">
+                            class="hosted-logo-img">
                     </div>
                 </div>
             </div>
@@ -1653,7 +1662,8 @@
                     <li><a href="https://www.ieeer10.org/" target="_blank">IEEE Region 10</a></li>
                     <li><a href="https://www.ieee.org/about/corporate/governance/p7-8.html" target="_blank">IEEE
                             Policies</a></li>
-                    <li><a href="https://www.ieee.org/about/corporate/governance/code-of-conduct" target="_blank">Code of
+                    <li><a href="https://www.ieee.org/about/corporate/governance/code-of-conduct" target="_blank">Code
+                            of
                             Conduct</a></li>
                 </ul>
             </div>
@@ -1669,7 +1679,7 @@
     </footer>
 
     <script>
-        // Mobile Navigation - Fresh Implementation
+
         (function () {
             'use strict';
 
@@ -1678,7 +1688,6 @@
             const body = document.body;
             const isMobile = window.innerWidth <= 992;
 
-            // Toggle mobile menu
             function toggleMenu() {
                 if (!hamburgerBtn || !mainNav) return;
 
@@ -1692,7 +1701,6 @@
                 }
             }
 
-            // Close mobile menu
             function closeMenu() {
                 if (!hamburgerBtn || !mainNav) return;
 
@@ -1701,7 +1709,6 @@
                 body.style.overflow = '';
             }
 
-            // Hamburger button click
             if (hamburgerBtn) {
                 hamburgerBtn.addEventListener('click', function (e) {
                     e.stopPropagation();
@@ -1709,7 +1716,6 @@
                 });
             }
 
-            // Handle dropdown toggles on mobile - close others when one opens
             const dropdowns = document.querySelectorAll('.dropdown');
             dropdowns.forEach(function (dropdown) {
                 const link = dropdown.querySelector('.nav-link');
@@ -1719,21 +1725,18 @@
                             e.preventDefault();
                             e.stopPropagation();
 
-                            // Close all other dropdowns first
                             dropdowns.forEach(function (otherDropdown) {
                                 if (otherDropdown !== dropdown && otherDropdown.classList.contains('open')) {
                                     otherDropdown.classList.remove('open');
                                 }
                             });
 
-                            // Toggle current dropdown
                             dropdown.classList.toggle('open');
                         }
                     });
                 }
             });
 
-            // Close menu when clicking outside
             document.addEventListener('click', function (e) {
                 if (mainNav && mainNav.classList.contains('open')) {
                     const navList = mainNav.querySelector('.nav-list');
@@ -1741,14 +1744,12 @@
                     const isClickOnButton = hamburgerBtn && hamburgerBtn.contains(e.target);
                     const isClickOnNav = mainNav.contains(e.target);
 
-                    // Close if clicking outside the nav menu and not on the hamburger button
                     if (!isClickOnNav && !isClickOnButton) {
                         closeMenu();
                     }
                 }
             });
 
-            // Close menu when clicking nav links (non-dropdown)
             const navLinks = document.querySelectorAll('.nav-item:not(.dropdown) .nav-link');
             navLinks.forEach(function (link) {
                 link.addEventListener('click', function () {
@@ -1758,7 +1759,6 @@
                 });
             });
 
-            // Close menu when clicking submenu links
             const submenuLinks = document.querySelectorAll('.submenu a');
             submenuLinks.forEach(function (link) {
                 link.addEventListener('click', function () {
@@ -1768,7 +1768,6 @@
                 });
             });
 
-            // Navbar scroll effect
             const navbar = document.querySelector('.navbar');
             if (navbar) {
                 window.addEventListener('scroll', function () {
@@ -1780,13 +1779,13 @@
                 });
             }
 
-            // Close menu on window resize if switching to desktop
             window.addEventListener('resize', function () {
                 if (window.innerWidth > 992 && mainNav && mainNav.classList.contains('open')) {
                     closeMenu();
                 }
             });
         })();
+
     </script>
 
     <script>
