@@ -303,79 +303,22 @@
 
     <main class="container">
         <div class="content-section" style="max-width: 800px; margin: 0 auto; margin-bottom: 40px;">
-            <p class="lead">Use the form below to submit your manuscript for review. Ensure you have followed the <a
+            <p class="lead">Use the instructions below to prepare your manuscript. Ensure you have followed the <a
                     href="author-guidelines.html" style="color: var(--primary); text-decoration: underline;">Author
                     Guidelines</a> before submitting.</p>
 
-            <form id="submissionForm">
-                <div class="card" style="border-left: none; padding-top: 20px;">
-                    <h3>Paper Details</h3>
-                    <div class="form-group">
-                        <label class="form-label">Paper Title *</label>
-                        <input type="text" class="form-control" name="title" required
-                            placeholder="Enter the full title of your paper">
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Track / Context *</label>
-                        <select class="form-control" required>
-                            <option value="">Select a track...</option>
-                            <option value="cs">Computer Science & AI</option>
-                            <option value="ee">Electrical Engineering</option>
-                            <option value="comm">Communications</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Abstract *</label>
-                        <textarea class="form-control" rows="5" required
-                            placeholder="Paste your abstract here..."></textarea>
-                    </div>
-                </div>
-
-                <div class="card" style="border-left: none; padding-top: 20px;">
-                    <h3>Author Information</h3>
-                    <div class="row" style="display: flex; gap: 20px;">
-                        <div class="form-group" style="flex: 1;">
-                            <label class="form-label">First Name *</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group" style="flex: 1;">
-                            <label class="form-label">Last Name *</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Email Address *</label>
-                        <input type="email" class="form-control" required placeholder="author@institution.edu">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Affiliation *</label>
-                        <input type="text" class="form-control" required placeholder="University or Company Name">
-                    </div>
-                </div>
-
-                <div class="card" style="border-left: none; padding-top: 20px;">
-                    <h3>File Upload</h3>
-                    <div class="form-group">
-                        <label class="form-label">Manuscript (PDF only) *</label>
-                        <div class="file-upload-wrapper" onclick="document.getElementById('fileInput').click()">
-                            <input type="file" id="fileInput" style="display: none;" accept=".pdf" required
-                                onchange="this.parentElement.querySelector('span').innerText = this.files[0].name">
-                            <span style="color: #666;">Click to upload your PDF file (Max 10MB)</span>
-                        </div>
-                        <div class="form-text">File must be in IEEE format.</div>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 30px;">
-                    <button type="submit" class="btn" style="padding: 15px 40px; font-size: 1.1rem;">Submit
-                        Paper</button>
-                    <p style="margin-top: 10px; font-size: 0.9rem;">By submitting, you agree to our terms and privacy
-                        policy.</p>
-                </div>
-            </form>
+            <div class="card" style="border-left: none; padding-top: 20px;">
+                <h3>Online submission has been disabled</h3>
+                <p>To submit your manuscript, please email the complete paper (IEEE PDF format) to <a href="mailto:submissions@tensymp2027.ieee.lk">submissions@tensymp2027.ieee.lk</a>.
+                Include the following in your email:</p>
+                <ul class="bullet-list">
+                    <li>Paper title</li>
+                    <li>Track selection</li>
+                    <li>Author names and affiliations</li>
+                    <li>Corresponding author contact</li>
+                </ul>
+                <p>All submissions must follow the <a href="author-guidelines.html" style="color: var(--primary); text-decoration: underline;">author guidelines</a>.</p>
+            </div>
         </div>
     </main>
 
