@@ -1,13 +1,17 @@
-<!DOCTYPE html>
+<parameter name="content"><!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact | IEEE TENSYMP 2027</title>
+    <title>Sponsors | IEEE TENSYMP 2027</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
     <style>
         .page-banner {
             background: var(--dark);
@@ -20,87 +24,117 @@
             font-weight: 600;
         }
 
-        .contact-section {
-            padding: 60px 8%;
-            max-width: 1000px;
+        /* Sub navigation */
+        .sub-nav {
+            background: #f8f9fa;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 0 8%;
+        }
+
+        .sub-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+        .sub-nav a {
+            display: block;
+            padding: 15px 0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            color: #666;
+            border-bottom: 2px solid transparent;
         }
 
-        .contact-info h2 {
-            font-size: 1.1rem;
+        .sub-nav a:hover,
+        .sub-nav a.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .sponsors-intro {
+            text-align: center;
+            padding: 50px 8%;
+            background: #fff;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .sponsors-intro p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Coming Soon Section */
+        .sponsors-coming-soon {
+            padding: 120px 8%;
+            text-align: center;
+            background: #fff;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sponsors-coming-soon h2 {
+            font-size: 2rem;
             color: #002244;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
 
-        .contact-block {
+        .sponsors-coming-soon p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            line-height: 1.8;
             margin-bottom: 30px;
         }
 
-        .contact-block h3 {
-            font-size: 0.95rem;
+        .sponsors-coming-soon .icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        /* Become a Sponsor CTA */
+        .sponsor-cta {
+            background: #f8f9fa;
+            padding: 50px 8%;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .sponsor-cta h3 {
+            font-size: 1.3rem;
+            color: #002244;
+            margin-bottom: 10px;
             font-weight: 600;
-            color: #333;
-            margin-bottom: 8px;
         }
 
-        .contact-block p {
-            font-size: 0.95rem;
+        .sponsor-cta p {
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto 20px;
             color: #555;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
-        .contact-block a {
+        .sponsor-cta a {
             color: var(--primary);
             text-decoration: none;
+            font-weight: 500;
         }
 
-        .contact-block a:hover {
+        .sponsor-cta a:hover {
             text-decoration: underline;
         }
 
-        .venue-info h2 {
-            font-size: 1.1rem;
-            color: #002244;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .venue-info p {
-            font-size: 0.95rem;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .venue-info address {
-            font-style: normal;
-            font-size: 0.95rem;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .map-container {
-            margin-top: 40px;
-            border-radius: 19px;
-            overflow: hidden;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 300px;
-            display: block;
-            border-radius: 19px;
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
             .page-banner {
                 padding: 80px 5% 40px;
@@ -110,25 +144,41 @@
                 font-size: 1.8rem;
             }
 
-            .contact-section {
-                padding: 40px 5%;
+            .sub-nav ul {
+                gap: 20px;
             }
 
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
+            .sub-nav a {
+                font-size: 0.85rem;
+            }
+
+            .sponsors-coming-soon {
+                padding: 80px 5%;
+                min-height: 300px;
+            }
+
+            .sponsors-coming-soon h2 {
+                font-size: 1.6rem;
+            }
+
+            .sponsors-coming-soon p {
+                font-size: 1rem;
+            }
+
+            .sponsors-coming-soon .icon {
+                font-size: 3rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 
     <header class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="Go to homepage">
-                <img src="TENSYMP 2027.png" alt="IEEE TENSYMP 2027">
+            <a href="../index.html" class="logo" aria-label="Go to homepage">
+                <img src="../TENSYMP 2027.png" alt="IEEE TENSYMP 2027">
             </a>
 
             <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle navigation menu">
@@ -139,22 +189,22 @@
 
             <nav class="main-nav" id="main-nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Call for Contributions</a>
                         <ul class="submenu">
-                            <li><a href="CFC/cfp.html">Call for Papers</a></li>
-                            <li><a href="CFC/sip.html">Special Invited Papers</a>
+                            <li><a href="../CFC/cfp.html">Call for Papers</a></li>
+                            <li><a href="../CFC/sip.html">Special Invited Papers</a>
                             </li>
-                            <li><a href="CFC/cft.html">Call for Tutorials</a></li>
-                            <li><a href="CFC/dates.html">Important Dates</a></li>
-                            <li><a href="CFC/tech_guidelines.html">Technical Program
+                            <li><a href="../CFC/cft.html">Call for Tutorials</a></li>
+                            <li><a href="../CFC/dates.html">Important Dates</a></li>
+                            <li><a href="../CFC/tech_guidelines.html">Technical Program
                                     Guidelines</a></li>
-                            <li><a href="CFC/author_guide.html">Author Guidelines</a></li>
-                            <li><a href="CFC/submit.html">Submit Online</a></li>
-                            <li><a href="CFC/camera_ready.html">Camera Ready Paper
+                            <li><a href="../CFC/author_guide.html">Author Guidelines</a></li>
+                            <li><a href="../CFC/submit.html">Submit Online</a></li>
+                            <li><a href="../CFC/camera_ready.html">Camera Ready Paper
                                     Submission</a></li>
-                            <li><a href="CFC/present_guide.html">Presentation Submission
+                            <li><a href="../CFC/present_guide.html">Presentation Submission
                                     Guidelines</a></li>
                         </ul>
                     </li>
@@ -162,126 +212,78 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Programme</a>
                         <ul class="submenu">
-                            <li><a href="./PRG/glance.html">At a Glance</a></li>
-                            <li><a href="./PRG/keynotes.html">Keynote Speakers</a></li>
-                            <li><a href="./PRG/panels.html">Plenary Panels</a></li>
-                            <li><a href="./PRG/sessions.html">Technical Sessions</a></li>
-                            <li><a href="./PRG/workshops.html">Workshops & Tutorials</a></li>
+                            <li><a href="../PRG/glance.html">At a Glance</a></li>
+                            <li><a href="../PRG/keynotes.html">Keynote Speakers</a></li>
+                            <li><a href="../PRG/panels.html">Plenary Panels</a></li>
+                            <li><a href="../PRG/sessions.html">Technical Sessions</a></li>
+                            <li><a href="../PRG/workshops.html">Workshops & Tutorials</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Committees</a>
                         <ul class="submenu">
-                            <li><a href="./CMT/advisory.html">Advisory Committee</a></li>
-                            <li><a href="./CMT/organizing.html">Organizing Committee</a></li>
-                            <li><a href="./CMT/tpc.html">Technical Program Committee</a>
+                            <li><a href="../CMT/advisory.html">Advisory Committee</a></li>
+                            <li><a href="../CMT/organizing.html">Organizing Committee</a></li>
+                            <li><a href="../CMT/tpc.html">Technical Program Committee</a>
                             </li>
                             <li><a href="#">Track Chairs & Co-Chairs</a></li>
-                            <li><a href="./CMT/intl_advisory.html">International Reviewers</a>
+                            <li><a href="../CMT/intl_advisory.html">International Reviewers</a>
                             </li>
                         </ul>
                     </li>
 
-                    <!-- <li class="nav-item"><a href="registration.html" class="nav-link">Registration</a></li> -->
+                    <!-- <li class="nav-item"><a href="../registration.html" class="nav-link">Registration</a></li> -->
 
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Sponsors & Exhibitor</a>
                         <ul class="submenu">
-                            <li><a href="SE/packages.html">Sponsorship packages</a></li>
-                            <li><a href="SE/exhibition.html">Exhibition opportunities</a></li>
-                            <li><a href="SE/sponsors.html">Our Sponsors</a></li>
+                            <li><a href="../SE/packages.html">Sponsorship packages</a></li>
+                            <li><a href="../SE/exhibition.html">Exhibition opportunities</a></li>
+                            <li><a href="../SE/sponsors.html">Our Sponsors</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Venue & Travel</a>
                         <ul class="submenu">
-                            <li><a href="VT/venue.html">Venue details</a></li>
-                            <li><a href="VT/visa.html">Travel & visa support</a></li>
-                            <li><a href="VT/accommodation.html">Accommodation suggestions</a></li>
-                            <li><a href="VT/tourism.html">Tourism & excursions</a></li>
+                            <li><a href="../VT/venue.html">Venue details</a></li>
+                            <li><a href="../VT/visa.html">Travel & visa support</a></li>
+                            <li><a href="../VT/accommodation.html">Accommodation suggestions</a></li>
+                            <li><a href="../VT/tourism.html">Tourism & excursions</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="../contact.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section class="page-banner">
-        <h1>Contact</h1>
+        <h1>Our Sponsors</h1>
     </section>
 
-    <section class="contact-section">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h2>Get in Touch</h2>
+    <section class="sponsors-coming-soon">
+        <div class="icon"></div>
+        <h2>Sponsors Will Be Announced Soon</h2>
+        <p>
+            We are currently finalizing partnerships with leading organizations in technology and innovation. 
+            Our sponsors will be announced in the coming weeks. Stay tuned for updates!
+        </p>
+    </section>
 
-                <div class="venue-info">
-                <h2>Symposium Secretary</h2>
-                <address>
-                    Dr. Upul Jayasinghe<br>
-                    University of Peradeniya<br>
-                    Sri Lanka 
-                </address>
-
-                <div class="">
-                    Email: <a href="mailto:upul.jayasinghe@peradeniya.ac.lk">tensymp2027@eng.pdn.ac.lk</a>
-                </div>
-
-                <br>
-                <br>
-                
-            </div>
-
-            <!--
-                <div class="contact-block">
-                    <h3>General Enquiries</h3>
-                    <p><a href="mailto:info@tensymp2027.org">info@tensymp2027.org</a></p>
-                </div>
-
-                <div class="contact-block">
-                    <h3>Paper Submissions</h3>
-                    <p><a href="mailto:papers@tensymp2027.org">papers@tensymp2027.org</a></p>
-                </div>
-
-                <div class="contact-block">
-                    <h3>Registration</h3>
-                    <p><a href="mailto:registration@tensymp2027.org">registration@tensymp2027.org</a></p>
-                </div>
-
-                <div class="contact-block">
-                    <h3>Sponsorship</h3>
-                    <p><a href="mailto:sponsors@tensymp2027.org">sponsors@tensymp2027.org</a></p>
-                </div>
-            </div> -->
-
-            
-            <div class="venue-info">
-                <h2>Symposium Venue</h2>
-                <address>
-                    Faculty of Engineering<br>
-                    University of Peradeniya<br>
-                    Peradeniya 20400<br>
-                    Sri Lanka
-                </address>
-
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5!2d80.5967!3d7.2536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368a0e8f6e8e7%3A0x4b05a3ed2f9f0c3e!2sFaculty%20of%20Engineering%2C%20University%20of%20Peradeniya!5e0!3m2!1sen!2slk!4v1600000000000!5m2!1sen!2slk"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-        </div>
+    <section class="sponsor-cta">
+        <h3>Interested in Sponsoring?</h3>
+        <p>
+            For sponsorship enquiries, please contact us at <a href="mailto:info@tensymp2027.org">info@tensymp2027.org</a>
+        </p>
     </section>
 
     <footer class="footer">
         <div class="footer-container">
 
             <div class="footer-col">
-                <img src="TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
+                <img src="../TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
                 <p>
                     IEEE Region 10 Symposium 2027<br>
                     Faculty of Engineering<br>
@@ -292,7 +294,7 @@
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="#">Call for Papers</a></li>
                     <li><a href="#">Programme</a></li>
                     <li><a href="#">Registration</a></li>
@@ -316,8 +318,7 @@
                     <li><a href="#">IEEE Sri Lanka Section</a></li>
                     <li><a href="#">IEEE Region 10</a></li>
                     <li><a href="#">IEEE Policies</a></li>
-                    <li><a href="https://www.ieee.org/about/corporate/governance/code-of-conduct" target="_blank">Code
-                            of Conduct</a></li>
+                    <li><a href="https://www.ieee.org/about/corporate/governance/code-of-conduct" target="_blank">Code of Conduct</a></li>
                 </ul>
             </div>
 
@@ -331,15 +332,14 @@
         </div>
     </footer>
 
-    <script>
 
+    <script>
         (function () {
             'use strict';
 
             const hamburgerBtn = document.getElementById('hamburger-btn');
             const mainNav = document.getElementById('main-nav');
             const body = document.body;
-            const isMobile = window.innerWidth <= 992;
 
             function toggleMenu() {
                 if (!hamburgerBtn || !mainNav) return;
@@ -438,9 +438,9 @@
                 }
             });
         })();
-        
     </script>
 
 </body>
 
-</html>
+</html></parameter>
+
