@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Accommodation | IEEE TENSYMP 2027</title>
+    <title>Programme at a Glance | IEEE TENSYMP 2027</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+
     <style>
-        .page-banner {
+                .page-banner {
             background: var(--dark);
             color: #fff;
             padding: 100px 8% 50px;
@@ -34,90 +35,129 @@
             border-bottom: 2px solid #e5e7eb;
         }
 
+        .content-section h3 {
+            font-size: 1.1rem;
+            color: #002244;
+            margin: 30px 0 15px;
+        }
+
         .content-section p {
             font-size: 0.95rem;
             color: #444;
             line-height: 1.8;
             margin-bottom: 15px;
         }
-
-        /* Accommodation */
-        .hotels-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 25px;
+        
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
         }
 
-        .hotel-card {
+        .schedule-table th,
+        .schedule-table td {
             border: 1px solid #e5e7eb;
-            padding: 20px;
+            padding: 14px;
+            font-size: 0.9rem;
+            vertical-align: top;
         }
 
-        .hotel-card h4 {
-            font-size: 1rem;
+        .schedule-table th {
+            background: #f8fafc;
+            font-weight: 600;
             color: #002244;
-            margin-bottom: 6px;
+            text-align: left;
         }
 
-        .hotel-card .hotel-type {
-            font-size: 0.75rem;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
+        .day-title {
+            font-weight: 600;
+            color: var(--primary);
         }
 
-        .hotel-card p {
-            font-size: 0.88rem;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 8px;
+
+
+/* CSS Variables */
+:root {
+  --primary: #00629B;
+  --primary-hover: #004e7c;
+  --dark: #002855;
+  --light: #f8f9fa;
+  --text-grey: #555555;
+  --white: #ffffff;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --font: 'Outfit', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+
+
+
+/* Utility Classes */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+
+
+
+.breadcrumb {
+  color: var(--light);
+  font-size: 0.9rem;
+}
+
+.card {
+  background-color: var(--light);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+  border-left: 4px solid var(--primary);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+
+.bullet-list {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-top: 10px;
         }
 
-        .hotel-card .distance {
-            font-size: 0.82rem;
-            color: #666;
-        }
-
-        .hotel-card .discount-tag {
-            display: inline-block;
-            background: #dcfce7;
-            color: #166534;
-            font-size: 0.72rem;
-            padding: 4px 8px;
-            margin-top: 10px;
-        }
-
-        @media (max-width: 900px) {
-            .hotels-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .page-banner {
-                padding: 80px 5% 40px;
-            }
-
-            .page-banner h1 {
-                font-size: 1.8rem;
-            }
-
-            .content-section {
-                padding: 40px 5%;
-            }
-
-            .hotels-grid {
-                grid-template-columns: 1fr;
-            }
+        .bullet-list li {
+        margin-bottom: 8px;
         }
     </style>
 </head>
 
 <body>
-    <script src="../script.js"></script>
+<script src="../script.js"></script>
 
+    <!-- ================= NAVBAR ================= -->
     <header class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo" aria-label="Go to homepage">
@@ -136,18 +176,18 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Call for Contributions</a>
                         <ul class="submenu">
-                            <li><a href="../CallForContributions/call-for-papers.html">Call for Papers</a></li>
-                            <li><a href="../CallForContributions/special-invited-papers.html">Special Invited Papers</a>
+                            <li><a href="../CFC/cfp.html">Call for Papers</a></li>
+                            <li><a href="../CFC/sip.html">Special Invited Papers</a>
                             </li>
-                            <li><a href="../CallForContributions/call-for-tutorials.html">Call for Tutorials</a></li>
-                            <li><a href="../CallForContributions/important-dates.html">Important Dates</a></li>
-                            <li><a href="../CallForContributions/technical-program-guidelines.html">Technical Program
+                            <li><a href="../CFC/cft.html">Call for Tutorials</a></li>
+                            <li><a href="../CFC/dates.html">Important Dates</a></li>
+                            <li><a href="../CFC/tech_guidelines.html">Technical Program
                                     Guidelines</a></li>
-                            <li><a href="../CallForContributions/author-guidelines.html">Author Guidelines</a></li>
-                            <li><a href="../CallForContributions/submit-online.html">Submit Online</a></li>
-                            <li><a href="../CallForContributions/camera-ready-submission.html">Camera Ready Paper
+                            <li><a href="../CFC/author_guide.html">Author Guidelines</a></li>
+                            <li><a href="../CFC/submit.html">Submit Online</a></li>
+                            <li><a href="../CFC/camera_ready.html">Camera Ready Paper
                                     Submission</a></li>
-                            <li><a href="../CallForContributions/presentation-guidelines.html">Presentation Submission
+                            <li><a href="../CFC/present_guide.html">Presentation Submission
                                     Guidelines</a></li>
                         </ul>
                     </li>
@@ -155,23 +195,23 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Programme</a>
                         <ul class="submenu">
-                            <li><a href="../Programme/at-a-glance.html">At a Glance</a></li>
-                            <li><a href="../Programme/keynote-speakers.html">Keynote Speakers</a></li>
-                            <li><a href="../Programme/plenary-panels.html">Plenary Panels</a></li>
-                            <li><a href="../Programme/technical-sessions.html">Technical Sessions</a></li>
-                            <li><a href="../Programme/workshops-tutorials.html">Workshops & Tutorials</a></li>
+                            <li><a href="../PRG/glance.html">At a Glance</a></li>
+                            <li><a href="../PRG/keynotes.html">Keynote Speakers</a></li>
+                            <li><a href="../PRG/panels.html">Plenary Panels</a></li>
+                            <li><a href="../PRG/sessions.html">Technical Sessions</a></li>
+                            <li><a href="../PRG/workshops.html">Workshops & Tutorials</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Committees</a>
                         <ul class="submenu">
-                            <li><a href="../committees/advisory-committee.html">Advisory Committee</a></li>
-                            <li><a href="../committees/Organizing Committee.html">Organizing Committee</a></li>
-                            <li><a href="../committees/technical-program-committee.html">Technical Program Committee</a>
+                            <li><a href="../CMT/advisory.html">Advisory Committee</a></li>
+                            <li><a href="../CMT/organizing.html">Organizing Committee</a></li>
+                            <li><a href="../CMT/tpc.html">Technical Program Committee</a>
                             </li>
                             <li><a href="#">Track Chairs & Co-Chairs</a></li>
-                            <li><a href="../committees/international-advisory-committee.html">International Reviewers</a>
+                            <li><a href="../CMT/intl_advisory.html">International Reviewers</a>
                             </li>
                         </ul>
                     </li>
@@ -181,19 +221,19 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Sponsors & Exhibitor</a>
                         <ul class="submenu">
-                            <li><a href="../Sponsor&Exhibitor/sponsorship-packages.html">Sponsorship packages</a></li>
-                            <li><a href="../Sponsor&Exhibitor/exhibition.html">Exhibition opportunities</a></li>
-                            <li><a href="../Sponsor&Exhibitor/sponsors.html">Our Sponsors</a></li>
+                            <li><a href="../SE/packages.html">Sponsorship packages</a></li>
+                            <li><a href="../SE/exhibition.html">Exhibition opportunities</a></li>
+                            <li><a href="../SE/sponsors.html">Our Sponsors</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Venue & Travel</a>
                         <ul class="submenu">
-                            <li><a href="../Venue&Travel/venue-details.html">Venue details</a></li>
-                            <li><a href="../Venue&Travel/travel-visa.html">Travel & visa support</a></li>
-                            <li><a href="../Venue&Travel/accommodation.html">Accommodation suggestions</a></li>
-                            <li><a href="../Venue&Travel/tourism.html">Tourism & excursions</a></li>
+                            <li><a href="../VT/venue.html">Venue details</a></li>
+                            <li><a href="../VT/visa.html">Travel & visa support</a></li>
+                            <li><a href="../VT/accommodation.html">Accommodation suggestions</a></li>
+                            <li><a href="../VT/tourism.html">Tourism & excursions</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a href="../contact.html" class="nav-link">Contact Us</a></li>
@@ -202,75 +242,72 @@
         </div>
     </header>
 
-    <section class="page-banner">
-        <h1>Accommodation</h1>
-    </section>
-
-    <section class="content-section">
-        <h2>Accommodation</h2>
-        <p>
-            We have partnered with hotels in Kandy to offer discounted rates for Symposium attendees. Mention
-            <strong>"IEEE TENSYMP 2027"</strong> when booking to receive the Symposium rate.
-        </p>
-
-        <div class="hotels-grid">
-            <div class="hotel-card">
-                <div class="hotel-type">5-Star</div>
-                <h4>Cinnamon Citadel Kandy</h4>
-                <p>Luxury hotel on the banks of the Mahaweli River with modern amenities and spa.</p>
-                <div class="distance">8 km from venue</div>
-                <div class="discount-tag">15% Discount</div>
-            </div>
-
-            <div class="hotel-card">
-                <div class="hotel-type">5-Star</div>
-                <h4>Earl's Regency Hotel</h4>
-                <p>Hillside resort with panoramic views, pool, and fine dining restaurants.</p>
-                <div class="distance">5 km from venue</div>
-                <div class="discount-tag">12% Discount</div>
-            </div>
-
-            <div class="hotel-card">
-                <div class="hotel-type">4-Star</div>
-                <h4>Thilanka Hotel</h4>
-                <p>Contemporary hotel in Kandy city with rooftop restaurant and city views.</p>
-                <div class="distance">7 km from venue</div>
-                <div class="discount-tag">10% Discount</div>
-            </div>
-
-            <div class="hotel-card">
-                <div class="hotel-type">4-Star</div>
-                <h4>OZO Kandy</h4>
-                <p>Modern hotel near Kandy Lake with minimalist design and excellent service.</p>
-                <div class="distance">6 km from venue</div>
-                <div class="discount-tag">10% Discount</div>
-            </div>
-
-            <div class="hotel-card">
-                <div class="hotel-type">Budget</div>
-                <h4>Hotel & Hostel & Cafe</h4>
-                <p>Budget-friendly accommodation with clean rooms and friendly atmosphere.</p>
-                <div class="distance">6 km from venue</div>
-                <div class="discount-tag">8% Discount</div>
-            </div>
-
-            <div class="hotel-card">
-                <div class="hotel-type">On Campus</div>
-                <h4>University Guest House</h4>
-                <p>On-campus accommodation. Limited rooms available for speakers and committee members.</p>
-                <div class="distance">Walking distance</div>
-                <div class="discount-tag">Special Rate</div>
-            </div>
+<section class="page-banner">
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" style="text-align: center;">Special Invited Papers</h1>
+            <div class="breadcrumb" style="text-align: center;">Home > Call for Contributions > Special Invited Papers</div>
         </div>
-
-        <p style="margin-top: 25px; font-size: 0.9rem; color: #666;">
-            Booking deadline for Symposium rates: <strong>15 April 2027</strong>. Book early as rooms are limited.
-        </p>
+    </section>
     </section>
 
+   <main class="container">
+    <div class="content-section">
+        <h1 style="text-align: center;">Special Invited Papers</h1>
+
+
+        <p>In addition to regular submissions, the specific technical committees have curated a selection of Special Invited Papers from world-renowned experts.</p>
+        <br>
+        <h2>Overview</h2>
+        <p>The goal of special sessions is to provide a forum for contributions that are highly specialized in the Symposium theme, focused on new topics or innovative applications of established approaches. A special session consists of four to six papers, which, for example, addresses a particular theme or consists of work done in some particular international project. Prospective organizers are invited to submit proposals for special sessions by <strong>7th of October, 2026</strong>.</p>
+
+        <ul class="bullet-list">
+            <li><strong>Opening Submissions:</strong> 7 October 2026</li>
+            <li><strong>Paper Submission Deadline:</strong> 7 January 2027</li>
+            <li><strong>Notification of Acceptance:</strong> 7 March 2027</li>
+            <li><strong>Camera Ready Submission:</strong> 31 March 2027</li>
+        </ul>
+        <br>
+
+        <h2>Proposal Requirements</h2>
+        <p>Proposals for special sessions are required to contain the following information:</p>
+        <ul class="bullet-list">
+            <li>Title for the proposed special session</li>
+            <li>Humanitarian aspect addressed by the proposed special session</li>
+            <li>One page summary of the special session including its motivation and goals</li>
+            <li>List of prospective authors who will submit papers to the special session</li>
+            <li>List of organizers (names, affiliations and short bio)</li>
+        </ul>
+        <p>There is a two-page limit for each proposal. Selected special sessions will be announced through the Symposium and will be open for submission to everyone.</p>
+        <br>
+        <h2>Submission</h2>
+        <p>Proposals for special sessions must be sent to:</p>
+        <div class="card" style="margin-top: 10px;">
+            <p><strong>Special Sessions Chair</strong><br>
+            Prof Budhika Jayaseka<br>
+            Past Chair, IEEE Sri Lanka Section,<br>
+            Electrical Engineering, University of Moratuwa<br>
+            <a href="mailto:buddhika@ieee.org">buddhika@ieee.org</a></p>
+        </div>
+        <br>
+
+        <h2>Review Process</h2>
+        <p>All papers will be peer-reviewed and will appear in the Symposium proceedings. The organizers will be Track Chairs (TC) for the proposed special session track. They are also responsible to assign reviewers and make judgment of the submitted papers for the special session. Papers co-authored by the special session organizers will be managed by other TCs to avoid conflicts of interest.</p>
+        <p>Please note that special session papers will be subject to the same rigorous review process which applies to regular papers not included in special sessions. The minimum number of papers per special session is four. If fewer than four papers submitted to a special session are accepted based on the reviewing process, the Program Committee reserves the right to re-assign these accepted papers to regular sessions.</p>
+
+        <br>
+        <h2>Invitation</h2>
+        <p>We look forward to hosting your Special Session at IEEE TENSYMP 2027.</p>
+    </div>
+    </main>
+
+
+   
+<!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer-container">
 
+            <!-- Symposium Info -->
             <div class="footer-col">
                 <img src="../TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
                 <p>
@@ -280,10 +317,11 @@
                 </p>
             </div>
 
+            <!-- Quick Links -->
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Call for Papers</a></li>
                     <li><a href="#">Programme</a></li>
                     <li><a href="#">Registration</a></li>
@@ -291,16 +329,18 @@
                 </ul>
             </div>
 
+            <!-- Symposium -->
             <div class="footer-col">
                 <h4>Symposium</h4>
                 <ul>
                     <li><a href="#">Important Dates</a></li>
                     <li><a href="#">Keynote Speakers</a></li>
                     <li><a href="#">Workshops & Tutorials</a></li>
-                    <li><a href="../venue-details.html">Venue & Travel</a></li>
+                    <li><a href="#">Venue & Travel</a></li>
                 </ul>
             </div>
 
+            <!-- IEEE Links -->
             <div class="footer-col">
                 <h4>IEEE</h4>
                 <ul>
@@ -313,6 +353,7 @@
 
         </div>
 
+        <!-- Bottom Bar -->
         <div class="footer-bottom">
             <p>
                 © 2027 IEEE Sri Lanka Section · IEEE TENSYMP 2027<br>
@@ -320,7 +361,6 @@
             </p>
         </div>
     </footer>
-
 
     <script>
         (function () {
@@ -432,3 +472,4 @@
 </body>
 
 </html>
+
