@@ -2,30 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Programme at a Glance | IEEE TENSYMP 2027</title>
+    <title>Call for Special Sessions | IEEE TENSYMP 2027</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-
     <style>
-        .page-banner {
+                .page-banner {
             background: var(--dark);
             color: #fff;
             padding: 100px 8% 50px;
         }
-
         .page-banner h1 {
             font-size: 2.2rem;
             font-weight: 600;
         }
-
         .content-section {
             padding: 50px 8%;
             max-width: 1100px;
             margin: 0 auto;
         }
-
         .content-section h2 {
             font-size: 1.4rem;
             color: #002244;
@@ -33,13 +28,11 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #e5e7eb;
         }
-
         .content-section h3 {
             font-size: 1.1rem;
             color: #002244;
             margin: 30px 0 15px;
         }
-
         .content-section p {
             font-size: 0.95rem;
             color: #444;
@@ -52,7 +45,6 @@
             border-collapse: collapse;
             margin-top: 30px;
         }
-
         .schedule-table th,
         .schedule-table td {
             border: 1px solid #e5e7eb;
@@ -60,155 +52,96 @@
             font-size: 0.9rem;
             vertical-align: top;
         }
-
         .schedule-table th {
             background: #f8fafc;
             font-weight: 600;
             color: #002244;
             text-align: left;
         }
-
         .day-title {
             font-weight: 600;
             color: var(--primary);
         }
 
-        /* CSS Variables */
-        :root {
-        --primary: #00629B;
-        --primary-hover: #004e7c;
-        --dark: #002855;
-        --light: #f8f9fa;
-        --text-grey: #555555;
-        --white: #ffffff;
-        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        --font: 'Outfit', sans-serif;
-        --transition: all 0.3s ease;
-        }
+/* CSS Variables */
+:root {
+  --primary: #00629B;
+  --primary-hover: #004e7c;
+  --dark: #002855;
+  --light: #f8f9fa;
+  --text-grey: #555555;
+  --white: #ffffff;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --font: 'Outfit', sans-serif;
+  --transition: all 0.3s ease;
+}
 
 
-        /* Utility Classes */
-        .btn {
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: var(--primary);
-        color: var(--white);
-        border-radius: 6px;
-        font-weight: 500;
-        cursor: pointer;
-        border: none;
-        transition: var(--transition);
-        }
+/* Utility Classes */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+.btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.bg-light {
+  background-color: var(--light);
+}
+.section-padding {
+  padding: 60px 0;
+}
 
-        .btn:hover {
-        background-color: var(--primary-hover);
-        transform: translateY(-2px);
-        box-shadow: var(--shadow);
-        }
+.breadcrumb {
+  color: var(--light);
+  font-size: 0.9rem;
+}
+.card {
+  background-color: var(--light);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+  border-left: 4px solid var(--primary);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
 
-        .bg-light {
-        background-color: var(--light);
-        }
-
-        .breadcrumb {
-        color: var(--light);
-        font-size: 0.9rem;
-        }
-
-        .page-banner {
-            background: var(--dark);
-            color: #fff;
-            padding: 100px 8% 50px;
-        }
-
-        .page-banner h1 {
-            font-size: 2.2rem;
-            font-weight: 600;
-        }
-
-        .content-section {
-            padding: 50px 8%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .content-section h2 {
-            font-size: 1.4rem;
-            color: #002244;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e5e7eb;
-        }
-
-        .content-section h3 {
-            font-size: 1.1rem;
-            color: #002244;
-            margin: 30px 0 15px;
-        }
-
-        .content-section p {
-            font-size: 0.95rem;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-        
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-        }
-
-        .schedule-table th,
-        .schedule-table td {
-            border: 1px solid #e5e7eb;
-            padding: 14px;
-            font-size: 0.9rem;
-            vertical-align: top;
-        }
-
-        .schedule-table th {
-            background: #f8fafc;
-            font-weight: 600;
-            color: #002244;
-            text-align: left;
-        }
-
-        .day-title {
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .bullet-list {
+.bullet-list {
         list-style-type: disc;
         padding-left: 20px;
         margin-top: 10px;
         }
-
         .bullet-list li {
         margin-bottom: 8px;
         }
-
     </style>
 </head>
 <body>
-
-    <script src="../script.js"></script>
-
+<script src="../script.js"></script>
     <!-- ================= NAVBAR ================= -->
     <header class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo" aria-label="Go to homepage">
                 <img src="../TENSYMP 2027.png" alt="IEEE TENSYMP 2027">
             </a>
-
             <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle navigation menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
-
             <nav class="main-nav" id="main-nav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
@@ -232,7 +165,6 @@
                                     Guidelines</a></li>
                         </ul>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Programme</a>
                         <ul class="submenu">
@@ -243,11 +175,10 @@
                             <li><a href="../PRG/workshops.html">Workshops & Tutorials</a></li>
                         </ul>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Committees</a>
                         <ul class="submenu">
-                            <li><a href="..//CMT/advisory.html">Advisory Committee</a></li>
+                            <li><a href="../CMT/advisory.html">Advisory Committee</a></li>
                             <li><a href="../CMT/organizing.html">Organizing Committee</a></li>
                             <li><a href="../CMT/tpc.html">Technical Program Committee</a>
                             </li>
@@ -256,9 +187,7 @@
                             </li>
                         </ul>
                     </li>
-
                     <!-- <li class="nav-item"><a href="../registration.html" class="nav-link">Registration</a></li> -->
-
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Sponsors & Exhibitor</a>
                         <ul class="submenu">
@@ -267,7 +196,6 @@
                             <li><a href="../SE/sponsors.html">Our Sponsors</a></li>
                         </ul>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Venue & Travel</a>
                         <ul class="submenu">
@@ -282,123 +210,132 @@
             </nav>
         </div>
     </header>
-    <section class="page-banner">
-    <h1 style="text-align: center;">Call for Papers</h1>
-
-<div class="breadcrumb" style="text-align: center;">
-  TENSYMP 2027 is now calling for full paper submission. Prospective authors are invited to
-  submit their full papers with maximum 06 pages.
-</div>
-
-</section>
-
-    <!-- Main Content -->
-    <main class="container">
-        <div class="content-section">
-
-            <!-- Flyer Preview -->
-            <h2>Call for Papers Flyer</h2>
-            <div style="text-align:center; margin-bottom:30px;">
-                <iframe 
-                    src="../assets/TENSYMP2027_flyer.pdf" 
-                    width="100%" 
-                    height="600px" 
-                    style="border:1px solid #ccc; border-radius:10px;">
-                </iframe>
-
-                <br><br>
-                <a href="../assets/TENSYMP2027_flyer.pdf" class="btn" download>
-                    Download Flyer
-                </a>
-            </div>
-
-
-            <!-- Tracks -->
-            <h2>Call for Papers – Tracks</h2>
-
-            <ol type="I" style="padding-left: 25px;">
-
-                <li><strong>Artificial Intelligence, Machine Learning, and Data Intelligence</strong></li>
-                <ul class="bullet-list">
-                    <li>AI for social good, resilient systems, predictive analytics, and intelligent decision-making frameworks.</li>
-                </ul>
-
-                <li><strong>Future Communication and Networking Technologies</strong></li>
-                <ul class="bullet-list">
-                    <li>5G/6G networks, IoT infrastructure, sensor platforms, and secure communication systems.</li>
-                </ul>
-
-                <li><strong>Cyber-Physical Systems, IoT, and Intelligent Automation</strong></li>
-                <ul class="bullet-list">
-                    <li>Smart sensing, real-time control, robotics, and integrated systems for adaptive applications.</li>
-                </ul>
-
-                <li><strong>Sustainable Energy and Environmental Technologies</strong></li>
-                <ul class="bullet-list">
-                    <li>Renewable energy, smart grids, environmental monitoring, and climate-resilient designs.</li>
-                </ul>
-
-                <li><strong>Cybersecurity, Privacy, and Resilient Computing</strong></li>
-                <ul class="bullet-list">
-                    <li>Secure architectures, privacy-preserving systems, and fault-tolerant computing.</li>
-                </ul>
-
-                <li><strong>Technology for Health, Humanity, and Society</strong></li>
-                <ul class="bullet-list">
-                    <li>AI in healthcare, telemedicine, ICT for communities, and socially impactful innovations.</li>
-                </ul>
-
-                <li><strong>Ethics, Policy, and Governance in Connected Systems</strong></li>
-                <ul class="bullet-list">
-                    <li>Responsible AI, governance frameworks, standards, and ethical challenges.</li>
-                </ul>
-
-                <li><strong>Education and Capacity Building in Resilient Technologies</strong></li>
-                <ul class="bullet-list">
-                    <li>Digital literacy, workforce development, and engineering education for future technologies.</li>
-                </ul>
-
-            </ol>
-            
-            <br>
-            <br>
-
-            <!-- Important Dates -->
-            <h2>Important Dates</h2>
-            <ul class="bullet-list">
-                <li><strong>Opening Submissions:</strong> 7 October 2026</li>
-                <li><strong>Paper Submission Deadline:</strong> 7 January 2027</li>
-                <li><strong>Notification of Acceptance:</strong> 7 March 2027</li>
-                <li><strong>Camera Ready Submission:</strong> 31 March 2027</li>
-                <li><strong>Symposium Dates:</strong> 12–14 May 2027</li>
-            </ul>
-
-
-            <br> <br>
-            
-
-            <!-- Submission Info -->
-            <h2>Submission Guidelines</h2>
-            <p>
-                Full papers (4–6 pages, IEEE double-column format) are invited. Submissions should 
-                present original research contributions, innovative applications, or case studies aligned with the symposium theme.
-            </p>
-
-            <p>
-                Accepted and presented papers will be submitted to IEEE Xplore subject to IEEE quality standards.
-            </p>
-
-            <p>
-                Please submit your paper through EDAS at <a href="https://edas.info/N35167" target="_blank" rel="noopener noreferrer">https://edas.info/N35167</a>.
-            </p>
-
+<section class="page-banner">
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" style="text-align: center;">Call for Special Sessions</h1>
+            <div class="breadcrumb" style="text-align: center;">Home > Call for Contributions > Call for Special Sessions</div>
         </div>
+    </section>
+    </section>
+   <main class="container">
+    <div class="content-section">
+
+        <p style="font-size: 1.1rem; text-align: center;">
+            <strong>IEEE TENSYMP 2027</strong><br>
+            IEEE Region 10 Symposium<br>
+            12&ndash;14 May 2027 | Kandy, Sri Lanka<br>
+            <em>Theme: Connected Intelligence for Resilient Societies</em>
+        </p>
+
+        <br>
+
+        <h2>Organize a Special Session at IEEE TENSYMP 2027</h2>
+        <p>IEEE TENSYMP 2027 invites proposals for Special Sessions focusing on emerging, niche, and interdisciplinary research topics that may not be fully covered by the main conference tracks.</p>
+        <p>Special Sessions are particularly encouraged in rapidly evolving areas, cross-disciplinary themes, industry-driven topics, and collaborative international research initiatives. These sessions provide a platform to highlight novel directions, visionary ideas, and community-building efforts within IEEE Region 10 and beyond.</p>
+
+        <br>
+
+        <h2>Special Session Scope</h2>
+        <p>Proposals are especially welcome in areas such as:</p>
+        <ul class="bullet-list">
+            <li>Emerging technologies not yet mainstream in established tracks</li>
+            <li>Interdisciplinary and cross-domain research themes</li>
+            <li>Industry-focused innovations and real-world deployments</li>
+            <li>Collaborative international or multi-institutional research initiatives</li>
+            <li>Recent advances from funded research projects or consortia</li>
+            <li>Frontier topics with high future impact potential</li>
+        </ul>
+
+        <br>
+
+        <h2>Proposal Guidelines</h2>
+        <p>A Special Session proposal should include:</p>
+        <ul class="bullet-list">
+            <li>Session Title</li>
+            <li>Scope, Motivation, and Objectives (approximately one page)</li>
+            <li>Justification highlighting uniqueness beyond regular tracks</li>
+            <li>Relevance to the TENSYMP 2027 Theme</li>
+            <li>List of Organizers (Names, Affiliations, Short Bios)</li>
+            <li>Tentative List of Contributors / Prospective Authors</li>
+            <li>Expected Number of Papers (minimum four accepted papers required for a dedicated session)</li>
+        </ul>
+
+        <br>
+
+        <h2>Important Dates</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Call for Special Sessions Opens</td>
+                    <td>01 August 2026</td>
+                </tr>
+                <tr>
+                    <td>Special Session Proposal Deadline</td>
+                    <td>30 September 2026</td>
+                </tr>
+                <tr>
+                    <td>Notification of Acceptance</td>
+                    <td>15 October 2026</td>
+                </tr>
+                <tr>
+                    <td>Special Session Paper Submission</td>
+                    <td>Same as Regular Paper Track</td>
+                </tr>
+                <tr>
+                    <td>Review, Acceptance, Camera-Ready</td>
+                    <td>Same as Regular Paper Track</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <h2>Review and Publication</h2>
+        <ul class="bullet-list">
+            <li>Papers submitted to Special Sessions will undergo the same rigorous peer-review process as regular submissions.</li>
+            <li>Accepted and presented papers will be submitted for inclusion in IEEE Xplore, subject to IEEE quality standards.</li>
+            <li>Special Session organizers will support the review process in coordination with the Technical Program Committee, following IEEE policies.</li>
+        </ul>
+
+        <br>
+
+        <h2>Submission Information</h2>
+        <p>Submit your Special Session proposal via the conference website:<br>
+        <a href="https://tensymp27.ieee.lk/index.html" target="_blank">https://tensymp27.ieee.lk</a></p>
+
+        <br>
+
+        <h2>Special Sessions Chair</h2>
+        <div class="card" style="margin-top: 10px;">
+            <p><strong>Special Sessions Chair</strong><br>
+            Prof Budhika Jayaseka<br>
+            Past Chair, IEEE Sri Lanka Section,<br>
+            Electrical Engineering, University of Moratuwa<br>
+            <a href="mailto:buddhika@ieee.org">buddhika@ieee.org</a></p>
+        </div>
+
+        <div class="card" style="margin-top: 10px;">
+            <p><strong>Special Sessions Co-Chair</strong><br>
+            Dr. W. D. Prasad<br>
+            Professor, Department of Electrical Engineering,<br>
+            Faculty of Engineering, University of Moratuwa<br>
+            <a href="mailto:prasad@ieee.org">prasad@ieee.org</a></p>
+        </div>
+
+    </div>
     </main>
 
-    <!-- ================= FOOTER ================= -->
+    
+<!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer-container">
-
             <!-- Symposium Info -->
             <div class="footer-col">
                 <img src="../TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
@@ -408,7 +345,6 @@
                     University of Peradeniya, Sri Lanka
                 </p>
             </div>
-
             <!-- Quick Links -->
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -420,7 +356,6 @@
                     <li><a href="#">Committees</a></li>
                 </ul>
             </div>
-
             <!-- Symposium -->
             <div class="footer-col">
                 <h4>Symposium</h4>
@@ -431,7 +366,6 @@
                     <li><a href="#">Venue & Travel</a></li>
                 </ul>
             </div>
-
             <!-- IEEE Links -->
             <div class="footer-col">
                 <h4>IEEE</h4>
@@ -442,9 +376,7 @@
                     <li><a href="https://www.ieee.org/about/corporate/governance/code-of-conduct" target="_blank">Code of Conduct</a></li>
                 </ul>
             </div>
-
         </div>
-
         <!-- Bottom Bar -->
         <div class="footer-bottom">
             <p>
@@ -453,45 +385,34 @@
             </p>
         </div>
     </footer>
-
-  
-
     <script>
         (function () {
             'use strict';
-
             const hamburgerBtn = document.getElementById('hamburger-btn');
             const mainNav = document.getElementById('main-nav');
             const body = document.body;
-
             function toggleMenu() {
                 if (!hamburgerBtn || !mainNav) return;
-
                 hamburgerBtn.classList.toggle('active');
                 mainNav.classList.toggle('open');
-
                 if (mainNav.classList.contains('open')) {
                     body.style.overflow = 'hidden';
                 } else {
                     body.style.overflow = '';
                 }
             }
-
             function closeMenu() {
                 if (!hamburgerBtn || !mainNav) return;
-
                 hamburgerBtn.classList.remove('active');
                 mainNav.classList.remove('open');
                 body.style.overflow = '';
             }
-
             if (hamburgerBtn) {
                 hamburgerBtn.addEventListener('click', function (e) {
                     e.stopPropagation();
                     toggleMenu();
                 });
             }
-
             const dropdowns = document.querySelectorAll('.dropdown');
             dropdowns.forEach(function (dropdown) {
                 const link = dropdown.querySelector('.nav-link');
@@ -500,32 +421,27 @@
                         if (window.innerWidth <= 992) {
                             e.preventDefault();
                             e.stopPropagation();
-
                             dropdowns.forEach(function (otherDropdown) {
                                 if (otherDropdown !== dropdown && otherDropdown.classList.contains('open')) {
                                     otherDropdown.classList.remove('open');
                                 }
                             });
-
                             dropdown.classList.toggle('open');
                         }
                     });
                 }
             });
-
             document.addEventListener('click', function (e) {
                 if (mainNav && mainNav.classList.contains('open')) {
                     const navList = mainNav.querySelector('.nav-list');
                     const isClickInsideNav = navList && navList.contains(e.target);
                     const isClickOnButton = hamburgerBtn && hamburgerBtn.contains(e.target);
                     const isClickOnNav = mainNav.contains(e.target);
-
                     if (!isClickOnNav && !isClickOnButton) {
                         closeMenu();
                     }
                 }
             });
-
             const navLinks = document.querySelectorAll('.nav-item:not(.dropdown) .nav-link');
             navLinks.forEach(function (link) {
                 link.addEventListener('click', function () {
@@ -534,7 +450,6 @@
                     }
                 });
             });
-
             const submenuLinks = document.querySelectorAll('.submenu a');
             submenuLinks.forEach(function (link) {
                 link.addEventListener('click', function () {
@@ -543,7 +458,6 @@
                     }
                 });
             });
-
             const navbar = document.querySelector('.navbar');
             if (navbar) {
                 window.addEventListener('scroll', function () {
@@ -554,7 +468,6 @@
                     }
                 });
             }
-
             window.addEventListener('resize', function () {
                 if (window.innerWidth > 992 && mainNav && mainNav.classList.contains('open')) {
                     closeMenu();
@@ -562,7 +475,5 @@
             });
         })();
     </script>
-
 </body>
 </html>
-
