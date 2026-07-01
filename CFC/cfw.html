@@ -5,121 +5,94 @@
     <title>Call for Workshops | IEEE TENSYMP 2027</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
-    
     <style>
-        .page-banner {
-            background: var(--dark);
-            color: #fff;
-            padding: 100px 8% 50px;
+        :root {
+            --primary: #00629B;
+            --primary-hover: #004e7c;
+            --dark: #002855;
+            --light: #f8f9fa;
+            --font: 'Outfit', sans-serif;
+            --transition: all 0.3s ease;
         }
-        .page-banner h1 {
-            font-size: 2.2rem;
+
+        .page-banner { background: var(--dark); color: #fff; padding: 100px 8% 60px; text-align: center; }
+        .page-banner h1 { font-size: 2.6rem; font-weight: 700; margin-bottom: 12px; }
+        .page-banner p { font-size: 1.05rem; color: rgba(255,255,255,0.85); max-width: 720px; margin: 0 auto; line-height: 1.7; }
+        .breadcrumb { color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-bottom: 20px; }
+        .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        .breadcrumb a:hover { color: #fff; }
+
+        .content-section { padding: 60px 8%; max-width: 1100px; margin: 0 auto; }
+        .content-section h2 { font-size: 1.5rem; color: #002244; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; }
+        .content-section h3 { font-size: 1.1rem; color: #002244; margin: 30px 0 15px; }
+        .content-section p { font-size: 0.95rem; color: #444; line-height: 1.8; margin-bottom: 15px; }
+
+        .bullet-list { list-style-type: disc; padding-left: 20px; margin-top: 10px; }
+        .bullet-list li { margin-bottom: 8px; color: #444; font-size: 0.95rem; }
+
+        .schedule-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .schedule-table th, .schedule-table td { border: 1px solid #e5e7eb; padding: 14px; font-size: 0.9rem; vertical-align: top; }
+        .schedule-table th { background: #f8fafc; font-weight: 600; color: #002244; text-align: left; }
+
+        .flyer-float {
+            float: right;
+            width: 320px;
+            margin: 0 0 24px 32px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .flyer-float img { width: 100%; display: block; }
+        .flyer-float .flyer-cap {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 16px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.65));
+            display: flex;
+            justify-content: center;
+        }
+        .flyer-float .flyer-cap a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: #fff;
+            color: #002855;
             font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.25s ease;
         }
-        .content-section {
-            padding: 50px 8%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .content-section h2 {
-            font-size: 1.4rem;
-            color: #002244;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e5e7eb;
-        }
-        .content-section h3 {
-            font-size: 1.1rem;
-            color: #002244;
-            margin: 30px 0 15px;
-        }
-        .content-section p {
-            font-size: 0.95rem;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-        
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-        }
-        .schedule-table th,
-        .schedule-table td {
-            border: 1px solid #e5e7eb;
-            padding: 14px;
-            font-size: 0.9rem;
-            vertical-align: top;
-        }
-        .schedule-table th {
-            background: #f8fafc;
-            font-weight: 600;
-            color: #002244;
-            text-align: left;
-        }
-        .day-title {
-            font-weight: 600;
-            color: var(--primary);
-        }
+        .flyer-float .flyer-cap a:hover { background: #002855; color: #fff; }
 
-/* CSS Variables */
-:root {
-  --primary: #00629B;
-  --primary-hover: #004e7c;
-  --dark: #002855;
-  --light: #f8f9fa;
-  --text-grey: #555555;
-  --white: #ffffff;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --font: 'Outfit', sans-serif;
-  --transition: all 0.3s ease;
-}
+        .card { background: #f8fafc; border-radius: 12px; padding: 24px; margin-top: 16px; border-left: 4px solid var(--primary); }
+        .card p { margin-bottom: 6px; }
 
+        .format-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+        .format-item { background: #f8fafc; border-radius: 10px; padding: 20px; text-align: center; border-left: 4px solid var(--primary); }
+        .format-item h4 { font-size: 1rem; color: #002244; margin-bottom: 8px; }
+        .format-item p { font-size: 0.9rem; color: #555; margin-bottom: 0; }
 
-/* Utility Classes */
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--primary);
-  color: var(--white);
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  border: none;
-  transition: var(--transition);
-}
-.btn:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
-}
-.bg-light {
-  background-color: var(--light);
-}
-.section-padding {
-  padding: 60px 0;
-}
+        .btn { display: inline-block; padding: 12px 24px; background-color: var(--primary); color: var(--white); border-radius: 6px; font-weight: 500; cursor: pointer; border: none; transition: var(--transition); }
+        .btn:hover { background-color: var(--primary-hover); transform: translateY(-2px); box-shadow: var(--shadow); }
 
-.breadcrumb {
-  color: var(--light);
-  font-size: 0.9rem;
-}
-.bullet-list {
-        list-style-type: disc;
-        padding-left: 20px;
-        margin-top: 10px;
+        @media (max-width: 992px) {
+            .format-grid { grid-template-columns: 1fr; }
         }
-        .bullet-list li {
-        margin-bottom: 8px;
+        @media (max-width: 768px) {
+            .flyer-float { float: none; width: 100%; max-width: 360px; margin: 0 auto 24px; display: block; }
+            .page-banner h1 { font-size: 2rem; }
+            .content-section { padding: 40px 5%; }
+            .page-banner { padding: 80px 5% 40px; }
         }
     </style>
 </head>
 <body>
     <script src="../script.js"></script>
-    <!-- ================= NAVBAR ================= -->
     <header class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo" aria-label="Go to homepage">
@@ -136,21 +109,17 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Call for Contributions</a>
                         <ul class="submenu">
-                            <li><a href="../CFC/cfp.html">Call for Papers</a></li>
-                            <li><a href="../CFC/sip.html">Special Invited Papers</a>
-                            </li>
-                            <li><a href="../CFC/cft.html">Call for Tutorials</a></li>
-                            <li><a href="../CFC/cfw.html">Call for Workshops</a></li>
-                            <li><a href="../CFC/cfss.html">Call for Special Sessions</a></li>
                             <li><a href="../CFC/dates.html">Important Dates</a></li>
-                            <li><a href="../CFC/tech_guidelines.html">Technical Program
-                                    Guidelines</a></li>
+                            <li><a href="../CFC/cfp.html">Call for Papers</a></li>
+                            <li><a href="../CFC/sip.html">Special Invited Papers</a></li>
+                            <li><a href="../CFC/cfss.html">Call for Special Sessions</a></li>
+                            <li><a href="../CFC/cfw.html">Call for Workshops</a></li>
+                            <li><a href="../CFC/cft.html">Call for Tutorials</a></li>
+                            <li><a href="../CFC/tech_guidelines.html">Technical Program Guidelines</a></li>
                             <li><a href="../CFC/author_guide.html">Author Guidelines</a></li>
                             <li><a href="../CFC/submit.html">Submit Online</a></li>
-                            <li><a href="../CFC/camera_ready.html">Camera Ready Paper
-                                    Submission</a></li>
-                            <li><a href="../CFC/present_guide.html">Presentation Submission
-                                    Guidelines</a></li>
+                            <li><a href="../CFC/camera_ready.html">Camera Ready Paper Submission</a></li>
+                            <li><a href="../CFC/present_guide.html">Presentation Submission Guidelines</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -168,14 +137,11 @@
                         <ul class="submenu">
                             <li><a href="../CMT/advisory.html">Advisory Committee</a></li>
                             <li><a href="../CMT/organizing.html">Organizing Committee</a></li>
-                            <li><a href="../CMT/tpc.html">Technical Program Committee</a>
-                            </li>
+                            <li><a href="../CMT/tpc.html">Technical Program Committee</a></li>
                             <li><a href="#">Track Chairs & Co-Chairs</a></li>
-                            <li><a href="../CMT/intl_advisory.html">International Reviewers</a>
-                            </li>
+                            <li><a href="../CMT/intl_advisory.html">International Reviewers</a></li>
                         </ul>
                     </li>
-                    <!-- <li class="nav-item"><a href="../registration.html" class="nav-link">Registration</a></li> -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Sponsors & Exhibitor</a>
                         <ul class="submenu">
@@ -198,164 +164,144 @@
             </nav>
         </div>
     </header>
-    <section class="page-banner">
-     <h1 style="text-align: center;">Call for Workshops</h1>
-    <div class="breadcrumb" style="text-align: center;">Home > Call for Contributions > Call for Workshops</div>
-    </section>
-   <main class="container">
-    <div class="content-section">
 
-            <div style="text-align:center; margin-bottom:30px;">
-                <img src="../assets/workshop_proposal.jpeg" alt="Call for Workshops" style="width:100%; max-width:720px; border-radius:10px; box-shadow:0 8px 24px rgba(2,6,23,0.08);">
+    <section class="page-banner">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> &rsaquo; Call for Contributions &rsaquo; Call for Workshops
+        </div>
+        <h1>Call for Workshops</h1>
+        <p>IEEE TENSYMP 2027 invites high-quality workshop proposals aligned with the theme &ldquo;Connected Intelligence for Resilient Societies&rdquo;.</p>
+    </section>
+
+    <main class="container">
+        <div class="content-section">
+
+            <div class="flyer-float">
+                <a href="../assets/workshop_proposal.jpeg" target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/workshop_proposal.jpeg" alt="Call for Workshops Flyer">
+                </a>
+                <div class="flyer-cap">
+                    <a href="../assets/workshop.pdf" target="_blank"><i class="fas fa-download"></i> Download PDF</a>
+                </div>
             </div>
 
-        <p style="font-size: 1.1rem; text-align: center;">
-            <strong>IEEE R10 TENSYMP 2027 &mdash; Sri Lanka</strong><br>
-            <em>Connected Intelligence for Resilient Societies</em><br>
-            12&ndash;14 May 2027 | Faculty of Engineering, University of Peradeniya, Sri Lanka<br>
-            <a href="https://tensymp27.ieee.lk/">https://tensymp27.ieee.lk/</a>
-        </p>
+            <h2>Overview</h2>
+            <p>IEEE TENSYMP 2027 invites high-quality workshop proposals to be organized as part of the symposium programme. Workshops should provide focused, technically sound and practice-oriented engagement aligned with the theme, &ldquo;Connected Intelligence for Resilient Societies&rdquo;. Proposals are welcome from researchers, IEEE members, academics, industry experts, professional bodies and cross-disciplinary teams.</p>
+            <p>Workshops may be conducted in-person or online, as half-day (3 hrs) or full-day (6 hrs) sessions. Selected workshops will be featured prominently in the symposium programme.</p>
 
-        <br>
+            <br clear="all">
 
-        <p>IEEE R10 TENSYMP 2027 invites high-quality workshop proposals to be organized as part of the symposium programme. Workshops should provide focused, technically sound and practice-oriented engagement aligned with the theme, <em>&ldquo;Connected Intelligence for Resilient Societies&rdquo;</em>. Proposals are welcome from researchers, IEEE members, academics, industry experts, professional bodies and cross-disciplinary teams.</p>
+            <h2>Workshop Scope and Areas</h2>
+            <p>Workshops may include invited talks, demonstrations, hands-on sessions, case studies, and interactive Q&amp;A. Topics include:</p>
+            <ul class="bullet-list">
+                <li>Artificial Intelligence, Machine Learning and Data Intelligence</li>
+                <li>Future Communication and Networking Technologies</li>
+                <li>Cyber-Physical Systems, IoT and Intelligent Automation</li>
+                <li>Sustainable Energy and Environmental Technologies</li>
+                <li>Cybersecurity, Privacy and Resilient Computing</li>
+                <li>Technology for Health, Humanity and Society</li>
+                <li>Ethics, Policy and Governance in Connected Systems</li>
+                <li>Education and Capacity Building</li>
+                <li>Smart Cities, Digital Twins and Resilient Infrastructure</li>
+                <li>Cloud, Edge and Distributed Computing</li>
+                <li>Industry 5.0, Digital Transformation and Humanitarian Technologies</li>
+            </ul>
 
-        <br>
+            <br>
 
-        <h2>Workshop Scope and Areas</h2>
-        <p>Workshops may include invited talks, demonstrations, hands-on sessions, case studies and interactive Q&amp;A sessions. Topics may include:</p>
-        <ul class="bullet-list">
-            <li>Artificial Intelligence, Machine Learning and Data Intelligence</li>
-            <li>Future Communication and Networking Technologies</li>
-            <li>Cyber-Physical Systems, IoT and Intelligent Automation</li>
-            <li>Sustainable Energy and Environmental Technologies</li>
-            <li>Cybersecurity, Privacy and Resilient Computing</li>
-            <li>Technology for Health, Humanity and Society</li>
-            <li>Ethics, Policy and Governance in Connected Systems</li>
-            <li>Education and Capacity Building</li>
-            <li>Smart Cities, Digital Twins and Resilient Infrastructure</li>
-            <li>Cloud, Edge and Distributed Computing</li>
-            <li>Industry 5.0, Digital Transformation and Humanitarian Technologies</li>
-        </ul>
+            <h2>Workshop Format &amp; Delivery</h2>
+            <div class="format-grid">
+                <div class="format-item">
+                    <h4>Format</h4>
+                    <p>Half-Day / Full-Day</p>
+                </div>
+                <div class="format-item">
+                    <h4>Duration</h4>
+                    <p>3 hours / 6 hours</p>
+                </div>
+                <div class="format-item">
+                    <h4>Delivery Mode</h4>
+                    <p>In-Person or Online</p>
+                </div>
+            </div>
+            <p style="margin-top: 16px;">Workshops may be conducted in-person at the Faculty of Engineering, University of Peradeniya, or online through an approved virtual platform. The final mode will be determined based on proposal quality and programme logistics.</p>
 
-        <br>
+            <br>
 
-        <h2>Workshop Format and Delivery Mode</h2>
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Format</th>
-                    <th>Duration</th>
-                    <th>Delivery Mode</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Half-Day / Full-Day Workshop</td>
-                    <td>3 hours / 6 hours</td>
-                    <td>In-person or Online</td>
-                </tr>
-            </tbody>
-        </table>
-        <p>Workshops may be conducted either as In-Person Workshops at the Faculty of Engineering, University of Peradeniya, Sri Lanka, or as Online Workshops through an approved virtual platform prior to the main conference dates. The final delivery mode will be determined based on proposal quality, relevance to the symposium theme and overall programme logistics.</p>
+            <h2>Proposal Requirements</h2>
+            <p>Workshop proposals should be submitted as a single PDF document (preferably not exceeding 6 pages) and include:</p>
+            <ul class="bullet-list">
+                <li>Workshop title</li>
+                <li>Preferred format and delivery mode</li>
+                <li>Abstract and objectives</li>
+                <li>Relevance to the conference theme</li>
+                <li>Topics of interest</li>
+                <li>Intended audience</li>
+                <li>Tentative programme</li>
+                <li>Organizer details and short biographies</li>
+                <li>Proposed speakers or demonstrators, if any</li>
+                <li>Expected number of participants</li>
+                <li>Publicity plan</li>
+                <li>Technical or logistical requirements</li>
+            </ul>
+            <p>If paper submissions are included, papers should follow the IEEE conference format and undergo peer review.</p>
 
-        <br>
+            <br>
 
-        <h2>Proposal Requirements</h2>
-        <p>Workshop proposals should be submitted as a single PDF document, preferably not exceeding 6 pages, and should include:</p>
-        <ul class="bullet-list">
-            <li>Workshop title</li>
-            <li>Preferred format and delivery mode</li>
-            <li>Abstract and objectives</li>
-            <li>Relevance to the conference theme</li>
-            <li>Topics of interest</li>
-            <li>Intended audience</li>
-            <li>Tentative programme</li>
-            <li>Organizer details and short biographies</li>
-            <li>Proposed speakers or demonstrators, if any</li>
-            <li>Expected number of participants</li>
-            <li>Publicity plan</li>
-            <li>Technical or logistical requirements</li>
-        </ul>
-        <p>If paper submissions are included, papers should follow the IEEE conference format and undergo peer review.</p>
+            <h2>Important Dates</h2>
+            <table class="schedule-table">
+                <thead>
+                    <tr><th>Activity</th><th>Date</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Workshop Proposal Submission Opens</td><td>15 July 2026</td></tr>
+                    <tr><td>Workshop Proposal Submission Deadline</td><td>1 September 2026</td></tr>
+                    <tr><td>Notification of Acceptance</td><td>28 September 2026</td></tr>
+                </tbody>
+            </table>
 
-        <br>
+            <br>
 
-        <h2>Important Dates</h2>
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Activity</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Workshop Proposal Submission Opens</td>
-                    <td>15 July 2026</td>
-                </tr>
-                <tr>
-                    <td>Workshop Proposal Submission Deadline</td>
-                    <td>1 September 2026</td>
-                </tr>
-                <tr>
-                    <td>Notification of Acceptance</td>
-                    <td>28 September 2026</td>
-                </tr>
-            </tbody>
-        </table>
+            <h2>Submission &amp; Enquiries</h2>
+            <p>Workshop proposals must be submitted through the official submission system. The submission link will be announced on the TENSYMP 2027 website. Please include <em>&ldquo;TENSYMP 2027 Workshop Proposal&rdquo;</em> in the subject line of all email correspondence.</p>
 
-        <br>
+            <div class="card">
+                <p><strong>Workshop Chair</strong></p>
+                <p>Prof. Anuradha Jayakody</p>
+                <p>Sri Lanka Institute of Information Technology, Sri Lanka</p>
+                <p>Email: <a href="mailto:anuradha.j@sliit.lk">anuradha.j@sliit.lk</a></p>
+            </div>
 
-        <h2>Submission and Enquiries</h2>
-        <p>Workshop proposals must be submitted through the official submission system. The submission link will be announced on the TENSYMP 2027 website. Please include <em>&ldquo;TENSYMP 2027 Workshop Proposal&rdquo;</em> in the subject line of all email correspondence.</p>
-        <p>For enquiries, please contact:</p>
-        <div class="card" style="margin-top: 10px;">
-            <p><strong>Workshop Chair</strong><br>
-            Prof. Anuradha Jayakody<br>
-            Sri Lanka Institute of Information Technology, Sri Lanka<br>
-            Email: <a href="mailto:anuradha.j@sliit.lk">anuradha.j@sliit.lk</a></p>
+            <p style="margin-top: 24px;">Join us in shaping a high-impact workshop programme that connects intelligent technologies with resilient societies.</p>
+
         </div>
-        <p>Join us in shaping a high-impact workshop programme that connects intelligent technologies with resilient societies.</p>
+    </main>
 
-    </div>
-</main>
-
-    <!-- ================= FOOTER ================= -->
-    <!-- ================= FOOTER ================= -->
     <footer class="footer">
         <div class="footer-container">
-            <!-- Symposium Info -->
             <div class="footer-col">
                 <img src="../TENSYMP 2027-crop.png" alt="IEEE TENSYMP 2027" class="footer-logo">
-                <p>
-                    IEEE Region 10 Symposium 2027<br>
-                    Faculty of Engineering<br>
-                    University of Peradeniya, Sri Lanka
-                </p>
+                <p>IEEE Region 10 Symposium 2027<br>Faculty of Engineering<br>University of Peradeniya, Sri Lanka</p>
             </div>
-            <!-- Quick Links -->
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Call for Papers</a></li>
-                    <li><a href="#">Programme</a></li>
-                    <li><a href="#">Registration</a></li>
-                    <li><a href="#">Committees</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../CFC/cfp.html">Call for Papers</a></li>
+                    <li><a href="../PRG/glance.html">Programme</a></li>
+                    <li><a href="../registration.html">Registration</a></li>
+                    <li><a href="../CMT/organizing.html">Committees</a></li>
                 </ul>
             </div>
-            <!-- Symposium -->
             <div class="footer-col">
                 <h4>Symposium</h4>
                 <ul>
-                    <li><a href="#">Important Dates</a></li>
-                    <li><a href="#">Keynote Speakers</a></li>
-                    <li><a href="#">Workshops & Tutorials</a></li>
-                    <li><a href="#">Venue & Travel</a></li>
+                    <li><a href="../CFC/dates.html">Important Dates</a></li>
+                    <li><a href="../PRG/keynotes.html">Keynote Speakers</a></li>
+                    <li><a href="../PRG/workshops.html">Workshops & Tutorials</a></li>
+                    <li><a href="../VT/venue.html">Venue & Travel</a></li>
                 </ul>
             </div>
-            <!-- IEEE Links -->
             <div class="footer-col">
                 <h4>IEEE</h4>
                 <ul>
@@ -366,103 +312,23 @@
                 </ul>
             </div>
         </div>
-        <!-- Bottom Bar -->
         <div class="footer-bottom">
-            <p>
-                © 2027 IEEE Sri Lanka Section · IEEE TENSYMP 2027<br>
-                All rights reserved.
-            </p>
+            <p>&copy; 2027 IEEE Sri Lanka Section &middot; IEEE TENSYMP 2027<br>All rights reserved.</p>
         </div>
     </footer>
-    
+
     <script>
         (function () {
             'use strict';
-            const hamburgerBtn = document.getElementById('hamburger-btn');
-            const mainNav = document.getElementById('main-nav');
-            const body = document.body;
-            function toggleMenu() {
-                if (!hamburgerBtn || !mainNav) return;
-                hamburgerBtn.classList.toggle('active');
-                mainNav.classList.toggle('open');
-                if (mainNav.classList.contains('open')) {
-                    body.style.overflow = 'hidden';
-                } else {
-                    body.style.overflow = '';
-                }
-            }
-            function closeMenu() {
-                if (!hamburgerBtn || !mainNav) return;
-                hamburgerBtn.classList.remove('active');
-                mainNav.classList.remove('open');
-                body.style.overflow = '';
-            }
-            if (hamburgerBtn) {
-                hamburgerBtn.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    toggleMenu();
-                });
-            }
-            const dropdowns = document.querySelectorAll('.dropdown');
-            dropdowns.forEach(function (dropdown) {
-                const link = dropdown.querySelector('.nav-link');
-                if (link) {
-                    link.addEventListener('click', function (e) {
-                        if (window.innerWidth <= 992) {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            dropdowns.forEach(function (otherDropdown) {
-                                if (otherDropdown !== dropdown && otherDropdown.classList.contains('open')) {
-                                    otherDropdown.classList.remove('open');
-                                }
-                            });
-                            dropdown.classList.toggle('open');
-                        }
-                    });
-                }
-            });
-            document.addEventListener('click', function (e) {
-                if (mainNav && mainNav.classList.contains('open')) {
-                    const navList = mainNav.querySelector('.nav-list');
-                    const isClickInsideNav = navList && navList.contains(e.target);
-                    const isClickOnButton = hamburgerBtn && hamburgerBtn.contains(e.target);
-                    const isClickOnNav = mainNav.contains(e.target);
-                    if (!isClickOnNav && !isClickOnButton) {
-                        closeMenu();
-                    }
-                }
-            });
-            const navLinks = document.querySelectorAll('.nav-item:not(.dropdown) .nav-link');
-            navLinks.forEach(function (link) {
-                link.addEventListener('click', function () {
-                    if (window.innerWidth <= 992) {
-                        closeMenu();
-                    }
-                });
-            });
-            const submenuLinks = document.querySelectorAll('.submenu a');
-            submenuLinks.forEach(function (link) {
-                link.addEventListener('click', function () {
-                    if (window.innerWidth <= 992) {
-                        closeMenu();
-                    }
-                });
-            });
-            const navbar = document.querySelector('.navbar');
-            if (navbar) {
-                window.addEventListener('scroll', function () {
-                    if (window.scrollY > 20) {
-                        navbar.classList.add('scrolled');
-                    } else {
-                        navbar.classList.remove('scrolled');
-                    }
-                });
-            }
-            window.addEventListener('resize', function () {
-                if (window.innerWidth > 992 && mainNav && mainNav.classList.contains('open')) {
-                    closeMenu();
-                }
-            });
+            const h = document.getElementById('hamburger-btn'), n = document.getElementById('main-nav'), b = document.body;
+            function t() { if (!h||!n) return; h.classList.toggle('active'); n.classList.toggle('open'); b.style.overflow = n.classList.contains('open') ? 'hidden' : ''; }
+            function c() { if (!h||!n) return; h.classList.remove('active'); n.classList.remove('open'); b.style.overflow = ''; }
+            if (h) h.addEventListener('click', function(e) { e.stopPropagation(); t(); });
+            document.querySelectorAll('.dropdown').forEach(function(d) { const l = d.querySelector('.nav-link'); if (l) l.addEventListener('click', function(e) { if (window.innerWidth <= 992) { e.preventDefault(); e.stopPropagation(); document.querySelectorAll('.dropdown').forEach(function(o) { if (o!==d && o.classList.contains('open')) o.classList.remove('open'); }); d.classList.toggle('open'); } }); });
+            document.addEventListener('click', function(e) { if (n && n.classList.contains('open')) { const nl = n.querySelector('.nav-list'); if (!((nl && nl.contains(e.target)) || (h && h.contains(e.target)) || n.contains(e.target))) c(); } });
+            document.querySelectorAll('.nav-item:not(.dropdown) .nav-link, .submenu a').forEach(function(l) { l.addEventListener('click', function() { if (window.innerWidth <= 992) c(); }); });
+            const nav = document.querySelector('.navbar'); if (nav) window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 20); });
+            window.addEventListener('resize', function() { if (window.innerWidth > 992 && n && n.classList.contains('open')) c(); });
         })();
     </script>
 </body>
