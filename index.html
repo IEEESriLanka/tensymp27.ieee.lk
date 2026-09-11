@@ -486,6 +486,212 @@
             margin: 0;
         }
 
+        /* ================= FLYER SHOWCASE ================= */
+        .flyer-showcase {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 40px;
+            max-width: 1150px;
+            margin: 0 auto;
+            align-items: stretch;
+        }
+
+        .flyer-thumbs {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .flyer-thumb {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 2px solid rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            padding: 14px 16px 18px;
+            cursor: pointer;
+            text-align: left;
+            font-family: 'Outfit', sans-serif;
+            overflow: hidden;
+            transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .flyer-thumb img {
+            width: 76px;
+            height: 98px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+            filter: saturate(0.75) brightness(0.85);
+            transition: filter 0.3s ease;
+        }
+
+        .flyer-thumb span {
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 0.92rem;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .flyer-thumb:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(79, 163, 223, 0.55);
+            transform: translateY(-2px);
+        }
+
+        .flyer-thumb.active {
+            border-color: #4aa3df;
+            background: linear-gradient(135deg, rgba(0, 98, 155, 0.5), rgba(0, 40, 85, 0.6));
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+        }
+
+        .flyer-thumb.active img {
+            filter: saturate(1) brightness(1);
+        }
+
+        .flyer-thumb.active span {
+            color: #fff;
+        }
+
+        .flyer-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            display: block;
+        }
+
+        .flyer-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #4aa3df, #8ccdf2);
+            border-radius: 0 3px 3px 0;
+        }
+
+        .flyer-thumb.active .flyer-progress::after {
+            animation: flyerProgress 4s linear forwards;
+        }
+
+        @keyframes flyerProgress {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .flyer-stage {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 560px;
+            background: radial-gradient(circle at 50% 35%, rgba(0, 98, 155, 0.18), rgba(0, 40, 85, 0.35));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 30px;
+            overflow: hidden;
+        }
+
+        .flyer-main {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            aspect-ratio: 3175 / 4490;
+        }
+
+        .flyer-main-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: scale(0.94);
+            transition: opacity 0.45s ease, transform 0.45s ease;
+            pointer-events: none;
+        }
+
+        .flyer-main-img.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        @media (max-width: 900px) {
+            .flyer-showcase {
+                grid-template-columns: 1fr;
+                gap: 26px;
+            }
+
+            .flyer-thumbs {
+                flex-direction: row;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .flyer-thumb {
+                flex: 1;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 8px;
+                padding: 12px 8px 14px;
+                max-width: 170px;
+            }
+
+            .flyer-thumb img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 3175 / 4490;
+                max-width: 90px;
+            }
+
+            .flyer-stage {
+                min-height: 420px;
+                padding: 22px;
+            }
+
+            .flyer-main {
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .flyer-thumb {
+                padding: 10px 6px 12px;
+                gap: 6px;
+            }
+
+            .flyer-thumb img {
+                max-width: 76px;
+            }
+
+            .flyer-thumb span {
+                font-size: 0.78rem;
+            }
+
+            .flyer-stage {
+                min-height: 340px;
+                padding: 16px;
+            }
+
+            .flyer-main {
+                max-width: 240px;
+            }
+        }
+
         .countdown-modern {
             text-align: center;
             max-width: 800px;
@@ -1512,6 +1718,47 @@
         </div>
     </section>
 
+    <!-- ================= FLYERS / CALLS FOR SUBMISSION ================= -->
+    <section class="section-modern bg-dark flyers-section" id="flyers">
+        <div class="section-title">
+            <h2>Calls for Submission</h2>
+            <p>Explore our calls for special sessions, workshop proposals, and tutorials</p>
+        </div>
+
+        <div class="flyer-showcase">
+            <div class="flyer-thumbs" role="tablist" aria-label="Browse flyers">
+                <button class="flyer-thumb active" type="button" data-index="0" aria-selected="true">
+                    <img src="assets/Special Sessions.jpg" alt="Call for Special Sessions flyer thumbnail">
+                    <span>Special Sessions</span>
+                    <span class="flyer-progress"></span>
+                </button>
+
+                <button class="flyer-thumb" type="button" data-index="1" aria-selected="false">
+                    <img src="assets/Call for Workshop Proposals.jpg" alt="Call for Workshop Proposals flyer thumbnail">
+                    <span>Workshop Proposals</span>
+                    <span class="flyer-progress"></span>
+                </button>
+
+                <button class="flyer-thumb" type="button" data-index="2" aria-selected="false">
+                    <img src="assets/Call for Tutorials.jpg" alt="Call for Tutorials flyer thumbnail">
+                    <span>Tutorials</span>
+                    <span class="flyer-progress"></span>
+                </button>
+            </div>
+
+            <div class="flyer-stage">
+                <div class="flyer-main">
+                    <img class="flyer-main-img active" src="assets/Special Sessions.jpg"
+                        alt="Call for Special Sessions flyer">
+                    <img class="flyer-main-img" src="assets/Call for Workshop Proposals.jpg"
+                        alt="Call for Workshop Proposals flyer">
+                    <img class="flyer-main-img" src="assets/Call for Tutorials.jpg"
+                        alt="Call for Tutorials flyer">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ================= Symposium SCOPE & OBJECTIVES ================= -->
     <section class="section-modern bg-white">
         <div class="section-title">
@@ -1818,6 +2065,64 @@
 
         const timerInterval = setInterval(updateCountdown, 1000);
         updateCountdown();
+    </script>
+
+    <script>
+        (function () {
+            'use strict';
+
+            const thumbs = document.querySelectorAll('.flyer-thumb');
+            const mainImgs = document.querySelectorAll('.flyer-main-img');
+            const showcase = document.querySelector('.flyer-showcase');
+            if (!thumbs.length || !mainImgs.length) return;
+
+            let currentIndex = 0;
+            let timer = null;
+            const ROTATE_MS = 4000;
+
+            function showFlyer(index) {
+                currentIndex = index;
+                thumbs.forEach(function (thumb, i) {
+                    thumb.classList.toggle('active', i === index);
+                    thumb.setAttribute('aria-selected', i === index ? 'true' : 'false');
+                });
+                mainImgs.forEach(function (img, i) {
+                    img.classList.toggle('active', i === index);
+                });
+                restartTimer();
+            }
+
+            function nextFlyer() {
+                showFlyer((currentIndex + 1) % thumbs.length);
+            }
+
+            function restartTimer() {
+                if (timer) clearInterval(timer);
+                if (!document.hidden) {
+                    timer = setInterval(nextFlyer, ROTATE_MS);
+                }
+            }
+
+            thumbs.forEach(function (thumb, i) {
+                thumb.addEventListener('click', function () {
+                    showFlyer(i);
+                });
+            });
+
+            if (showcase) {
+                showcase.addEventListener('mouseenter', function () {
+                    if (timer) {
+                        clearInterval(timer);
+                        timer = null;
+                    }
+                });
+                showcase.addEventListener('mouseleave', function () {
+                    restartTimer();
+                });
+            }
+
+            restartTimer();
+        })();
     </script>
 
 </body>
