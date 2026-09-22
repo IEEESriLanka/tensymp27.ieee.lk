@@ -52,25 +52,49 @@
             margin-bottom: 30px;
         }
 
+        .tourism-group {
+            margin-top: 26px;
+        }
+
+        .tourism-group h3 {
+            margin: 0 0 18px;
+            color: #002244;
+            font-size: 1.08rem;
+        }
+
         .attractions-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
+            margin-bottom: 30px;
         }
 
         .attraction-card {
             border: 1px solid #e5e7eb;
+            background: #fff;
             overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
         }
 
-        .attraction-card .attraction-img {
-            height: 140px;
-            background: #e5e7eb;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 0.85rem;
+        .attraction-thumb {
+            display: block;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            background: #edf3f7;
+        }
+
+        .attraction-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.35s ease;
+        }
+
+        .attraction-card:hover .attraction-thumb img {
+            transform: scale(1.04);
         }
 
         .attraction-card .attraction-content {
@@ -78,21 +102,37 @@
         }
 
         .attraction-card h4 {
-            font-size: 0.95rem;
+            font-size: 0.97rem;
             color: #002244;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .attraction-card h4 a {
+            color: #002244;
+            text-decoration: none;
+        }
+
+        .attraction-card h4 a:hover {
+            color: var(--primary);
+            text-decoration: underline;
         }
 
         .attraction-card p {
             font-size: 0.85rem;
             color: #555;
-            line-height: 1.6;
+            line-height: 1.7;
             margin-bottom: 10px;
         }
 
         .attraction-card .distance-tag {
             font-size: 0.78rem;
-            color: #888;
+            color: #666;
+            font-weight: 600;
+            background: #f3f7fb;
+            display: inline-block;
+            padding: 5px 8px;
+            border-radius: 999px;
         }
 
         .tour-links {
@@ -266,64 +306,301 @@
     
     <div class="tourism-intro">
         <p>
-            Kandy, a UNESCO World Heritage City, is the cultural capital of Sri Lanka. Nestled among misty hills, it offers a rich blend of history, spirituality, and natural beauty. Take some time to explore these attractions during your visit.
+            Kandy, a UNESCO World Heritage City, is the cultural capital of Sri Lanka. Nestled among misty hills, it offers a rich blend of history, spirituality, and natural beauty. Below are some of the most notable attractions around Kandy for delegates and visitors.
         </p>
     </div>
 
-    <h3>Nearby Attractions</h3>
-    <div class="attractions-grid">
-        <div class="attraction-card">
-            <div class="attraction-img">Temple Image</div>
-            <div class="attraction-content">
-                <h4>Temple of the Sacred Tooth Relic</h4>
-                <p>Sri Lanka's most sacred Buddhist site, housing the tooth relic of Lord Buddha. Located by Kandy Lake.</p>
-                <span class="distance-tag">6 km from venue</span>
-            </div>
-        </div>
+    <div class="tourism-group">
+        <h3>Kandy City Centre / Lake Area</h3>
+        <div class="attractions-grid">
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://www.templeofthesacredtooth.org/" target="_blank" rel="noopener">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhh2wZvdCK-8vPvJ6lWjBMEzmO2azaiHDSoZd2M6y3jA&s=10" alt="Temple of the Tooth in Kandy" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://www.templeofthesacredtooth.org/" target="_blank" rel="noopener">Temple of the Tooth</a></h4>
+                    <p>The most sacred Buddhist temple in Sri Lanka, known for enshrining the sacred tooth relic of Lord Buddha.</p>
+                    <span class="distance-tag">Lake area</span>
+                </div>
+            </article>
 
-        <div class="attraction-card">
-            <div class="attraction-img">Garden Image</div>
-            <div class="attraction-content">
-                <h4>Royal Botanic Gardens</h4>
-                <p>One of the finest botanical gardens in Asia, spanning 147 acres with over 4,000 plant species.</p>
-                <span class="distance-tag">2 km from venue</span>
-            </div>
-        </div>
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Kandy_Lake" target="_blank" rel="noopener">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQESAYQVdz8H8GhoYKrFgsKiaWCLYaO3YrpNfZVrsipDw&s=10" alt="Kandy Lake" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Kandy_Lake" target="_blank" rel="noopener">Kandy Lake</a></h4>
+                    <p>A scenic man-made lake in the heart of Kandy, ideal for a peaceful stroll and evening views.</p>
+                    <span class="distance-tag">City centre</span>
+                </div>
+            </article>
 
-        <div class="attraction-card">
-            <div class="attraction-img">Lake Image</div>
-            <div class="attraction-content">
-                <h4>Kandy Lake</h4>
-                <p>Scenic artificial lake in the heart of the city. Perfect for an evening stroll.</p>
-                <span class="distance-tag">6 km from venue</span>
-            </div>
-        </div>
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Kandy_National_Museum" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kandy_National_Museum.jpg" alt="Kandy National Museum" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Kandy_National_Museum" target="_blank" rel="noopener">Kandy National Museum</a></h4>
+                    <p>An important cultural museum displaying royal regalia, historic artifacts, and Kandyan heritage.</p>
+                    <span class="distance-tag">Near the lake</span>
+                </div>
+            </article>
 
-        <div class="attraction-card">
-            <div class="attraction-img">View Image</div>
-            <div class="attraction-content">
-                <h4>Bahiravokanda Buddha Statue</h4>
-                <p>Giant white Buddha statue on a hilltop offering panoramic views of Kandy city.</p>
-                <span class="distance-tag">8 km from venue</span>
-            </div>
-        </div>
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Old_Royal_Palace,_Kandy" target="_blank" rel="noopener">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4rCA1iAbEs35qAy5YLVYkQJiRsT1MdXYritlhTo6VHw&s=10" alt="Old Royal Palace" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Old_Royal_Palace,_Kandy" target="_blank" rel="noopener">Old Royal Palace</a></h4>
+                    <p>A historic royal complex that reflects the grandeur of the Kandyan kingdom and its architecture.</p>
+                    <span class="distance-tag">Heritage site</span>
+                </div>
+            </article>
 
-        <div class="attraction-card">
-            <div class="attraction-img">Tea Image</div>
-            <div class="attraction-content">
-                <h4>Tea Plantations</h4>
-                <p>Visit nearby tea estates in Hanthana or take a day trip to Nuwara Eliya tea country.</p>
-                <span class="distance-tag">15–60 km from venue</span>
-            </div>
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Udawatta_Kele_Sanctuary" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udawattakele_Kandy.JPG" alt="Udawatta Kele forest" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Udawatta_Kele_Sanctuary" target="_blank" rel="noopener">Udawatta Kele</a></h4>
+                    <p>A lush forest reserve on a hill overlooking the city, perfect for nature walks and birdwatching.</p>
+                    <span class="distance-tag">Forest reserve</span>
+                </div>
+            </article>
         </div>
+    </div>
 
-        <div class="attraction-card">
-            <div class="attraction-img">Dance Image</div>
-            <div class="attraction-content">
-                <h4>Kandyan Dance Show</h4>
-                <p>Traditional cultural performances held daily at the Kandy Lake Club and Red Cross Hall.</p>
-                <span class="distance-tag">6 km from venue</span>
-            </div>
+    <div class="tourism-group">
+        <h3>Hills Overlooking Kandy</h3>
+        <div class="attractions-grid">
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Bahirawakanda" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bahirawakanda.jpg" alt="Bahirawakanda Buddha statue" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Bahirawakanda" target="_blank" rel="noopener">Bahirawakanda</a></h4>
+                    <p>A prominent hilltop shrine and white Buddha statue that offers panoramic views of Kandy and the valley below.</p>
+                    <span class="distance-tag">Hill viewpoint</span>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="tourism-group">
+        <h3>Western Kandy</h3>
+        <div class="attractions-grid">
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://www.botanicgardens.gov.lk/" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lanka%2C_Peradeniya_Botanical_Gardens.jpg" alt="Peradeniya Botanical Gardens" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://www.botanicgardens.gov.lk/" target="_blank" rel="noopener">Peradeniya Botanical Gardens</a></h4>
+                    <p>One of the most beautiful botanical gardens in Asia, famous for orchids, palms, and extensive green landscapes.</p>
+                    <span class="distance-tag">Western Kandy</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://www.ceylonteamuseum.com/" target="_blank" rel="noopener">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlSRcW9VcllgEK6FqsPHluErTw03b3QPki8NHCWApaEQ&s=10" alt="Ceylon Tea Museum" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://www.ceylonteamuseum.com/" target="_blank" rel="noopener">Ceylon Tea Museum</a></h4>
+                    <p>Located near the tea-growing region, this museum charts the rich history and heritage of Sri Lankan tea.</p>
+                    <span class="distance-tag">Tea country</span>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="tourism-group">
+        <h3>East of Kandy</h3>
+        <div class="attractions-grid">
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Pallekele_International_Cricket_Stadium" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pallekele_International_Cricket_Stadium.JPG" alt="Pallekele International Cricket Stadium" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Pallekele_International_Cricket_Stadium" target="_blank" rel="noopener">Pallekele International Cricket Stadium</a></h4>
+                    <p>A leading international cricket venue in Sri Lanka, known for its modern facilities and scenic setting.</p>
+                    <span class="distance-tag">East of Kandy</span>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="tourism-group">
+        <h3>Northwest of Kandy</h3>
+        <div class="attractions-grid">
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Ranawana_Raja_Maha_Vihara" target="_blank" rel="noopener">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwJJwI2_BB5iL44DrK6AmT9m_ivlZQDEkIYsjFN9RrWw&s=10" alt="Ranawana Royal Temple" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Ranawana_Raja_Maha_Vihara" target="_blank" rel="noopener">Ranawana Royal Temple</a></h4>
+                    <p>One of the historic Buddhist temples in the Kandy district, known for its architecture and spiritual importance.</p>
+                    <span class="distance-tag">Northwest of Kandy</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://www.pinnawala.org/" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pinnawala_elephant_orphanage.jpg" alt="Pinnawala Elephant Orphanage" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://www.pinnawala.org/" target="_blank" rel="noopener">Pinnawala Elephant Orphanage</a></h4>
+                    <p>A popular wildlife and conservation destination where visitors can see elephants in a protected environment.</p>
+                    <span class="distance-tag">Northwest of Kandy</span>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="tourism-group">
+        <h3>Top Attractions in Sri Lanka</h3>
+        <div class="attractions-grid">
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Sigiriya" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sigiriya_Rock_fortress.jpg" alt="Sigiriya Rock Fortress" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Sigiriya" target="_blank" rel="noopener">Sigiriya Rock Fortress</a></h4>
+                    <p>Iconic UNESCO-listed rock fortress with panoramic views and historic palace ruins.</p>
+                    <span class="distance-tag">Cultural landmark</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Galle_Fort" target="_blank" rel="noopener">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQylhGpD1KHX7CKLk1Smd3E5iyT4bkoANXhsZmqFyyYqg&s=10" alt="Galle Fort" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Galle_Fort" target="_blank" rel="noopener">Galle Fort</a></h4>
+                    <p>A historic coastal fort with colonial architecture, cafés, and scenic sea views.</p>
+                    <span class="distance-tag">Southern coast</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Yala_National_Park" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Yala_National_Park.jpg" alt="Yala National Park" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Yala_National_Park" target="_blank" rel="noopener">Yala National Park</a></h4>
+                    <p>One of Sri Lanka’s best wildlife reserves, famous for leopard sightings and biodiversity.</p>
+                    <span class="distance-tag">Wildlife safari</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Nine_Arches_Bridge,_Ella" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nine_Arches_Bridge_in_Ella.jpg" alt="Nine Arches Bridge, Ella" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Nine_Arches_Bridge,_Ella" target="_blank" rel="noopener">Nine Arches Bridge, Ella</a></h4>
+                    <p>A famous viaduct bridge set amid lush tea plantations and scenic mountain views.</p>
+                    <span class="distance-tag">Hill country</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Dambulla_cave_temple" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dambulla_Cave_temple.jpg" alt="Dambulla Cave Temple" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Dambulla_cave_temple" target="_blank" rel="noopener">Dambulla Cave Temple</a></h4>
+                    <p>A major Buddhist pilgrimage site known for cave murals and ancient statues.</p>
+                    <span class="distance-tag">Cultural site</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Anuradhapura" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Anuradhapura_-_55465660359.jpg" alt="Anuradhapura Ancient City" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Anuradhapura" target="_blank" rel="noopener">Anuradhapura Ancient City</a></h4>
+                    <p>One of Sri Lanka’s oldest capitals, rich in Buddhist heritage and ancient ruins.</p>
+                    <span class="distance-tag">Historic city</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Polonnaruwa" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ancient_City_of_Polonnaruwa%2C_Sri_Lanka_%283%29.jpg" alt="Polonnaruwa Ancient City" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Polonnaruwa" target="_blank" rel="noopener">Polonnaruwa Ancient City</a></h4>
+                    <p>A remarkable archaeological site featuring ancient stupas, temples, and royal palaces.</p>
+                    <span class="distance-tag">Ancient ruins</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Kelaniya_Raja_Maha_Vihara" target="_blank" rel="noopener">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_BqjT5XCvfArgxU881xAmPHTT0EJGa4OE5vXufXzluA&s=10" alt="Kelaniya Raja Maha Vihara" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Kelaniya_Raja_Maha_Vihara" target="_blank" rel="noopener">Kelaniya Raja Maha Vihara</a></h4>
+                    <p>A revered Buddhist temple close to Colombo known for its long cultural and religious significance.</p>
+                    <span class="distance-tag">Colombo district</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Gangaramaya_Temple" target="_blank" rel="noopener">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiF6CtxqtIrMFJzb7SHlYW065je_AdDLUSxB1U16goYw&s=10" alt="Gangaramaya Temple, Colombo" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Gangaramaya_Temple" target="_blank" rel="noopener">Gangaramaya Temple, Colombo</a></h4>
+                    <p>A beautiful Buddhist temple with eclectic architecture, statues, and a rich heritage collection.</p>
+                    <span class="distance-tag">Colombo</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Independence_Square,_Colombo" target="_blank" rel="noopener">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiaYiRipwRPKS7Ad7f7I7Zre3JLWskV-_4XBPSVEdA2A&s=10" alt="Independence Square, Colombo" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Independence_Square,_Colombo" target="_blank" rel="noopener">Independence Square, Colombo</a></h4>
+                    <p>A historic public square commemorating Sri Lanka’s independence, surrounded by elegant gardens.</p>
+                    <span class="distance-tag">City attraction</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Bentota" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Lanka%2C_Bentota%2C_beach_%281%29.JPG" alt="Bentota Beach" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Bentota" target="_blank" rel="noopener">Bentota Beach</a></h4>
+                    <p>A popular beach destination with calm waters and a relaxed coastal atmosphere.</p>
+                    <span class="distance-tag">Southwest coast</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Hikkaduwa" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hikkaduwa_Beach_Sri_Lanka.jpg" alt="Hikkaduwa Beach" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Hikkaduwa" target="_blank" rel="noopener">Hikkaduwa Beach</a></h4>
+                    <p>Known for coral gardens, surf culture, and vibrant beachside amenities.</p>
+                    <span class="distance-tag">Southwest coast</span>
+                </div>
+            </article>
+
+            <article class="attraction-card">
+                <a class="attraction-thumb" href="https://en.wikipedia.org/wiki/Mirissa" target="_blank" rel="noopener">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mirissa_beach%2C_Srilanka.jpg" alt="Mirissa Beach" />
+                </a>
+                <div class="attraction-content">
+                    <h4><a href="https://en.wikipedia.org/wiki/Mirissa" target="_blank" rel="noopener">Mirissa Beach</a></h4>
+                    <p>A scenic coastal town famed for whale watching, sunsets, and palm-lined beaches.</p>
+                    <span class="distance-tag">Southern coast</span>
+                </div>
+            </article>
         </div>
     </div>
 
@@ -333,7 +610,7 @@
             <div class="link-card">
                 <div>
                     <h4>Sri Lanka Tourism</h4>
-                    <p>Official tourism board website</p>
+                    <p>Official tourism portal</p>
                 </div>
                 <a href="https://www.srilanka.travel" target="_blank" rel="noopener">Visit →</a>
             </div>
@@ -348,8 +625,8 @@
 
             <div class="link-card">
                 <div>
-                    <h4>TripAdvisor – Things to Do</h4>
-                    <p>Reviews and attractions</p>
+                    <h4>TripAdvisor – Kandy</h4>
+                    <p>Popular attractions and reviews</p>
                 </div>
                 <a href="https://www.tripadvisor.com/Attractions-g304138-Activities-Kandy.html" target="_blank" rel="noopener">Visit →</a>
             </div>
@@ -357,32 +634,12 @@
             <div class="link-card">
                 <div>
                     <h4>Sri Lanka Railways</h4>
-                    <p>Train schedules and bookings</p>
+                    <p>Book rail travel and timetables</p>
                 </div>
                 <a href="https://www.railway.gov.lk" target="_blank" rel="noopener">Visit →</a>
             </div>
-
-            <div class="link-card">
-                <div>
-                    <h4>Sigiriya Rock Fortress</h4>
-                    <p>UNESCO site, 90 km from Kandy</p>
-                </div>
-                <a href="https://www.srilanka.travel/sigiriya" target="_blank" rel="noopener">Visit →</a>
-            </div>
-
-            <div class="link-card">
-                <div>
-                    <h4>Pinnawala Elephant Orphanage</h4>
-                    <p>40 km from Kandy</p>
-                </div>
-                <a href="https://www.srilanka.travel/pinnawala-elephant-orphanage" target="_blank" rel="noopener">Visit →</a>
-            </div>
         </div>
     </div>
-
-    <p style="margin-top: 30px; font-size: 0.9rem; color: #666;">
-        <strong>Symposium Tours:</strong> Optional post-Symposium tours will be organized to Sigiriya, Dambulla, and Nuwara Eliya. Details will be available during registration.
-    </p>
 </section>
 
 <footer class="footer">

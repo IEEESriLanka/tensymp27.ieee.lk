@@ -560,6 +560,134 @@ body {
 
 }
 
+.page-banner {
+    background: linear-gradient(135deg, rgba(0, 34, 68, 0.98), rgba(0, 98, 155, 0.92));
+    color: #fff;
+    padding: 72px 20px 36px;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+.page-banner .breadcrumb {
+    margin-top: 12px;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.content-section {
+    background: #ffffff;
+    border: 1px solid rgba(0, 98, 155, 0.12);
+    border-radius: 22px;
+    box-shadow: 0 18px 50px rgba(0, 32, 64, 0.08);
+    padding: 42px clamp(20px, 4vw, 54px);
+}
+
+.content-section h2,
+.content-section h3,
+.content-section h4 {
+    color: var(--dark);
+    line-height: 1.4;
+}
+
+.content-section h2 {
+    font-size: clamp(1.8rem, 2vw, 2.4rem);
+    margin-bottom: 12px;
+}
+
+.content-section h3 {
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    margin-bottom: 24px;
+}
+
+.content-section h4 {
+    font-size: 1.38rem;
+    margin: 28px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(0, 98, 155, 0.12);
+}
+
+.content-section p {
+    margin: 0 0 16px;
+    font-size: 1.02rem;
+    line-height: 1.9;
+    color: #2d3748;
+}
+
+.content-section a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 600;
+}
+
+.content-section a:hover {
+    color: #004d7a;
+}
+
+.content-section strong {
+    color: var(--dark);
+}
+
+.bullet-list {
+    margin: 12px 0 18px 18px;
+    padding-left: 14px;
+    list-style: disc;
+}
+
+.bullet-list li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    color: #2b2f36;
+}
+
+.bullet-list ul {
+    margin-top: 8px;
+    margin-left: 24px;
+    padding-left: 12px;
+    list-style: circle;
+}
+
+.bullet-list ul li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        padding-top: 60px;
+    }
+
+    .container {
+        padding: 24px 14px 60px;
+    }
+
+    .content-section {
+        border-radius: 16px;
+        padding: 24px 18px;
+    }
+
+    .content-section h4 {
+        font-size: 1.18rem;
+    }
+
+    .content-section p,
+    .bullet-list li {
+        font-size: 0.98rem;
+    }
+}
+
 
 /* GRID */
 .grid-3 {
