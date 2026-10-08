@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Programme at a Glance | IEEE R10 TENSYMP 2027</title>
+    <title>Technical Program Committee Guidelines | IEEE R10 TENSYMP 2027</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -176,6 +176,132 @@
             font-weight: 600;
             color: var(--primary);
         }
+
+        /* ---- Desk-Rejection Guidelines (TPC) ---- */
+
+        .content-section .desk-lead {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .content-section h4.subsection-title {
+            font-size: 1.15rem;
+            color: #002244;
+            margin: 40px 0 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .content-section ol.criteria-list > li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: #f8fafc;
+            border-left: 3px solid var(--primary);
+            border-radius: 6px;
+            padding: 16px 18px;
+            margin-bottom: 14px;
+        }
+
+        .content-section ol.criteria-list > li::before {
+            content: none;
+        }
+
+        .content-section .num-badge {
+            flex: 0 0 auto;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--white);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .content-section .num-badge::before {
+            content: counter(item);
+        }
+
+        .content-section .num-badge.small {
+            width: 22px;
+            height: 22px;
+            font-size: 0.72rem;
+            background: var(--dark);
+            margin-top: 1px;
+        }
+
+        .content-section .criterion-body {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .content-section .criterion-body h5 {
+            font-size: 1.02rem;
+            color: #002244;
+            font-weight: 600;
+            margin: 0 0 10px;
+        }
+
+        .content-section .criterion-body > *:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-section .criterion-body .bullet-list li {
+            margin-bottom: 6px;
+        }
+
+        .content-section ol.workflow-list > li {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin-bottom: 10px;
+            font-size: 0.92rem;
+        }
+
+        .content-section ol.workflow-list > li::before {
+            color: var(--primary);
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        .content-section ol.decision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 10px;
+        }
+
+        .content-section ol.decision-grid > li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 10px 12px;
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .content-section ol.decision-grid > li::before {
+            content: none;
+        }
+
+        .content-section .record-note {
+            background: #fff8e1;
+            border-left: 4px solid #f0b429;
+            border-radius: 6px;
+            padding: 16px 18px;
+            margin-top: 26px;
+            font-size: 0.93rem;
+            color: #444;
+        }
     </style>
 </head>
 
@@ -206,8 +332,7 @@
                             <li><a href="../CFC/cfss.html">Call for Special Sessions</a></li>
                             <li><a href="../CFC/cfw.html">Call for Workshops</a></li>
                             <li><a href="../CFC/cft.html">Call for Tutorials</a></li>
-                            <li><a href="../CFC/tech_guidelines.html">Technical Program
-                                    Guidelines</a></li>
+                            <li><a href="../CFC/tech_guidelines.html">Technical Program Committee Guidelines</a></li>
                             <li><a href="../CFC/author_guide.html">Author Guidelines</a></li>
                             <li><a href="../CFC/submit.html">Submit Online</a></li>
                             <li><a href="../CFC/camera_ready.html">Camera Ready Paper
@@ -268,8 +393,8 @@
 <section class="page-banner">
     <section class="page-header">
         <div class="container">
-            <h1 class="page-title">Technical Program Guidelines</h1>
-            <div class="breadcrumb">Home > Call for Contributions > Technical Program Guidelines</div>
+            <h1 class="page-title">Technical Program Committee Guidelines</h1>
+            <div class="breadcrumb">Home > Call for Contributions > Technical Program Committee Guidelines</div>
         </div>
     </section>
 </section>
@@ -296,14 +421,307 @@
                 <li>
                     <h4>Compliance with IEEE Format</h4>
                     <p>All submissions must strictly adhere to the IEEE standard Symposium paper format. Authors are provided with official IEEE templates and formatting instructions. Prior to the double-blind peer review, a desk review will be conducted to screen submissions for compliance.</p>
-                    <p>Papers will be desk rejected for the following reasons:</p>
-                    <ul class="bullet-list">
-                        <li>Exceeding the maximum length of six (6) pages.</li>
-                        <li>Not aligned with the Symposium themes or scope.</li>
-                        <li>Not conforming to the IEEE formatting guidelines.</li>
-                        <li>Written in poor English that hinders understanding.</li>
-                        <li>Plagiarism exceeding 30%, as checked via Turnitin.</li>
-                    </ul>
+
+                    <p class="desk-lead">The Technical Program Committee (TPC) of R10 IEEE TENSYMP 2027 is committed to maintaining a fair, transparent, rigorous, and efficient peer-review process. All submissions will undergo initial desk screening before assignment to reviewers. Desk screening identifies fundamental eligibility, scope, double-blind, AI, publication-ethics, and submission-compliance issues. In the review process novelty, technical depth, methodology, experimental adequacy, significance and quality of conclusions, etc. should normally be evaluated.</p>
+
+                    <h4 class="subsection-title">Guidelines for Desk Rejection</h4>
+
+                    <ol class="criteria-list">
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Governing Principles</h5>
+                                <p>The desk-screening process shall be guided by IEEE publication policies and ethical requirements, the IEEE Publication Services and Products Board (PSPB) Operations Manual, IEEE Author Center conference policies, IEEE requirements concerning plagiarism, duplicate publication and multiple submissions, IEEE requirements concerning AI-generated content, the official scope and technical tracks of R10 IEEE TENSYMP 2027, and additional TENSYMP 2027 requirements established by the TPC.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Principle of Desk Rejection</h5>
+                                <p>Desk rejection is an administrative and technical eligibility decision, not normally a judgment that the research is scientifically invalid. A paper may be desk rejected when a fundamental submission-level problem makes it unsuitable for peer review.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Desk-Rejection Criteria</h5>
+                                <p>A paper shall normally be desk rejected if it:</p>
+                                <ul class="bullet-list">
+                                    <li>is clearly outside TENSYMP 2027 scope;</li>
+                                    <li>is outside relevant IEEE technical areas;</li>
+                                    <li>is above the TENSYMP 2027 similarity threshold;</li>
+                                    <li>is affected by plagiarism, duplicate publication or prohibited concurrent submission;</li>
+                                    <li>is in clear violation of double-blind requirements;</li>
+                                    <li>is in serious violation of IEEE AI requirements;</li>
+                                    <li>is fundamentally incomplete; or</li>
+                                    <li>is affected by serious publication/research-integrity concerns.</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Out of Scope of TENSYMP 2027</h5>
+                                <p>The paper should demonstrate a meaningful connection with the symposium theme, &ldquo;Connected Intelligence for Resilient Societies,&rdquo; and at least one relevant technical area. Interdisciplinary papers are welcome. A submission may be desk rejected when it:</p>
+                                <ul class="bullet-list">
+                                    <li>has a central contribution with no meaningful relationship to the symposium theme, technical tracks, or broader IEEE engineering and technology focus;</li>
+                                    <li>lacks a substantive connection to IEEE-relevant engineering, computing, technology, or related interdisciplinary research; or</li>
+                                    <li>is purely social, philosophical, business, clinical, humanities, or educational in nature without a meaningful technology/engineering component.</li>
+                                </ul>
+                                <p>This criterion should be applied reasonably so that legitimate interdisciplinary research is not excluded.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Similarity Screening</h5>
+                                <p>All submissions will undergo similarity screening. For TENSYMP 2027, a manuscript with an <strong>overall similarity score above 30%</strong> shall normally be desk rejected. This 30% threshold is a TENSYMP 2027 TPC screening criterion and should not be presented as a universal IEEE threshold. The screening team should consider the individual matching sources, references and quotations, legitimate standard technical phrases, self-similarity, figures, tables, algorithms, datasets, and results rather than relying blindly on the percentage alone.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Duplicate Publication</h5>
+                                <p>A paper may be desk rejected for duplicate publication, substantial duplication of the authors&rsquo; previous work, reuse of figures/tables/results without appropriate attribution, or other serious publication-ethics concerns. Where a case requires formal investigation rather than an obvious screening decision, the TPC will follow appropriate IEEE publication-ethics procedures. A paper should not proceed to review when it is clearly a previously published paper with little or no substantive new contribution. Earlier work may be developed into a more complete contribution when properly cited and when the new contribution is clear and substantive.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Multiple or Concurrent Submission</h5>
+                                <p>IEEE policy requires original work that is not simultaneously under review by another refereed publication, subject to applicable IEEE policies. Clear evidence of prohibited concurrent submission, substantially identical work under review elsewhere, or resubmission of previously published work without appropriate disclosure may result in desk rejection.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Double-Blind Review Requirements</h5>
+                                <p>TENSYMP 2027 will use a double-blind review process. The review manuscript must not reveal author identity. It must not contain:</p>
+                                <ul class="bullet-list">
+                                    <li>author names, affiliations, institutional addresses, email addresses, ORCID identifiers, personal webpages or institutional webpages;</li>
+                                    <li>identifying project or laboratory information;</li>
+                                    <li>acknowledgements that reveal an author or institution. Acknowledgements must not identify persons, universities, laboratories, grants, projects, or organisations in a manner that compromises anonymity.</li>
+                                </ul>
+                                <p>Self-citations may be used where necessary but should be written objectively and without unnecessary self-identification. A minor inadvertent formatting issue may be corrected if procedures permit; clear, extensive, or deliberate violations may be desk rejected.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>AI Policy</h5>
+                                <p>The use of AI tools itself is not ground for rejection. Authors remain responsible for the accuracy, originality, integrity, and appropriate disclosure of their work. Under current IEEE guidance, AI-generated content such as text, figures, images and code may require disclosure. A paper may be desk rejected for a serious violation of IEEE AI requirements, including:</p>
+                                <ul class="bullet-list">
+                                    <li>substantial undisclosed AI-generated content where disclosure is required;</li>
+                                    <li>AI-generated figures/images/code without required disclosure;</li>
+                                    <li>fabricated AI-generated references or technical content; or</li>
+                                    <li>deliberate concealment of substantial AI-generated material.</li>
+                                </ul>
+                                <p>Ordinary grammar or language editing is treated differently from substantive AI-generated content. Where AI disclosure is required, the disclosure must not compromise double-blind review.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Manuscript Completeness and Basic Technical Requirements</h5>
+                                <p>A paper may be desk rejected if it is so incomplete or technically deficient that meaningful peer review cannot reasonably be conducted, including:</p>
+                                <ul class="bullet-list">
+                                    <li>missing major sections, essential figures/tables or required results;</li>
+                                    <li>corrupted or unreadable PDFs;</li>
+                                    <li>incomplete manuscripts or placeholder content.</li>
+                                </ul>
+                                <p>Minor formatting problems should not normally result in desk rejection.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>IEEE Template and Formatting Requirements</h5>
+                                <p>Authors are expected to use the prescribed IEEE conference template and TENSYMP 2027 submission requirements. The following may justify desk rejection:</p>
+                                <ul class="bullet-list">
+                                    <li>fundamental incompatibility with the required format;</li>
+                                    <li>excessive page length;</li>
+                                    <li>unreadable or corrupted files; or</li>
+                                    <li>significant template instruction text.</li>
+                                </ul>
+                                <p>Minor cosmetic errors should normally be corrected rather than used as grounds for rejection.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>References and Citation Practices</h5>
+                                <p>A paper may be desk rejected where there is clear evidence of:</p>
+                                <ul class="bullet-list">
+                                    <li>fabricated references or non-existent publications;</li>
+                                    <li>systematic citation manipulation;</li>
+                                    <li>extensive irrelevant citation practices intended to manipulate metrics; or</li>
+                                    <li>missing attribution for material taken from other sources.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <h4 class="subsection-title">Recommended Screening Workflow</h4>
+                    <ol class="workflow-list">
+                        <li><strong>Administrative check:</strong> completeness, file, format, page limit, metadata.</li>
+                        <li><strong>Scope check:</strong> TENSYMP 2027 theme, technical track/interdisciplinary connection, IEEE relevance.</li>
+                        <li><strong>Double-blind check:</strong> names, affiliations, contact details, acknowledgements and other identifying information.</li>
+                        <li><strong>Similarity check:</strong> record overall similarity, major sources and evidence of overlap.</li>
+                        <li><strong>Publication ethics:</strong> prior publication, duplicate publication, concurrent submission.</li>
+                        <li><strong>AI compliance:</strong> apparent undisclosed AI-generated content and other serious AI-policy concerns.</li>
+                        <li><strong>Final documented TPC decision.</strong></li>
+                    </ol>
+
+                    <h4 class="subsection-title">Desk-Rejection Decision Categories</h4>
+                    <ol class="decision-grid">
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Outside relevant IEEE technical area and TENSYMP 2027 scope</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Similarity score &gt; 30% and one source &gt;10%</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Plagiarism/substantial unattributed overlap</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Duplicate or substantially previously published work</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Concurrent/multiple submission</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Double-blind violation - author names, affiliations/identifying information, acknowledgement etc</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Serious IEEE AI-policy violation</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Fundamental manuscript incompleteness</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Serious formatting/submission non-compliance</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Fabrication/falsification or serious research-integrity concern</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Inappropriate authorship/submission information</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Other serious IEEE/TENSYMP publication-policy violation</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Number of pages &gt; 6</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Review Papers</span></li>
+                        <li><span class="num-badge small" aria-hidden="true"></span><span>Manuscripts whose primary purpose is commercial promotion rather than research dissemination may be desk rejected.</span></li>
+                    </ol>
+
+                    <p class="record-note">For each desk-rejected paper, retain a confidential record containing Paper ID, title, screening date, category/code, relevant evidence, similarity score where applicable, TPC member(s) responsible, final decision and brief justification. This supports consistency and auditability. The desk-rejection process should be applied with firmness, consistency and fairness.</p>
+                </li>
+
+                <li>
+                    <h4>Guidelines for Acceptance / Rejection Decision</h4>
+
+                    <ol class="criteria-list">
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Number of Reviews</h5>
+                                <p>All submissions must be subjected to a minimum of two reviews for a paper to take a decision. Tie breaking review should be required in the event of two opposite decisions.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Confidentiality of the Review Process</h5>
+                                <p>All submissions must be treated as confidential. TPC members, reviewers and others involved in screening must not:</p>
+                                <ul class="bullet-list">
+                                    <li>share manuscripts;</li>
+                                    <li>disclose author or reviewer identities;</li>
+                                    <li>use unpublished information for personal or professional advantage; or</li>
+                                    <li>discuss submissions with unauthorised people.</li>
+                                </ul>
+                                <p>Reviewers must not upload confidential manuscript content to public AI platforms for review or analysis.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Data Fabrication, Falsification and Serious Research Misconduct</h5>
+                                <p>Clear evidence at screening of any of the following may justify rejection or referral for investigation:</p>
+                                <ul class="bullet-list">
+                                    <li>fabricated results, falsified data or manipulated results;</li>
+                                    <li>fabricated references;</li>
+                                    <li>seriously misleading image manipulation;</li>
+                                    <li>invented datasets or experiments; or</li>
+                                    <li>other serious research misconduct.</li>
+                                </ul>
+                                <p>Suspicion alone should not be treated as established misconduct.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Basic Scholarly Quality</h5>
+                                <p>Novelty, technical depth, methodology, experimental adequacy, significance and quality of conclusions should normally be evaluated through peer review. Rejection may nevertheless be appropriate where there is:</p>
+                                <ul class="bullet-list">
+                                    <li>no identifiable research question;</li>
+                                    <li>no meaningful technical contribution;</li>
+                                    <li>no methodology or results where these are essential; or</li>
+                                    <li>the manuscript is essentially promotional or otherwise not a research contribution.</li>
+                                </ul>
+                                <p>Commercially relevant research remains eligible where it contains a genuine technical contribution supported by appropriate evidence.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Copyright and Third-Party Material</h5>
+                                <p>Authors are responsible for ensuring that third-party material can legally be used and published. Concerns may include:</p>
+                                <ul class="bullet-list">
+                                    <li>copyrighted figures reproduced without appropriate permission;</li>
+                                    <li>substantial third-party material without authorization; and</li>
+                                    <li>inappropriate reuse of published material.</li>
+                                </ul>
+                                <p>Serious and apparent copyright problems may justify rejection or a request for clarification.</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Manipulation of the Review Process</h5>
+                                <p>A submission may be rejected or referred for investigation where there is evidence of:</p>
+                                <ul class="bullet-list">
+                                    <li>false author identities;</li>
+                                    <li>fraudulent institutional information;</li>
+                                    <li>fabricated author information;</li>
+                                    <li>manipulation of submission metadata; or</li>
+                                    <li>attempts to improperly influence reviewer assignment.</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Fairness and Consistency</h5>
+                                <p>The same criteria should be applied regardless of country, institution, author seniority, IEEE membership, academic position, nationality, gender, affiliation, reviewer identity or perceived prestige. <strong>The TPC should evaluate the submission rather than the reputation of the authors.</strong></p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Human Review of Automated Screening Results</h5>
+                                <p>Automated tools should support, not replace, TPC judgement. In particular:</p>
+                                <ul class="bullet-list">
+                                    <li>similarity scores are indicators rather than automatic determinations of plagiarism;</li>
+                                    <li>AI-detection tools should not be treated as definitive evidence of AI use;</li>
+                                    <li>automated scope classifications should be checked by qualified TPC members; and</li>
+                                    <li>formatting alerts should be interpreted reasonably.</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="num-badge" aria-hidden="true"></span>
+                            <div class="criterion-body">
+                                <h5>Authorship and Author List</h5>
+                                <p>Authors should have made meaningful intellectual contributions and participated in preparing or critically reviewing the manuscript. Concerns involving guest or honorary authorship, fraudulent author information, or inappropriate author-list manipulation should be handled under applicable IEEE procedures. Addition of authors at the camera-ready stage should follow the TENSYMP 2027 instructions; <strong>the conference currently states that addition of authors is not allowed at that stage.</strong></p>
+                            </div>
+                        </li>
+                    </ol>
                 </li>
 
                 <li>
@@ -318,7 +736,7 @@
 
                 <li>
                     <h4>Symposium Management System</h4>
-                    <p>Microsoft CMT will be used as the official Symposium Management Tool for paper submission, review, and communication.</p>
+                    <p>EDAS will be used as the official Symposium Management Tool for paper submission, review, and communication.</p>
                 </li>
 
                 <li>
