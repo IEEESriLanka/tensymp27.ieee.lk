@@ -56,14 +56,45 @@
         }
 
         .committee-card {
+            display: grid;
+            grid-template-columns: 96px 1fr;
+            grid-template-areas:
+                "photo role"
+                "photo name"
+                "photo affil";
+            column-gap: 18px;
+            align-items: start;
             border: 1px solid #e5e7eb;
             padding: 25px;
             background: #fff;
             transition: box-shadow 0.3s;
         }
 
+        .committee-card.no-photo {
+            display: block;
+        }
+
         .committee-card:hover {
             box-shadow: 0 4px 12px rgba(0, 34, 68, 0.1);
+        }
+
+        .committee-card .member-photo {
+            grid-area: photo;
+        }
+
+        .committee-card .member-photo img {
+            display: block;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 3px solid #e5e7eb;
+            background: #f0f9ff;
+        }
+
+        .committee-card.chair .member-photo img {
+            border-color: var(--primary);
         }
 
         .committee-card.chair {
@@ -72,6 +103,7 @@
         }
 
         .committee-card .role {
+            grid-area: role;
             font-size: 0.85rem;
             color: var(--primary);
             text-transform: uppercase;
@@ -81,6 +113,7 @@
         }
 
         .committee-card .name {
+            grid-area: name;
             font-size: 1.15rem;
             color: #002244;
             font-weight: 600;
@@ -88,6 +121,7 @@
         }
 
         .committee-card .affiliation {
+            grid-area: affil;
             font-size: 0.9rem;
             color: #555;
             line-height: 1.6;
@@ -139,7 +173,14 @@
             }
 
             .committee-card {
+                grid-template-columns: 76px 1fr;
+                column-gap: 14px;
                 padding: 20px;
+            }
+
+            .committee-card .member-photo img {
+                width: 76px;
+                height: 76px;
             }
         }
     </style>
@@ -193,6 +234,8 @@
                     </ul>
                 </li>
 
+                <li class="nav-item"><a href="../registration.html" class="nav-link">Registration</a></li>
+
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link">Committees</a>
                     <ul class="submenu">
@@ -203,8 +246,6 @@
                         </li>
                     </ul>
                 </li>
-
-                <!-- <li class="nav-item"><a href="../registration.html" class="nav-link">Registration</a></li> -->
 
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link">Sponsors & Exhibitor</a>
@@ -246,6 +287,7 @@
     <h3>Symposium Leadership</h3>
     <div class="committee-grid">
         <div class="committee-card chair">
+            <div class="member-photo"><img src="../assets/oc/1.%20Thrishantha%20Nanayakkara.jpg" alt="Prof. Thrishantha Nanayakkara" loading="lazy"></div>
             <div class="role">Honorary Chair</div>
             <div class="name">
                 <a href="https://profiles.imperial.ac.uk/t.nanayakkara" target="_blank">
@@ -259,6 +301,7 @@
         </div>
 
         <div class="committee-card chair">
+            <div class="member-photo"><img src="../assets/oc/2.%20Prof.%20Roshan%20Ragel.jpeg" alt="Prof. Roshan G Ragel" loading="lazy"></div>
             <div class="role">Symposium Chair</div>
             <div class="name">
                 <a href="https://people.ce.pdn.ac.lk/staff/academic/roshan-ragel/" target="_blank">
@@ -272,6 +315,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/3.%20Prof.%20S.%20Vasanthapriyan.jpg" alt="Prof. S. Vasanthapriyan" loading="lazy"></div>
             <div class="role">Symposium Vice Chair</div>
             <div class="name">
                 <a href="https://www.sab.ac.lk/staff-directory/216" target="_blank">
@@ -285,6 +329,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/4.%20Prof.%20A.%20Ramanan.jpg" alt="Prof. Amirthalingam Ramanan" loading="lazy"></div>
             <div class="role">Symposium Vice Chair</div>
             <div class="name">
                 <a href="https://www.csc.jfn.ac.lk/prof-a-ramanan/" target="_blank">
@@ -298,6 +343,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/5.%20Dr.%20Upul%20Jayasinghe.png" alt="Dr. Upul Jayasinghe" loading="lazy"></div>
             <div class="role">Symposium Secretary</div>
             <div class="name">
                 <a href="http://people.ce.pdn.ac.lk/staff/academic/upul-jayasinghe/" target="_blank">
@@ -311,6 +357,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/6.%20Ms.%20Warunika%20Hippola.jpg" alt="Ms. Warunika Hippola" loading="lazy"></div>
             <div class="role">Assistant Secretary</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/warunika-hippola" target="_blank">
@@ -327,6 +374,7 @@
     <h3>Technical Program</h3>
     <div class="committee-grid">
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/7.%20Prof.%20Ruwan%20Gopura.jpg" alt="Senior Prof. Ruwan Gopura" loading="lazy"></div>
             <div class="role">Technical Program Chair</div>
             <div class="name">
                 <a href="https://uom.lk/staff/Gopura.RARC" target="_blank">
@@ -343,6 +391,7 @@
     <h3>Finance & External Relations</h3>
     <div class="committee-grid">
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/8.%20Mr.%20%20Kavinga%20Upul%20Ekanayaka.png" alt="Mr. Kavinga Upul Ekanayake" loading="lazy"></div>
             <div class="role">Finance Chair</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/kavinga-upul-ekanayaka" target="_blank">
@@ -355,6 +404,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/9.%20Dr.%20Udaya%20Sampath%20Perera.jpeg" alt="Dr. Udaya Sampath Perera" loading="lazy"></div>
             <div class="role">External Relationships Chair</div>
             <div class="name">
                 <a href="https://ent.uom.lk/team/dr-sampath-perera/" target="_blank">
@@ -367,6 +417,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/10.%20Dr.%20Aishwarya%20Bandla.webp" alt="Dr. Aishwarya Bandla" loading="lazy"></div>
             <div class="role">External Relationships Co-Chair</div>
             <div class="name">
                 <a href="https://sg.linkedin.com/in/aishbandla" target="_blank">
@@ -383,6 +434,7 @@
     <h3>Publications & Awards</h3>
     <div class="committee-grid">
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/11.%20Dr.%20Chamira%20Edussooriya.jpg" alt="Dr. Chamira Edussooriya" loading="lazy"></div>
             <div class="role">Publications Chair</div>
             <div class="name">
                 <a href="https://ent.uom.lk/team/dr-chamira-u-s-edussooriya/" target="_blank">
@@ -396,6 +448,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/12.%20Dr.%20Kasun%20T.%20Hemachandra.jpg" alt="Dr. Kasun T. Hemachandra" loading="lazy"></div>
             <div class="role">Publications Co-Chair</div>
             <div class="name">
                 <a href="https://ent.uom.lk/team/dr-kasun-hemachandra/" target="_blank">
@@ -409,6 +462,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/13.%20Dr.%20K.%20Pubudu%20N.%20Jayasena.webp" alt="Dr. K. Pubudu N. Jayasena" loading="lazy"></div>
             <div class="role">Awards / Travel Grants Chair</div>
             <div class="name">
                 <a href="https://tu-dresden.de/ing/informatik/sya/se/die-professur/beschaeftigte/Pubudu_Jayasena?set_language=en" target="_blank">
@@ -426,6 +480,7 @@
     <h3>Workshops, Tutorials & Special Sessions</h3>
     <div class="committee-grid">
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/14.%20Prof.%20Anuradha%20Jayakody.jpeg" alt="Prof. Anuradha Jayakody" loading="lazy"></div>
             <div class="role">Workshops Chair</div>
             <div class="name">
                 <a href="https://www.sliit.lk/faculty-of-computing/staff/anuradha.j/" target="_blank">
@@ -440,6 +495,7 @@
 
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/15.%20Prof.%20Buddhika%20Jayasekara.jpg" alt="Prof. Buddhika Jayasekara" loading="lazy"></div>
             <div class="role">Special Sessions Chair</div>
             <div class="name">
                 <a href="https://uom.lk/staff/Jayasekara.AGBP" target="_blank">
@@ -454,6 +510,7 @@
 
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/16.%20Dr.%20Samiru%20Gayan.jpg" alt="Dr. Samiru Gayan" loading="lazy"></div>
             <div class="role">Tutorial Chair</div>
             <div class="name">
                 <a href="https://ent.uom.lk/team/dr-samiru-gayan/" target="_blank">
@@ -467,6 +524,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/17.%20Dr.%20Sureka%20Thiruchittampalam.jpg" alt="Dr. Sureka Thiruchittampalam" loading="lazy"></div>
             <div class="role">Tutorial Co-Chair</div>
             <div class="name">
                 <a href="https://uom.lk/staff/Thiruchittampalam.S" target="_blank">
@@ -480,6 +538,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/18.%20Dr.%20Thilini%20Mahanama.png" alt="Dr. Thilini Mahanama" loading="lazy"></div>
             <div class="role">Tutorial Co-Chair</div>
             <div class="name">
                 <a href="https://im.kln.ac.lk/profile-dr-thilini-mahanama" target="_blank">
@@ -496,6 +555,7 @@
     <h3>Affinity Groups</h3>
     <div class="committee-grid">
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/19.%20Mr.%20Manodya%20Nabadawewa.jpg" alt="Mr. Manodya Nabadawewa" loading="lazy"></div>
             <div class="role">YP Track Chair</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/manodyanabadawewa" target="_blank">
@@ -509,6 +569,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/20.%20Mr.%20Heshan%20Mallawaarachchi.jpg" alt="Mr. Heshan Mallawaarachchi" loading="lazy"></div>
             <div class="role">YP Track Co-Chair</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/heshann" target="_blank">
@@ -521,6 +582,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/21.%20Prof.%20Jeevani%20Jayasinghe.jpg" alt="Prof. (Mrs.) Jeevani W. Jayasinghe" loading="lazy"></div>
             <div class="role">WIE Track Chair</div>
             <div class="name">
                 Prof. (Mrs.) Jeevani W. Jayasinghe
@@ -531,6 +593,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/22.%20Ms.%20Hiruni%20Hettiarachchi.jpg" alt="Ms. Hiruni Hettiarachchi" loading="lazy"></div>
             <div class="role">WIE Track Co-Chair</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/hiruniihettiarachchi" target="_blank">
@@ -543,6 +606,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/23.%20Ms.%20Vismini%20Amarasinha.jpg" alt="Ms. Vismini Amarasinha" loading="lazy"></div>
             <div class="role">Student Track Chair</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/vismini-amarasinha" target="_blank">
@@ -558,6 +622,7 @@
     <h3>Operations & Logistics</h3>
     <div class="committee-grid">
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/24.%20Ms.%20Umaya%20Balagalla.jpeg" alt="Ms. Umaya Balagalla" loading="lazy"></div>
             <div class="role">Publicity Chair</div>
             <div class="name">
                 <a href="http://eng.sjp.ac.lk/eeeng/staff/ms-umaya-bhashini-balagalla/" target="_blank">
@@ -571,6 +636,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/25.%20Dr.%20Swarnalatha%20Radhakrishnan.jpg" alt="Dr. Swarnalatha Radhakrishnan" loading="lazy"></div>
             <div class="role">Registration Chair</div>
             <div class="name">
                 <a href="https://people.ce.pdn.ac.lk/staff/academic/swarnalatha-radhakrishnan/" target="_blank">
@@ -584,6 +650,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/26.%20Ms.%20Sewwandie%20Nanayakkara.jpg" alt="Ms. Sewwandie Nanayakkara" loading="lazy"></div>
             <div class="role">Registration Co-Chair</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/sewwandie-nanayakkara" target="_blank">
@@ -596,6 +663,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/27.%20Dr.%20Pramila%20Gamage.png" alt="Dr. Pramila Gamage" loading="lazy"></div>
             <div class="role">Local Arrangement Chair</div>
             <div class="name">
                 <a href="https://eng.pdn.ac.lk/dmie/staff/DrPGamage.html" target="_blank">
@@ -609,6 +677,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/28.%20Dr.%20Akila%20Wijethunga.jpg" alt="Dr. Akila Wijethunga" loading="lazy"></div>
             <div class="role">Innovation Challenge Chair</div>
             <div class="name">
                 <a href="https://tech.sjp.ac.lk/mmt/eng-hr-jayatileke-bio-2-2-8/" target="_blank">
@@ -625,6 +694,7 @@
     <h3>Industry & Exhibitions</h3>
     <div class="committee-grid">
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/29.%20Dr.%20Namal%20Bandaranayake.jpg" alt="Dr. Namal Bandaranayake" loading="lazy"></div>
             <div class="role">Exhibitions and Patronage Chair</div>
             <div class="name">
                 Dr. Namal Bandaranayake
@@ -636,6 +706,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/30.%20Dr.%20Isuru%20Bandara.jpg" alt="Dr. Isuru Bandara" loading="lazy"></div>
             <div class="role">Exhibitions and Patronage Co-Chair</div>
             <div class="name">
                 Dr. Isuru Bandara
@@ -647,6 +718,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/31.%20Mr.%20Thilina%20Gunarathne.png" alt="Mr. Thilina Gunarathne" loading="lazy"></div>
             <div class="role">Exhibitions and Patronage Co-Chair</div>
             <div class="name">
                 <a href="https://people.ce.pdn.ac.lk/staff/academic/thilina-gunarathne/" target="_blank">
@@ -660,6 +732,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/32.%20Mr.%20Dhammika%20Marasinghe.jpg" alt="Mr. Dhammika Marasinghe" loading="lazy"></div>
             <div class="role">Industry Outreach Chair</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/dhammikamarasinghe" target="_blank">
@@ -673,6 +746,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/33.%20Ms.%20Lihini%20Rajapaksha.png" alt="Ms. Lihini Rajapaksha" loading="lazy"></div>
             <div class="role">Industry Outreach Co-Chair</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/lihinitwr" target="_blank">
@@ -689,6 +763,7 @@
     <h3>IT, Website & Media</h3>
     <div class="committee-grid">
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/34.%20Ms.%20Yasodha%20Vimukthi.jpg" alt="Ms. Yasodha Vimukthi" loading="lazy"></div>
             <div class="role">IT and Website Chair</div>
             <div class="name">
                 <a href="https://people.ce.pdn.ac.lk/staff/academic/yasodha-vimukthi/" target="_blank">
@@ -702,6 +777,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/35.%20Ms.%20Andrea%20Rajiah.jpg" alt="Ms. Andrea Rajiah" loading="lazy"></div>
             <div class="role">Media and Media Outreach Chair</div>
             <div class="name">
                 <a href="#" target="_blank">
@@ -714,6 +790,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/36.%20Ms.%20Aparna%20Thewarapperuma.png" alt="Ms. Aparna Thewarapperuma" loading="lazy"></div>
             <div class="role">IT and Website Volunteer</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/aparna-thewarapperuma-834ab824a" target="_blank">
@@ -726,6 +803,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/M.A.Malshi%20wijesinghe.png" alt="Ms. Malshi Wijesinghe" loading="lazy"></div>
             <div class="role">Website Volunteer</div>
             <div class="name">
                 <a href="https://www.linkedin.com/in/malshi-kavindya-51215b2a6/" target="_blank">
@@ -739,6 +817,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/37.%20Ms.%20Wathsala%20Dayananda.jpg" alt="Ms. Wathsala Dayananda" loading="lazy"></div>
             <div class="role">Publicity Volunteers</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/wathsala-dayananda" target="_blank">
@@ -751,6 +830,7 @@
         </div>
 
         <div class="committee-card">
+            <div class="member-photo"><img src="../assets/oc/38.%20Ms.%20Shashini%20Withanage.jpg" alt="Ms. Shashini Withanage" loading="lazy"></div>
             <div class="role">Publicity Volunteer</div>
             <div class="name">
                 <a href="https://lk.linkedin.com/in/shashini-withanage-9a708b15a" target="_blank">
