@@ -56,6 +56,14 @@
         }
 
         .committee-card {
+            display: grid;
+            grid-template-columns: 96px 1fr;
+            grid-template-areas:
+                "photo role"
+                "photo name"
+                "photo affil";
+            column-gap: 18px;
+            align-items: start;
             border: 1px solid #e5e7eb;
             padding: 25px;
             background: #fff;
@@ -66,12 +74,32 @@
             box-shadow: 0 4px 12px rgba(0, 34, 68, 0.1);
         }
 
+        .committee-card .member-photo {
+            grid-area: photo;
+        }
+
+        .committee-card .member-photo img {
+            display: block;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 3px solid #e5e7eb;
+            background: #f0f9ff;
+        }
+
+        .committee-card.chair .member-photo img {
+            border-color: var(--primary);
+        }
+
         .committee-card.chair {
             background: #f0f9ff;
             border-left: 4px solid var(--primary);
         }
 
         .committee-card .role {
+            grid-area: role;
             font-size: 0.85rem;
             color: var(--primary);
             text-transform: uppercase;
@@ -81,6 +109,7 @@
         }
 
         .committee-card .name {
+            grid-area: name;
             font-size: 1.15rem;
             color: #002244;
             font-weight: 600;
@@ -97,6 +126,7 @@
         }
 
         .committee-card .affiliation {
+            grid-area: affil;
             font-size: 0.9rem;
             color: #555;
             line-height: 1.6;
@@ -167,6 +197,21 @@
             border-top: 1px solid #f0f0f0;
         }
 
+        .track-person .member-photo {
+            flex-shrink: 0;
+        }
+
+        .track-person .member-photo img {
+            display: block;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 3px solid #e5e7eb;
+            background: #f0f9ff;
+        }
+
         .track-person-role {
             flex-shrink: 0;
             font-size: 0.75rem;
@@ -235,7 +280,14 @@
             }
 
             .committee-card {
+                grid-template-columns: 76px 1fr;
+                column-gap: 14px;
                 padding: 20px;
+            }
+
+            .committee-card .member-photo img {
+                width: 76px;
+                height: 76px;
             }
         }
     </style>
@@ -342,6 +394,7 @@
     <h3>Technical Program Chairs</h3>
     <div class="committee-grid">
         <div class="committee-card chair">
+            <div class="member-photo"><img src="../assets/TPC/Prof.%20Ruwan%20Gopura.jfif" alt="Prof. Ruwan Gopura" loading="lazy"></div>
             <div class="role">Technical Program Chair</div>
             <div class="name">Prof. Ruwan Gopura</div>
             <div class="affiliation">
@@ -352,6 +405,7 @@
         </div>
 
         <div class="committee-card chair">
+            <div class="member-photo"><img src="../assets/TPC/Dr.%20Pubudu%20Ranaweera.jpg" alt="Dr. Pubudu Ranaweera" loading="lazy"></div>
             <div class="role">Technical Program Co-Chair</div>
             <div class="name">Dr. Pubudu Ranaweera</div>
             <div class="affiliation">
@@ -371,6 +425,7 @@
         </div>
         <div class="track-card-body">
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Dr.%20Damayanthi%20Herath.jpg" alt="Dr. Damayanthi Herath" loading="lazy"></div>
                 <div class="track-person-role">Track Chair</div>
                 <div class="track-person-info">
                     <div class="name">Dr. Damayanthi Herath</div>
@@ -378,6 +433,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Dr.%20Sandareka%20Wickramanayake.jfif" alt="Dr. Sandareka Wickramanayake" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Dr. Sandareka Wickramanayake</div>
@@ -385,6 +441,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Dr.%20Pasan%20Maduranga.jfif" alt="Dr. Pasan Maduranga" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Dr. Pasan Maduranga</div>
@@ -392,6 +449,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Dr.%20MAC%20Akmal%20Jahan.jpg" alt="Dr. MAC Akmal Jahan" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Dr. MAC Akmal Jahan</div>
@@ -408,6 +466,7 @@
         </div>
         <div class="track-card-body">
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Prof.%20Michel%20Ong.jfif" alt="Prof. Michel Ong" loading="lazy"></div>
                 <div class="track-person-role">Track Chair</div>
                 <div class="track-person-info">
                     <div class="name">Prof. Michel Ong</div>
@@ -415,6 +474,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Prof.%20Pradeep%20Abeygunawardenepura.jpeg" alt="Prof. Pradeep Abeygunawardenepura" loading="lazy"></div>
                 <div class="track-person-role">Track Chair</div>
                 <div class="track-person-info">
                     <div class="name">Prof. Pradeep Abeygunawardenepura</div>
@@ -422,6 +482,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Prof.%20(Ms.)%20Bhagya%20Nathalie%20Silva.jpeg" alt="Prof. (Ms.) Bhagya Nathalie Silva" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Prof. (Ms.) Bhagya Nathalie Silva</div>
@@ -438,6 +499,7 @@
         </div>
         <div class="track-card-body">
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Dr.%20Viraj%20Muthugala.jfif" alt="Dr. Viraj Muthugala" loading="lazy"></div>
                 <div class="track-person-role">Track Chair</div>
                 <div class="track-person-info">
                     <div class="name">Dr. Viraj Muthugala</div>
@@ -445,6 +507,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Dr.%20(Ms.)%20Bhagya%20Samarakoon.jfif" alt="Dr. (Ms.) Bhagya Samarakoon" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Dr. (Ms.) Bhagya Samarakoon</div>
@@ -461,6 +524,7 @@
         </div>
         <div class="track-card-body">
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Dr.%20Asitha%20Bandaranayake.jpg" alt="Dr. Asitha Bandaranayake" loading="lazy"></div>
                 <div class="track-person-role">Track Chair</div>
                 <div class="track-person-info">
                     <div class="name">Dr. Asitha Bandaranayake</div>
@@ -468,6 +532,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Prof.%20Chalinda%20Beneragama.jfif" alt="Prof. Chalinda Beneragama" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Prof. Chalinda Beneragama</div>
@@ -475,6 +540,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Dr.%20(Ms.)%20M.%20Barathy.jpg" alt="Dr. (Ms.) M. Barathy" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Dr. (Ms.) M. Barathy</div>
@@ -491,6 +557,7 @@
         </div>
         <div class="track-card-body">
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Prof.%20Lasith%20Gunawardena.webp" alt="Prof. Lasith Gunawardena" loading="lazy"></div>
                 <div class="track-person-role">Track Chair</div>
                 <div class="track-person-info">
                     <div class="name">Prof. Lasith Gunawardena</div>
@@ -498,6 +565,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Dr.%20Shashi%20Charles.jpg" alt="Dr. Shashi Charles" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Dr. Shashi Charles</div>
@@ -514,6 +582,7 @@
         </div>
         <div class="track-card-body">
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Prof.%20Tharaka%20Samarasinghe.jpg" alt="Prof. Tharaka Samarasinghe" loading="lazy"></div>
                 <div class="track-person-role">Track Chair</div>
                 <div class="track-person-info">
                     <div class="name">Prof. Tharaka Samarasinghe</div>
@@ -521,6 +590,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Prof.%20Madhusanka%20Liyanage.jfif" alt="Prof. Madhusanka Liyanage" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Prof. Madhusanka Liyanage</div>
@@ -528,6 +598,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Prof.%20Dushantha%20Jayakody.jpeg" alt="Prof. Dushantha Jayakody" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Prof. Dushantha Jayakody</div>
@@ -544,6 +615,7 @@
         </div>
         <div class="track-card-body">
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Prof.%20Sidath%20Liyanage.jpg" alt="Prof. Sidath Liyanage" loading="lazy"></div>
                 <div class="track-person-role">Track Chair</div>
                 <div class="track-person-info">
                     <div class="name">Prof. Sidath Liyanage</div>
@@ -551,6 +623,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Dr.%20Chanaka%20Udayanga.jfif" alt="Dr. Chanaka Udayanga" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Dr. Chanaka Udayanga</div>
@@ -567,6 +640,7 @@
         </div>
         <div class="track-card-body">
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Prof.%20Manivannan%20Siyamalan.jpg" alt="Prof. Manivannan Siyamalan" loading="lazy"></div>
                 <div class="track-person-role">Track Chair</div>
                 <div class="track-person-info">
                     <div class="name">Prof. Manivannan Siyamalan</div>
@@ -574,6 +648,7 @@
                 </div>
             </div>
             <div class="track-person">
+                <div class="member-photo"><img src="../assets/TPC/Dr.%20(Ms.)%20R.%20Nirthika.jpg" alt="Dr. (Ms.) R. Nirthika" loading="lazy"></div>
                 <div class="track-person-role">Track Co-Chair</div>
                 <div class="track-person-info">
                     <div class="name">Dr. (Ms.) R. Nirthika</div>
